@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    ports:
+      - "5006:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+  web:
+    build: .
+    env_file: .env
+    environment:
+      - VIRTUAL_HOST=localhost
