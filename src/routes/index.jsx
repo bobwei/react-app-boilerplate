@@ -1,13 +1,13 @@
 import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 
-import App from '../containers/App';
+import Root from '../containers/Root';
 import IndexPage from '../containers/IndexPage';
 
 export default (history) => {
   return (
     <Router history={history}>
-      <Route path="/" component={App}>
+      <Route path="/" component={Root}>
         <IndexRoute components={{ main: IndexPage }} />
       </Route>
     </Router>

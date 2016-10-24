@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const App = (prop) => {
+const Root = (prop) => {
   return (
     <div>
       {prop.main}
@@ -9,8 +9,8 @@ const App = (prop) => {
   );
 };
 
-App.propTypes = {
+Root.propTypes = {
   main: React.PropTypes.element,
 };
 
-export default connect()(App);
+export default connect()(Root);
