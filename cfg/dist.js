@@ -1,18 +1,17 @@
-'use strict';
-
-let path = require('path');
-let webpack = require('webpack');
+/* eslint-disable global-require, import/no-extraneous-dependencies */
+const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-let baseConfig = require('./base');
-let defaultSettings = require('./defaults');
+const baseConfig = require('./base');
+const defaultSettings = require('./defaults');
 
 // Add needed plugins here
-let BowerWebpackPlugin = require('bower-webpack-plugin');
+const BowerWebpackPlugin = require('bower-webpack-plugin');
 
-let config = Object.assign({}, baseConfig, {
+const config = Object.assign({}, baseConfig, {
   entry: [
     'babel-polyfill',
-    path.join(__dirname, '../src/index')
+    path.join(__dirname, '../src/index'),
   ],
   cache: false,
   devtool: 'sourcemap',
@@ -21,19 +20,19 @@ let config = Object.assign({}, baseConfig, {
     new webpack.DefinePlugin({
       'process.env': {
         BROWSER: JSON.stringify(true),
-        NODE_ENV: '"production"'
-      }
+        NODE_ENV: '"production"',
+      },
     }),
     new BowerWebpackPlugin({
-      searchResolveModulesDirectories: false
+      searchResolveModulesDirectories: false,
     }),
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('[name].css'),
   ],
-  module: defaultSettings.getDefaultModules()
+  module: defaultSettings.getDefaultModules(),
 });
 
 // Add needed loaders to the defaults here
@@ -42,8 +41,8 @@ config.module.loaders.push({
   loader: 'babel',
   include: [].concat(
     config.additionalPaths,
-    [ path.join(__dirname, '/../src') ]
-  )
+    [path.join(__dirname, '/../src')]
+  ),
 });
 
 module.exports = config;
