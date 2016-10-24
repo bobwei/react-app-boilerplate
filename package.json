@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-template",
-  "version": "1.7.1",
+  "version": "2.0.0",
   "description": "A base skeleton template for react and webpack",
   "scripts": {
     "server": "env=dist node server/index.js --env=dist",
@@ -13,14 +13,7 @@
     "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
     "clean": "rimraf dist/*"
   },
-  "keywords": [
-    "React",
-    "Webpack",
-    "Babel",
-    "Boilerplate",
-    "Demo"
-  ],
-  "author": "Bob Wei",
+  "author": "bob61016@gmail.com",
   "devDependencies": {
     "babel-eslint": "^6.0.0",
     "babel-loader": "^6.0.0",
