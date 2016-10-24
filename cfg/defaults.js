@@ -41,12 +41,26 @@ const getDefaultModules = () => {
         if (process.env.inlineCSSInJS) {
           return {
             test: /\.scss$/,
-            loader: 'style-loader!css-loader!sass-loader!postcss-loader?outputStyle=expanded',
+            exclude: /(App.scss)/,
+            loader: 'style-loader!css-loader?modules&localIdentName=[local]__[hash:base64:5]!postcss-loader!sass-loader',
           };
         }
         return {
           test: /\.scss$/,
-          loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader!postcss-loader?outputStyle=expanded'),
+          exclude: /(App.scss)/,
+          loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&localIdentName=[local]__[hash:base64:5]!postcss-loader!sass-loader'),
+        };
+      })(),
+      (() => {
+        if (process.env.inlineCSSInJS) {
+          return {
+            include: /(App.scss)/,
+            loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded',
+          };
+        }
+        return {
+          include: /(App.scss)/,
+          loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!sass-loader?outputStyle=expanded'),
         };
       })(),
       {
