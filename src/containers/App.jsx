@@ -1,13 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const App = (prop) => (
-  <div>
-    {prop.main}
-  </div>
-);
-
-App.defaultProps = {
+const App = (prop) => {
+  return (
+    <div>
+      {prop.main}
+    </div>
+  );
 };
 
 App.propTypes = {

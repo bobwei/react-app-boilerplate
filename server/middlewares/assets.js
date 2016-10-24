@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+/* eslint-disable global-require, import/no-extraneous-dependencies */
 import express from 'express';
 
 export default function () {
@@ -12,7 +12,7 @@ export default function () {
     const config = require('../../webpack.config');
     const proxy = require('proxy-middleware');
     const url = require('url');
-    (new WebpackDevServer(webpack(config), config.devServer))
+    (new WebpackDevServer(webpack(config), { ...config.devServer, quiet: true }))
       .listen(config.port, 'localhost', (err) => {
         if (err) {
           console.log(err);

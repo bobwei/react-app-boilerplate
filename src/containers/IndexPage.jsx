@@ -7,10 +7,4 @@ const IndexPage = () => (
   </div>
 );
 
-IndexPage.defaultProps = {
-};
-
-IndexPage.propTypes = {
-};
-
 export default connect()(IndexPage);
