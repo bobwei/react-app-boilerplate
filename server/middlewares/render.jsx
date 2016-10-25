@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import express from 'express';
 import path from 'path';
 import React from 'react';
@@ -9,7 +10,7 @@ import { Provider } from 'react-redux';
 import createRoutes from '../../src/routes/index';
 import configureStore from '../../src/stores/configureStore';
 
-export default function () {
+export default () => {
   const app = express();
   app.set('views', path.join(__dirname, '../views'));
   app.set('view engine', 'ejs');
@@ -41,4 +42,4 @@ export default function () {
     });
   });
   return app;
-}
+};
