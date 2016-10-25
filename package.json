@@ -3,8 +3,8 @@
   "version": "2.0.0",
   "description": "A base skeleton template for react and webpack",
   "scripts": {
-    "server": "env=dist node server/index.js --env=dist",
-    "start": "env=dev inlineCSSInJS=true node server/index.js --env=dev",
+    "server": "env=dist node server/index.js",
+    "start": "env=dev inlineCSSInJS=true node server/index.js",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
     "posttest": "npm run lint",
@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "autoprefixer": "^6.3.6",
-    "babel-core": "^6.9.1",
+    "babel-core": "^6.18.0",
     "bootstrap-sass": "^3.3.6",
     "compression": "^1.6.2",
     "core-js": "^2.0.0",
@@ -72,10 +72,10 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "font-awesome": "^4.6.3",
     "normalize.css": "^4.0.0",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
-    "react-router": "^2.4.1",
+    "react-router": "^3.0.0",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0"
   }
