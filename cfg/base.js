@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+/* eslint-disable global-require, import/no-extraneous-dependencies */
 const path = require('path');
 const defaultSettings = require('./defaults');
 
@@ -37,6 +37,7 @@ module.exports = {
       styles: `${defaultSettings.srcPath}/styles/`,
       config: `${defaultSettings.srcPath}/config/${process.env.REACT_WEBPACK_ENV}`,
     },
+    fallback: path.join(__dirname, '../', 'node_modules'),
   },
   module: {},
   postcss() {
