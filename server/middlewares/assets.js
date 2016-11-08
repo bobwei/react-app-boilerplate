@@ -12,7 +12,7 @@ export default function () {
     const config = require('../../webpack.config');
     const proxy = require('proxy-middleware');
     const url = require('url');
-    (new WebpackDevServer(webpack(config), { ...config.devServer, quiet: true }))
+    (new WebpackDevServer(webpack(config), { ...config.devServer }))
       .listen(config.port, 'localhost', (err) => {
         if (err) {
           console.log(err);
