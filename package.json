@@ -5,11 +5,7 @@
   "scripts": {
     "server": "env=dist node server/index.js",
     "start": "env=dev inlineCSSInJS=true node server/index.js",
-    "test": "karma start",
-    "test:watch": "karma start --autoWatch=true --singleRun=false",
-    "posttest": "npm run lint",
     "dist": "npm run copy & webpack --env=dist",
-    "lint": "eslint ./src",
     "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
     "clean": "rimraf dist/*"
   },
