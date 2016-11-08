@@ -1,12 +1,12 @@
 /* eslint-disable global-require, import/no-extraneous-dependencies */
 import express from 'express';
 
-export default function () {
+export default () => {
   const app = express();
-  const env = process.env.env || 'dev';
+  const { NODE_ENV } = process.env;
 
   // mount assets for dev
-  if (env === 'dev') {
+  if (NODE_ENV !== 'production') {
     const webpack = require('webpack');
     const WebpackDevServer = require('webpack-dev-server');
     const config = require('../../webpack.config');
@@ -25,4 +25,4 @@ export default function () {
   }
 
   return app;
-}
+};

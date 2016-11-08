@@ -2,10 +2,16 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const WEBPACK_DEV_SERVER_PORT = 8000;
 const PUBLIC_PATH = '/assets/';
 const SRC_PATH = path.join(__dirname, './src/');
+const DIST_PATH = path.join(__dirname, './dist/');
+
+const { NODE_ENV } = process.env;
 
 module.exports = {
   entry: [
@@ -29,7 +35,7 @@ module.exports = {
   debug: true,
   devtool: 'eval',
   output: {
-    path: path.join(__dirname, '/../dist/assets'),
+    path: path.join(DIST_PATH, 'assets'),
     filename: 'app.js',
     publicPath: PUBLIC_PATH,
   },
@@ -115,3 +121,30 @@ module.exports = {
   },
   postcss: () => [require('autoprefixer')],
 };
+
+if (NODE_ENV === 'production') {
+  module.exports = Object.assign({}, module.exports, {
+    entry: [
+      'babel-polyfill',
+      `${SRC_PATH}/index`,
+    ],
+    cache: false,
+    devtool: 'sourcemap',
+    debug: false,
+    plugins: [
+      new webpack.optimize.DedupePlugin(),
+      new webpack.DefinePlugin({
+        'process.env': {
+          BROWSER: JSON.stringify(true),
+          NODE_ENV: '"production"',
+        },
+      }),
+      new webpack.optimize.UglifyJsPlugin(),
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new webpack.optimize.AggressiveMergingPlugin(),
+      new webpack.NoErrorsPlugin(),
+      new ExtractTextPlugin('[name].css'),
+    ],
+  });
+  delete module.exports.devServer;
+}
