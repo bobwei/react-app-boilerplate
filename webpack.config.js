@@ -2,9 +2,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const dotenv = require('dotenv');
-
-dotenv.config();
+require('dotenv').config();
 
 const WEBPACK_DEV_SERVER_PORT = 8000;
 const PUBLIC_PATH = '/assets/';
@@ -38,20 +36,6 @@ module.exports = {
     path: path.join(DIST_PATH, 'assets'),
     filename: 'app.js',
     publicPath: PUBLIC_PATH,
-  },
-  devServer: {
-    contentBase: `${SRC_PATH}/`,
-    historyApiFallback: true,
-    hot: true,
-    port: WEBPACK_DEV_SERVER_PORT,
-    publicPath: PUBLIC_PATH,
-    noInfo: false,
-    quiet: false,
-    lazy: false,
-    stats: {
-      cached: false,
-      chunks: false,
-    },
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
@@ -122,7 +106,24 @@ module.exports = {
   postcss: () => [require('autoprefixer')],
 };
 
-if (NODE_ENV === 'production') {
+if (NODE_ENV !== 'production') {
+  module.exports = Object.assign({}, module.exports, {
+    devServer: {
+      contentBase: `${SRC_PATH}/`,
+      historyApiFallback: true,
+      hot: true,
+      port: WEBPACK_DEV_SERVER_PORT,
+      publicPath: PUBLIC_PATH,
+      noInfo: false,
+      quiet: false,
+      lazy: false,
+      stats: {
+        cached: false,
+        chunks: false,
+      },
+    },
+  });
+} else if (NODE_ENV === 'production') {
   module.exports = Object.assign({}, module.exports, {
     entry: [
       'babel-polyfill',
