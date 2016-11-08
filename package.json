@@ -4,7 +4,7 @@
   "description": "A base skeleton template for react and webpack",
   "scripts": {
     "start": "inlineCSSInJS=true node server/index.js",
-    "dist": "npm run copy & NODE_ENV=production webpack -p",
+    "build": "npm run copy & NODE_ENV=production webpack -p",
     "server": "node server/index.js",
     "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
     "clean": "rimraf dist/*"
