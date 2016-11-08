@@ -1,14 +1,15 @@
-FROM node:6.2.1
+FROM node:7.0.0
+
+RUN npm install -g yarn
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY package.json .
-RUN npm install
+ADD package.json .
+ADD yarn.lock .
+RUN yarn
 
-COPY . .
-RUN npm run dist
-
-EXPOSE 5012
+ADD . .
+RUN npm run build
 
 CMD [ "npm", "run", "server" ]

@@ -2,11 +2,12 @@ import express from 'express';
 import compression from 'compression';
 import dotenv from 'dotenv';
 
-dotenv.config();
-
 import assets from './middlewares/assets';
 import render from './middlewares/render';
 
+dotenv.config();
+
+const { NODE_ENV } = process.env;
 
 /* server configs */
 const app = express();
@@ -20,7 +21,7 @@ app.use(render());
 /* start server */
 app.listen(app.get('port'), () => {
   console.log('Node app is running on port', app.get('port'));
-  if (process.env.env === 'dev') {
+  if (NODE_ENV !== 'production') {
     console.log(`Open Url http://localhost:${app.get('port')} to get started`);
   }
 });
