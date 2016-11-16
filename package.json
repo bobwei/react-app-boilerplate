@@ -2,6 +2,9 @@
   "name": "react-webpack-template",
   "version": "2.0.0",
   "description": "A base skeleton template for react and webpack",
+  "engines": {
+    "node": "^6.9.0"
+  },
   "scripts": {
     "start": "inlineCSSInJS=true node server/index.js",
     "build": "npm run clean & npm run copy & NODE_ENV=production webpack -p --config webpack/webpack.config.js",
