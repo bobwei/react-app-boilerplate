@@ -7,10 +7,11 @@
   },
   "scripts": {
     "start": "inlineCSSInJS=true node server/index.js",
-    "build": "npm run clean & npm run copy & NODE_ENV=production webpack -p --config webpack/webpack.config.prod.babel.js",
+    "build": "npm run clean && npm run copy && NODE_ENV=production webpack -p --config webpack/webpack.config.prod.babel.js",
     "server": "NODE_ENV=production node server/index.js",
     "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
-    "clean": "rimraf dist/*"
+    "clean": "rimraf dist/*",
+    "deploy:gh-pages": "npm run build && gh-pages -d dist"
   },
   "author": "bob61016@gmail.com",
   "devDependencies": {
@@ -33,6 +34,7 @@
     "eslint-plugin-react": "^6.7.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "gh-pages": "^0.11.0",
     "glob": "^7.0.0",
     "isparta-instrumenter-loader": "^1.0.0",
     "minimist": "^1.2.0",
