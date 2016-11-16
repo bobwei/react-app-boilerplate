@@ -6,8 +6,8 @@ require('dotenv').config();
 
 const WEBPACK_DEV_SERVER_PORT = 8000;
 const PUBLIC_PATH = '/assets/';
-const SRC_PATH = path.join(__dirname, './src/');
-const DIST_PATH = path.join(__dirname, './dist/');
+const SRC_PATH = path.join(__dirname, './../src/');
+const DIST_PATH = path.join(__dirname, './../dist/');
 
 const { NODE_ENV } = process.env;
 
