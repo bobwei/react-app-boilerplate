@@ -2,15 +2,17 @@
 import path from 'path';
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import dotenv from 'dotenv';
 
-require('dotenv').config();
+import {
+  WEBPACK_DEV_SERVER_PORT,
+  PUBLIC_PATH, SRC_PATH, DIST_PATH,
+} from './webpack.config.base.babel';
 
-const WEBPACK_DEV_SERVER_PORT = 8000;
-const PUBLIC_PATH = '/assets/';
-const SRC_PATH = path.join(__dirname, './../src/');
-const DIST_PATH = path.join(__dirname, './../dist/');
-
-const { NODE_ENV } = process.env;
+dotenv.config();
+const {
+  NODE_ENV,
+} = process.env;
 
 module.exports = {
   entry: [
