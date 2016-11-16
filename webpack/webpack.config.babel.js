@@ -1,7 +1,8 @@
 /* eslint-disable global-require, import/no-extraneous-dependencies */
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+import path from 'path';
+import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+
 require('dotenv').config();
 
 const WEBPACK_DEV_SERVER_PORT = 8000;
