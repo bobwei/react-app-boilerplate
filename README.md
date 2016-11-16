@@ -2,25 +2,39 @@
 
 This is a project template with batteries included to speed up project initiation.
 
+## Features
 
-## Development ( Run )
+*   react-router
+*   redux
+*   bootstrap-sass
+*   css-modules
+*   eslint
+*   babel
+*   server side rendering
+*   hot reload
+*   docker
+*   dotenv
 
-#### Run
+## Development Flow
 
+First time
 ```
-$ npm start
+yarn
 ```
 
-## Production ( Build & Run )
-
-#### Build
-
+Development server
 ```
-$ npm run dist
+npm start
 ```
 
-#### Run
+## Production Flow
 
+Build static assets
 ```
-$ npm run server
+npm run build
+```
+
+Run production server
+```
+npm run server
 ```
