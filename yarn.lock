@@ -1160,9 +1160,9 @@ cookie@0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
 
-copyfiles@^0.2.1:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/copyfiles/-/copyfiles-0.2.2.tgz#79a8ff0b85837f9bfa27978d672260631655b673"
+copyfiles@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/copyfiles/-/copyfiles-1.0.0.tgz#317026871d5390e32acd03ec458775267e94bc2a"
   dependencies:
     glob "^7.0.5"
     ltcdr "^2.2.1"
@@ -1800,9 +1800,9 @@ file-entry-cache@^2.0.0:
     flat-cache "^1.2.1"
     object-assign "^4.0.1"
 
-file-loader@^0.8.4:
-  version "0.8.5"
-  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-0.8.5.tgz#9275d031fe780f27d47f5f4af02bd43713cc151b"
+file-loader@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-0.9.0.tgz#1d2daddd424ce6d1b07cfe3f79731bed3617ab42"
   dependencies:
     loader-utils "~0.2.5"
 
