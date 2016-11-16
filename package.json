@@ -33,7 +33,7 @@
     "glob": "^7.0.0",
     "isparta-instrumenter-loader": "^1.0.0",
     "minimist": "^1.2.0",
-    "node-sass": "^3.7.0",
+    "node-sass": "^3.13.0",
     "null-loader": "^0.1.1",
     "postcss": "^5.0.21",
     "postcss-loader": "^1.0.0",
