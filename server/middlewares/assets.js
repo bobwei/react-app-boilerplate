@@ -9,7 +9,7 @@ export default () => {
   if (NODE_ENV !== 'production') {
     const webpack = require('webpack');
     const WebpackDevServer = require('webpack-dev-server');
-    const config = require('../../webpack/webpack.config.babel');
+    const config = require('../../webpack/webpack.config.dev.babel').default;
     const proxy = require('proxy-middleware');
     const url = require('url');
     (new WebpackDevServer(webpack(config), { ...config.devServer }))
