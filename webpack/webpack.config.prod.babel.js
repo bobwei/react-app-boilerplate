@@ -38,7 +38,6 @@ const config = {
 
   cache: false,
   debug: false,
-  devtool: 'sourcemap',
 };
 
 export default config;

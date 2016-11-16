@@ -52,7 +52,7 @@ const config = {
 
   cache: true,
   debug: true,
-  devtool: 'eval',
+  devtool: 'source-map',
   port: WEBPACK_DEV_SERVER_PORT,
 };
 
