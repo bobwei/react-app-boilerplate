@@ -1,7 +1,8 @@
 {
   "name": "react-webpack-template",
-  "version": "2.0.0",
+  "author": "Bob Wei <bob61016@gmail.com>",
   "description": "A base skeleton template for react and webpack",
+  "license": "MIT",
   "engines": {
     "node": "^6.9.0"
   },
@@ -13,7 +14,6 @@
     "clean": "rimraf dist/*",
     "deploy:gh-pages": "npm run build && gh-pages -d dist"
   },
-  "author": "bob61016@gmail.com",
   "devDependencies": {
     "autoprefixer": "^6.5.3",
     "babel-eslint": "^7.1.0",
