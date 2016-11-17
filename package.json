@@ -61,6 +61,7 @@
     "dotenv": "^2.0.0",
     "ejs": "^2.4.2",
     "express": "^4.13.4",
+    "fbjs": "^0.8.6",
     "font-awesome": "^4.7.0",
     "normalize.css": "^5.0.0",
     "react": "^15.3.2",
