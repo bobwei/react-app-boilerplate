@@ -41,13 +41,11 @@ const config = {
       ...baseConfig.module.loaders,
       {
         test: /\.(js|jsx)$/,
-        loader: 'react-hot!babel-loader',
-        include: SRC_PATH,
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.(js|jsx)$/,
-        loader: 'eslint-loader',
+        loaders: [
+          'react-hot',
+          'babel-loader',
+          'eslint-loader',
+        ],
         include: SRC_PATH,
         exclude: /node_modules/,
       },
