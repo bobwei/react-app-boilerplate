@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 const {
-  inlineCSSInJS,
+  ENABLE_EXTRACT_TEXT_PLUGIN,
 } = process.env;
 
 export const WEBPACK_DEV_SERVER_PORT = 8000;
@@ -33,7 +33,7 @@ const config = {
         loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&indentedSyntax',
       },
       (() => {
-        if (inlineCSSInJS) {
+        if (ENABLE_EXTRACT_TEXT_PLUGIN === 'false') {
           return {
             test: /\.scss$/,
             exclude: /(App.scss)/,
@@ -47,7 +47,7 @@ const config = {
         };
       })(),
       (() => {
-        if (inlineCSSInJS) {
+        if (ENABLE_EXTRACT_TEXT_PLUGIN === 'false') {
           return {
             include: /(App.scss)/,
             loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded',
