@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Root = prop => (
+const Root = ({ main, children }) => (
   <div>
-    {prop.main}
+    {main || children}
   </div>
 );
 

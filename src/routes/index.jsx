@@ -1,13 +1,16 @@
+/* eslint-disable global-require */
 import React from 'react';
-import { Router, Route, IndexRoute } from 'react-router';
+import { Router, Route } from 'react-router';
 
 import Root from '../containers/Root';
-import IndexPage from '../containers/IndexPage';
 
 export default history => (
   <Router history={history}>
-    <Route path="/" component={Root}>
-      <IndexRoute components={{ main: IndexPage }} />
-    </Route>
+    <Route
+      component={Root}
+      childRoutes={[
+        require('./Home'),
+      ]}
+    />
   </Router>
 );
