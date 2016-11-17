@@ -2,7 +2,7 @@
 import express from 'express';
 import path from 'path';
 import React from 'react';
-import { renderToStaticMarkup } from 'react-dom/server';
+import { renderToStaticMarkup, renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import { Provider } from 'react-redux';
 import createMemoryHistory from 'history/lib/createMemoryHistory';
@@ -29,7 +29,7 @@ export default () => {
       } else if (redirectLocation) {
         res.redirect(302, redirectLocation.pathname + redirectLocation.search);
       } else if (renderProps) {
-        const serverRenderingBody = renderToStaticMarkup(
+        const serverRenderingBody = renderToString(
           <Provider store={store} >
             <RouterContext {...renderProps} />
           </Provider>,
