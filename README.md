@@ -29,9 +29,7 @@ This is a project template with batteries included to speed up project initiatio
 │   ├── middlewares
 │   │   ├── assets.js
 │   │   └── render.jsx
-│   ├── server.js
-│   └── views
-│       └── index.ejs
+│   └── server.js
 ├── src
 │   ├── containers
 │   │   ├── Home
@@ -39,7 +37,7 @@ This is a project template with batteries included to speed up project initiatio
 │   │   │   └── index.scss
 │   │   └── Root.jsx
 │   ├── favicon.ico
-│   ├── index.html
+│   ├── html.jsx
 │   ├── index.jsx
 │   ├── reducers
 │   │   └── index.js
