@@ -7,6 +7,8 @@ import baseConfig, {
   SRC_PATH, DIST_PATH, PUBLIC_PATH,
 } from './webpack.config.base.babel';
 
+const { CLIENT_HISTORY } = process.env;
+
 const config = {
   ...baseConfig,
 
@@ -25,8 +27,8 @@ const config = {
     new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        BROWSER: JSON.stringify(true),
-        NODE_ENV: '"production"',
+        NODE_ENV: JSON.stringify('production'),
+        CLIENT_HISTORY: JSON.stringify(CLIENT_HISTORY),
       },
     }),
     new webpack.optimize.UglifyJsPlugin({

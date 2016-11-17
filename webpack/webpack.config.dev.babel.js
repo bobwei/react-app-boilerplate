@@ -8,6 +8,8 @@ import baseConfig, {
   SRC_PATH, DIST_PATH, PUBLIC_PATH,
 } from './webpack.config.base.babel';
 
+const { CLIENT_HISTORY } = process.env;
+
 const config = {
   ...baseConfig,
 
@@ -28,7 +30,7 @@ const config = {
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        BROWSER: JSON.stringify(true),
+        CLIENT_HISTORY: JSON.stringify(CLIENT_HISTORY),
       },
     }),
     new ExtractTextPlugin('[name].css', {

@@ -15,7 +15,9 @@ if (canUseDOM) {
   document.addEventListener('touchstart', () => {}, true);
 }
 
-const history = (location.protocol === 'file:') ? hashHistory : browserHistory;
+const { CLIENT_HISTORY } = process.env;
+
+const history = (location.protocol === 'file:' || CLIENT_HISTORY === 'hash') ? hashHistory : browserHistory;
 const store = configureStore({});
 const routes = createRoutes(history);
 
