@@ -12,12 +12,7 @@ import createRoutes from './routes/index';
 // to allow :active styles to work in your CSS on a page in Mobile Safari
 document.addEventListener('touchstart', () => {}, true);
 
-let history;
-if (location.protocol === 'file:') {
-  history = hashHistory;
-} else {
-  history = browserHistory;
-}
+const history = (location.protocol === 'file:') ? hashHistory : browserHistory;
 const store = configureStore({});
 const routes = createRoutes(history);
 
