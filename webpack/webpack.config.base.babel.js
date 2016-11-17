@@ -19,6 +19,7 @@ const config = {
     extensions: ['', '.js', '.jsx'],
     fallback: path.join(__dirname, '/../', 'node_modules'),
   },
+
   module: {
     loaders: [
       {
@@ -69,7 +70,10 @@ const config = {
       { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml' },
     ],
   },
-  postcss: () => [require('autoprefixer')],
+
+  postcss: () => [
+    require('autoprefixer'),
+  ],
 };
 
 export default config;
