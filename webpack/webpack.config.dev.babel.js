@@ -31,7 +31,9 @@ const config = {
         BROWSER: JSON.stringify(true),
       },
     }),
-    new ExtractTextPlugin('[name].css'),
+    new ExtractTextPlugin('[name].css', {
+      allChunks: true,
+    }),
   ],
 
   module: {
