@@ -31,7 +31,13 @@ const config = {
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
+        screw_ie8: true,
         warnings: false,
+        unused: true,
+        dead_code: true,
+      },
+      output: {
+        comments: false,
       },
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
