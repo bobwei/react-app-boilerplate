@@ -1,31 +1,32 @@
 /* eslint-disable global-require, import/no-extraneous-dependencies */
-import path from 'path';
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 import baseConfig, {
-  SRC_PATH, DIST_PATH, PUBLIC_PATH,
+  SRC_PATH, SERVER_DIST_PATH,
 } from './webpack.config.base.babel';
 
 const config = {
   ...baseConfig,
 
-  entry: [
-    'babel-polyfill',
-    `${SRC_PATH}/index`,
-  ],
+  entry: {
+    routes: `${SRC_PATH}/routes`,
+    stores: `${SRC_PATH}/stores`,
+  },
 
   output: {
-    path: path.join(DIST_PATH, 'assets'),
-    filename: 'app.js',
-    publicPath: PUBLIC_PATH,
+    path: SERVER_DIST_PATH,
+    filename: '[name].js',
+    libraryTarget: 'commonjs2',
   },
+
+  target: 'node',
 
   plugins: [
     new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        BROWSER: JSON.stringify(true),
+        BROWSER: JSON.stringify(false),
         NODE_ENV: '"production"',
       },
     }),
@@ -33,7 +34,7 @@ const config = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('[name].css', {
+    new ExtractTextPlugin('_[name].css', {
       allChunks: true,
     }),
   ],

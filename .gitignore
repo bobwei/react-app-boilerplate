@@ -31,3 +31,4 @@ bower_components/
 
 .env
 dist/
+build/
