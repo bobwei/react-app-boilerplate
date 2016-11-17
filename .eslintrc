@@ -11,7 +11,6 @@
   },
   "rules": {
     "no-console": 0,
-    "arrow-body-style": 0,
     "react/prop-types": [2, {"ignore": ["className", "children", "id", "onClick", "style", "dispatch", "params", "location"]}]
   }
 }
