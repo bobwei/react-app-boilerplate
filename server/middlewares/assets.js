@@ -1,26 +1,24 @@
 /* eslint-disable global-require, import/no-extraneous-dependencies */
 import express from 'express';
 
+const { NODE_ENV } = process.env;
+
 export default () => {
   const app = express();
-  const { NODE_ENV } = process.env;
 
-  // mount assets for dev
   if (NODE_ENV !== 'production') {
-    const webpack = require('webpack');
-    const WebpackDevServer = require('webpack-dev-server');
+    /*
+      mount assets for dev
+    */
     const config = require('../../webpack/webpack.config.dev.babel').default;
-    const proxy = require('proxy-middleware');
-    const url = require('url');
-    (new WebpackDevServer(webpack(config), { ...config.devServer }))
-      .listen(config.port, 'localhost', (err) => {
-        if (err) {
-          console.log(err);
-        }
-      });
-    app.use('/assets', proxy(url.parse(`http://localhost:${config.port}/assets`)));
-  // mount assets for production
+    const webpack = require('webpack');
+    const compiler = webpack(config);
+    app.use(require('webpack-dev-middleware')(compiler, config.devServer));
+    app.use(require('webpack-hot-middleware')(compiler));
   } else {
+    /*
+      mount assets for production
+    */
     app.use('/assets', express.static(`${__dirname}/../../dist/assets`));
   }
 
