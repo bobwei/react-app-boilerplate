@@ -9,6 +9,7 @@ import createMemoryHistory from 'history/lib/createMemoryHistory';
 
 import createRoutes from '../../build/routes';
 import configureStore from '../../build/stores';
+import HTML from '../../src/html';
 
 export default () => {
   const app = express();
@@ -28,14 +29,17 @@ export default () => {
       } else if (redirectLocation) {
         res.redirect(302, redirectLocation.pathname + redirectLocation.search);
       } else if (renderProps) {
-        const html = renderToStaticMarkup(
+        const serverRenderingBody = renderToStaticMarkup(
           <Provider store={store} >
             <RouterContext {...renderProps} />
           </Provider>,
         );
-        res.render('index', {
-          html,
-        });
+        const html = renderToStaticMarkup(
+          <HTML
+            serverRenderingBody={serverRenderingBody}
+          />,
+        );
+        res.send(`<!doctype html>${html}`);
       } else {
         res.status(404).send('Not found');
       }
