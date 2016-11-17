@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import { browserHistory, hashHistory } from 'react-router';
 
 import './styles/App.scss';
-import configureStore from './stores/configureStore';
-import createRoutes from './routes/index';
+import configureStore from './stores';
+import createRoutes from './routes';
 
 /* initialize */
 
