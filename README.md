@@ -47,7 +47,10 @@ This is a project template with batteries included to speed up project initiatio
 │   │   └── configureStore.js
 │   └── styles
 │       └── App.scss
-├── webpack.config.js
+├── webpack
+│   ├── webpack.config.base.babel.js
+│   ├── webpack.config.dev.babel.js
+│   └── webpack.config.prod.babel.js
 └── yarn.lock
 ```
 
