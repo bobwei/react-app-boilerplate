@@ -24,6 +24,8 @@ This is a project template with batteries included to speed up project initiatio
 ├── README.md
 ├── docker-compose.prod.yml
 ├── package.json
+├── scripts
+│   └── build.jsx
 ├── server
 │   ├── index.js
 │   ├── middlewares
@@ -50,6 +52,7 @@ This is a project template with batteries included to speed up project initiatio
 │   └── styles
 │       └── App.scss
 ├── webpack
+│   ├── webpack.config.all.babel.js
 │   ├── webpack.config.base.babel.js
 │   ├── webpack.config.dev.babel.js
 │   ├── webpack.config.prod.babel.js
