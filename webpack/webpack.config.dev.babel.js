@@ -12,7 +12,7 @@ const config = {
   ...baseConfig,
 
   entry: [
-    `webpack-dev-server/client?http://127.0.0.1:${WEBPACK_DEV_SERVER_PORT}`,
+    `webpack-dev-server/client?http://0.0.0.0:${WEBPACK_DEV_SERVER_PORT}`,
     'webpack/hot/only-dev-server',
     'babel-polyfill',
     `${SRC_PATH}/index`,
