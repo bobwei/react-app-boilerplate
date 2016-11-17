@@ -35,6 +35,25 @@ const config = {
     new ExtractTextPlugin('[name].css'),
   ],
 
+  module: {
+    ...baseConfig.module,
+    loaders: [
+      ...baseConfig.module.loaders,
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'react-hot!babel-loader',
+        include: SRC_PATH,
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'eslint-loader',
+        include: SRC_PATH,
+        exclude: /node_modules/,
+      },
+    ],
+  },
+
   devServer: {
     contentBase: `${SRC_PATH}/`,
     historyApiFallback: true,

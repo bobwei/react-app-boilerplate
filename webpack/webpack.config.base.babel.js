@@ -66,18 +66,6 @@ const config = {
       { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream' },
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
       { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml' },
-      {
-        test: /\.(js|jsx)$/,
-        loader: 'react-hot!babel-loader',
-        include: SRC_PATH,
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.(js|jsx)$/,
-        loader: 'eslint-loader',
-        include: SRC_PATH,
-        exclude: /node_modules/,
-      },
     ],
   },
   postcss: () => [require('autoprefixer')],

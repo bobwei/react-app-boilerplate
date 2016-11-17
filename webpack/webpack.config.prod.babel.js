@@ -36,6 +36,25 @@ const config = {
     new ExtractTextPlugin('[name].css'),
   ],
 
+  module: {
+    ...baseConfig.module,
+    loaders: [
+      ...baseConfig.module.loaders,
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader',
+        include: SRC_PATH,
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'eslint-loader',
+        include: SRC_PATH,
+        exclude: /node_modules/,
+      },
+    ],
+  },
+
   cache: false,
   debug: false,
 };
