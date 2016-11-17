@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import express from 'express';
-import path from 'path';
 import React from 'react';
 import { renderToStaticMarkup, renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
