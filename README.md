@@ -34,7 +34,9 @@ This is a project template with batteries included to speed up project initiatio
 │       └── index.ejs
 ├── src
 │   ├── containers
-│   │   ├── IndexPage.jsx
+│   │   ├── Home
+│   │   │   ├── index.jsx
+│   │   │   └── index.scss
 │   │   └── Root.jsx
 │   ├── favicon.ico
 │   ├── index.html
@@ -42,15 +44,18 @@ This is a project template with batteries included to speed up project initiatio
 │   ├── reducers
 │   │   └── index.js
 │   ├── routes
+│   │   ├── Home
+│   │   │   └── index.js
 │   │   └── index.jsx
 │   ├── stores
-│   │   └── configureStore.js
+│   │   └── index.js
 │   └── styles
 │       └── App.scss
 ├── webpack
 │   ├── webpack.config.base.babel.js
 │   ├── webpack.config.dev.babel.js
-│   └── webpack.config.prod.babel.js
+│   ├── webpack.config.prod.babel.js
+│   └── webpack.config.server.babel.js
 └── yarn.lock
 ```
 
