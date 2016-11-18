@@ -1,1 +1,1 @@
-web: env=dist node server/index.js --env=dist
+web: npm run server

@@ -12,7 +12,8 @@
     "server": "NODE_ENV=production node server/index.js",
     "copy": "copyfiles -f ./src/favicon.ico ./dist",
     "clean": "rimraf dist/* build/*",
-    "deploy:gh-pages": "npm run build && gh-pages -d dist"
+    "deploy:gh-pages": "npm run build && gh-pages -d dist",
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.3",

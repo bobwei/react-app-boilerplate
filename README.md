@@ -65,6 +65,7 @@ This is a project template with batteries included to speed up project initiatio
 First time
 ```
 yarn
+mv .example.env .env
 ```
 
 Development server
