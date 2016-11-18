@@ -2,7 +2,7 @@ module.exports = {
   path: '/',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
-      cb(null, require('../../containers/Home').default);
+      cb(null, require('../containers').default);
     });
   },
 };

@@ -34,18 +34,20 @@ This is a project template with batteries included to speed up project initiatio
 │   └── server.js
 ├── src
 │   ├── containers
-│   │   ├── Home
-│   │   │   ├── index.jsx
-│   │   │   └── index.scss
 │   │   └── Root.jsx
 │   ├── favicon.ico
 │   ├── html.jsx
 │   ├── index.jsx
+│   ├── pages
+│   │   └── Home
+│   │       ├── containers
+│   │       │   ├── index.jsx
+│   │       │   └── index.scss
+│   │       └── routes
+│   │           └── index.js
 │   ├── reducers
 │   │   └── index.js
 │   ├── routes
-│   │   ├── Home
-│   │   │   └── index.js
 │   │   └── index.jsx
 │   ├── stores
 │   │   └── index.js

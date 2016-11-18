@@ -9,7 +9,7 @@ export default history => (
     <Route
       component={Root}
       childRoutes={[
-        require('./Home'),
+        require('../pages/Home/routes'),
       ]}
     />
   </Router>
