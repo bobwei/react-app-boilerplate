@@ -9,3 +9,5 @@ const Root = ({ main, children }) => (
 Root.propTypes = {
   main: React.PropTypes.element,
 };
+
+export default Root;
