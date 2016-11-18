@@ -6,10 +6,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 const {
   ENABLE_EXTRACT_TEXT_PLUGIN,
+  CLIENT_HISTORY,
 } = process.env;
 
 export const WEBPACK_DEV_SERVER_PORT = 8000;
-export const PUBLIC_PATH = '/assets/';
+export const PUBLIC_PATH = (CLIENT_HISTORY === 'hash') ? 'assets/' : '/assets/';
 export const SRC_PATH = path.join(__dirname, './../src/');
 export const DIST_PATH = path.join(__dirname, './../dist/');
 export const SERVER_DIST_PATH = path.join(__dirname, './../build/');
