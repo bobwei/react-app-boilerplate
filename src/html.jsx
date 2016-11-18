@@ -14,7 +14,9 @@ const HTML = ({ language, title, serverRenderingBody, jsSrc, cssSrc }) => (
       <link rel="stylesheet" type="text/css" href={cssSrc} />
     </head>
     <body>
-      <div id="app" dangerouslySetInnerHTML={{ __html: serverRenderingBody }} />
+      <div id="app">
+        <div dangerouslySetInnerHTML={{ __html: serverRenderingBody }} />
+      </div>
       <script src={jsSrc} />
     </body>
   </html>
