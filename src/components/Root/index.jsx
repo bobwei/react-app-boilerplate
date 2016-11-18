@@ -1,13 +1,11 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+import { Provider } from 'react-redux';
 
-const Root = ({ main, children }) => (
-  <div>
-    {main || children}
-  </div>
+const Root = ({ store, routes }) => (
+  <Provider store={store}>
+    {routes}
+  </Provider>
 );
-
-Root.propTypes = {
-  main: React.PropTypes.element,
-};
 
 export default Root;

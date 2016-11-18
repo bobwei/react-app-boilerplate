@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import { browserHistory, hashHistory } from 'react-router';
 import canUseDOM from 'fbjs/lib/ExecutionEnvironment';
 
 import './styles/App.scss';
 import configureStore from './stores';
 import createRoutes from './routes';
+import Root from './components/Root';
 
 /* initialize */
 
@@ -22,8 +22,9 @@ const store = configureStore({});
 const routes = createRoutes(history);
 
 ReactDOM.render(
-  <Provider store={store}>
-    {routes}
-  </Provider>,
+  <Root
+    store={store}
+    routes={routes}
+  />,
   document.getElementById('app'),
 );

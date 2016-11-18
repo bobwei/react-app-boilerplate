@@ -2,12 +2,12 @@
 import React from 'react';
 import { Router, Route } from 'react-router';
 
-import Root from '../components/Root';
+import Layout from '../components/Layout';
 
 export default history => (
   <Router history={history}>
     <Route
-      component={Root}
+      component={Layout}
       childRoutes={[
         require('../pages/Home/routes'),
       ]}
