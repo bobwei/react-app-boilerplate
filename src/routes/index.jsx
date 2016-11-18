@@ -2,7 +2,7 @@
 import React from 'react';
 import { Router, Route } from 'react-router';
 
-import Root from '../containers/Root';
+import Root from '../components/Root';
 
 export default history => (
   <Router history={history}>
