@@ -6,8 +6,8 @@ import { match, RouterContext } from 'react-router';
 import { Provider } from 'react-redux';
 import createMemoryHistory from 'history/lib/createMemoryHistory';
 
-import createRoutes from '../../build/routes';
-import configureStore from '../../build/stores';
+import createRoutes from '../../build/server/routes';
+import configureStore from '../../build/server/stores';
 import HTML from '../../src/html';
 
 export default () => {
