@@ -34,8 +34,9 @@ This is a project template with batteries included to speed up project initiatio
 │   │   └── index.jsx
 │   └── server.js
 ├── src
-│   ├── containers
-│   │   └── Root.jsx
+│   ├── components
+│   │   └── Root
+│   │       └── index.jsx
 │   ├── favicon.ico
 │   ├── html.jsx
 │   ├── index.jsx
