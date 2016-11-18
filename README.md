@@ -84,3 +84,15 @@ Run production server
 ```
 npm run server
 ```
+
+## Deploy to Heroku
+
+create heroku app
+```
+heroku apps:create myapp
+heroku config:push
+```
+
+```
+git push heroku master
+```
