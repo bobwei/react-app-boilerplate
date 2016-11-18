@@ -4,4 +4,4 @@ import { renderToStaticMarkup } from 'react-dom/server';
 
 import HTML from '../src/html';
 
-console.log(renderToStaticMarkup(<HTML />));
+console.log(`<!doctype html>${renderToStaticMarkup(<HTML />)}`);
