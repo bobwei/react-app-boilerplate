@@ -27,10 +27,11 @@ This is a project template with batteries included to speed up project initiatio
 ├── scripts
 │   └── build.jsx
 ├── server
+│   ├── assets
+│   │   └── index.js
 │   ├── index.js
-│   ├── middlewares
-│   │   ├── assets.js
-│   │   └── render.jsx
+│   ├── render
+│   │   └── index.jsx
 │   └── server.js
 ├── src
 │   ├── containers
