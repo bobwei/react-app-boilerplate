@@ -14,6 +14,7 @@ const config = {
   ...baseConfig,
 
   entry: [
+    'react-hot-loader/patch',
     'webpack-hot-middleware/client',
     'babel-polyfill',
     `${SRC_PATH}/index`,
@@ -45,8 +46,7 @@ const config = {
       {
         test: /\.(js|jsx)$/,
         loaders: [
-          'react-hot',
-          'babel-loader',
+          'babel',
           'eslint-loader',
         ],
         include: SRC_PATH,
