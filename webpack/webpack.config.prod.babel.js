@@ -28,6 +28,15 @@ const config = {
       'process.env.CLIENT_HISTORY': JSON.stringify(CLIENT_HISTORY),
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false,
+      options: {
+        postcss: () => [
+          require('autoprefixer'),
+        ],
+      },
+    }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.NoErrorsPlugin(),
