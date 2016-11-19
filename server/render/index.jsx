@@ -4,19 +4,17 @@ import React from 'react';
 import { renderToStaticMarkup, renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import { Provider } from 'react-redux';
-import createMemoryHistory from 'history/lib/createMemoryHistory';
 
-import createRoutes from '../../build/server/routes';
+import routes from '../../build/server/routes';
 import configureStore from '../../build/server/stores';
 import HTML from '../../src/html';
 
 export default () => {
   const app = express();
 
-  const routes = createRoutes(createMemoryHistory());
-
   app.get('*', (req, res) => {
     const store = configureStore({});
+
     match({
       routes,
       location: req.url,
