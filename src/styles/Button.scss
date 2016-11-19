@@ -1,0 +1,37 @@
+.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+  outline: 0;
+}
+
+.btn {
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+$btn-default-bg-color: #ff5a5f;
+$btn-default-color: white;
+
+.btn-red {
+  border-color: $btn-default-bg-color;
+  background: $btn-default-bg-color;
+  background-color: $btn-default-bg-color;
+  color: $btn-default-color;
+
+  &:hover, &:focus {
+    color: $btn-default-color;
+    background-color: darken($btn-default-bg-color, 10%);
+    border-color: darken($btn-default-bg-color, 10%);
+  }
+
+  &:active {
+    color: $btn-default-color;
+    background-color: darken($btn-default-bg-color, 0%);
+    border-color: darken($btn-default-bg-color, 0%);
+  }
+
+  &:active, &:focus, &:hover {
+    box-shadow: none;
+    outline: none;
+  }
+}

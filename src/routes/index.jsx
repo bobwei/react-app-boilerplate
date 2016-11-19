@@ -9,6 +9,7 @@ const routes = (
     component={Layout}
     childRoutes={[
       require('../pages/Home/routes'),
+      require('../modules/auth/routes'),
     ]}
   />
 );
