@@ -11,14 +11,17 @@ const {
 
 export const WEBPACK_DEV_SERVER_PORT = 8000;
 export const PUBLIC_PATH = (CLIENT_HISTORY === 'hash') ? 'assets/' : '/assets/';
-export const SRC_PATH = path.join(__dirname, './../src/');
-export const DIST_PATH = path.join(__dirname, './../build/client/');
-export const SERVER_DIST_PATH = path.join(__dirname, './../build/server/');
+export const SRC_PATH = path.join(__dirname, '/../src');
+export const DIST_PATH = path.join(__dirname, '/../build/client');
+export const SERVER_DIST_PATH = path.join(__dirname, '/../build/server');
 
 const config = {
   resolve: {
-    extensions: ['', '.js', '.jsx'],
-    fallback: path.join(__dirname, '/../', 'node_modules'),
+    extensions: ['*', '.js', '.jsx'],
+    modules: [
+      path.join(__dirname, '/../', 'src'),
+      'node_modules',
+    ],
   },
 
   module: {
@@ -46,7 +49,10 @@ const config = {
         return {
           test: /\.scss$/,
           exclude: /(App.scss)/,
-          loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&localIdentName=[local]__[hash:base64:5]!postcss-loader!sass-loader'),
+          loader: ExtractTextPlugin.extract({
+            fallbackLoader: 'style-loader',
+            loader: 'css-loader?modules&localIdentName=[local]__[hash:base64:5]!postcss-loader!sass-loader',
+          }),
         };
       })(),
       (() => {
@@ -58,23 +64,22 @@ const config = {
         }
         return {
           include: /(App.scss)/,
-          loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!sass-loader?outputStyle=expanded'),
+          loader: ExtractTextPlugin.extract({
+            fallbackLoader: 'style-loader',
+            loader: 'css-loader!postcss-loader!sass-loader?outputStyle=expanded',
+          }),
         };
       })(),
       {
         test: /\.(png|jpg|gif|woff|woff2)$/,
         loader: 'url-loader?limit=8192',
       },
-      { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
-      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream' },
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
-      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml' },
+      { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
+      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/octet-stream' },
+      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader' },
+      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=image/svg+xml' },
     ],
   },
-
-  postcss: () => [
-    require('autoprefixer'),
-  ],
 };
 
 export default config;

@@ -1,4 +1,5 @@
 /* eslint-disable global-require, import/no-extraneous-dependencies */
+import path from 'path';
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
@@ -10,8 +11,8 @@ const config = {
   ...baseConfig,
 
   entry: {
-    routes: `${SRC_PATH}/routes`,
-    stores: `${SRC_PATH}/stores`,
+    routes: path.join(SRC_PATH, 'routes'),
+    stores: path.join(SRC_PATH, 'stores'),
   },
 
   output: {
@@ -23,28 +24,23 @@ const config = {
   target: 'node',
 
   plugins: [
-    new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({
-      'process.env': {
-        BROWSER: JSON.stringify(false),
-        NODE_ENV: '"production"',
+      'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false,
+      options: {
+        postcss: () => [
+          require('autoprefixer'),
+        ],
       },
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        screw_ie8: true,
-        warnings: false,
-        unused: true,
-        dead_code: true,
-      },
-      output: {
-        comments: false,
-      },
-    }),
-    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('_[name].css', {
+    new ExtractTextPlugin({
+      filename: '_[name].css',
       allChunks: true,
     }),
   ],
@@ -66,7 +62,6 @@ const config = {
   },
 
   cache: false,
-  debug: false,
 };
 
 export default config;

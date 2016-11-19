@@ -14,7 +14,7 @@ const config = {
 
   entry: [
     'babel-polyfill',
-    `${SRC_PATH}/index`,
+    path.join(SRC_PATH, 'index'),
   ],
 
   output: {
@@ -24,28 +24,15 @@ const config = {
   },
 
   plugins: [
-    new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-        CLIENT_HISTORY: JSON.stringify(CLIENT_HISTORY),
-      },
+      'process.env.CLIENT_HISTORY': JSON.stringify(CLIENT_HISTORY),
+      'process.env.NODE_ENV': JSON.stringify('production'),
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        screw_ie8: true,
-        warnings: false,
-        unused: true,
-        dead_code: true,
-      },
-      output: {
-        comments: false,
-      },
-    }),
-    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('[name].css', {
+    new ExtractTextPlugin({
+      filename: '[name].css',
       allChunks: true,
     }),
   ],
@@ -67,7 +54,6 @@ const config = {
   },
 
   cache: false,
-  debug: false,
 };
 
 export default config;

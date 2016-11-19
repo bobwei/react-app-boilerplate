@@ -17,7 +17,7 @@ const config = {
     // 'react-hot-loader/patch',
     'webpack-hot-middleware/client',
     'babel-polyfill',
-    `${SRC_PATH}/index`,
+    path.join(SRC_PATH, 'index'),
   ],
 
   output: {
@@ -30,12 +30,19 @@ const config = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
-      'process.env': {
-        CLIENT_HISTORY: JSON.stringify(CLIENT_HISTORY),
-      },
+      'process.env.CLIENT_HISTORY': JSON.stringify(CLIENT_HISTORY),
     }),
-    new ExtractTextPlugin('[name].css', {
+    new ExtractTextPlugin({
+      filename: '[name].css',
       allChunks: true,
+    }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        port: WEBPACK_DEV_SERVER_PORT,
+        postcss: () => [
+          require('autoprefixer'),
+        ],
+      },
     }),
   ],
 
@@ -47,7 +54,7 @@ const config = {
         test: /\.(js|jsx)$/,
         loaders: [
           'react-hot-loader',
-          'babel',
+          'babel-loader',
           'eslint-loader',
         ],
         include: SRC_PATH,
@@ -57,7 +64,7 @@ const config = {
   },
 
   devServer: {
-    contentBase: `${SRC_PATH}/`,
+    contentBase: `${SRC_PATH}`,
     historyApiFallback: true,
     hot: true,
     port: WEBPACK_DEV_SERVER_PORT,
@@ -72,9 +79,7 @@ const config = {
   },
 
   cache: true,
-  debug: true,
   devtool: 'source-map',
-  port: WEBPACK_DEV_SERVER_PORT,
 };
 
 export default config;
