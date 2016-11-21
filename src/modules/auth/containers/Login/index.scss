@@ -15,3 +15,15 @@
   margin: 20px 0;
   padding: 20px;
 }
+
+.loggedIn {
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logout {
+  margin-top: 20px;
+}

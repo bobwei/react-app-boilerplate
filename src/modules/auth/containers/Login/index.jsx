@@ -5,7 +5,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import styles from './index.scss';
 import LoginForm from '../../components/LoginForm';
 
-const LoginPage = () => (
+const LoginPage = ({ user }) => (
   <Grid>
     <Row>
       <Col mdOffset={3} md={6}>
@@ -14,7 +14,19 @@ const LoginPage = () => (
             登入
           </div>
           <div className={styles.body}>
-            <LoginForm />
+            {!user.objectId &&
+              <LoginForm />
+            }
+            {user.objectId &&
+              <div className={styles.loggedIn}>
+                <div>
+                  {user.username} 已登入
+                </div>
+                <button className={`btn btn-default ${styles.logout}`}>
+                  登出
+                </button>
+              </div>
+            }
           </div>
         </div>
       </Col>
@@ -22,4 +34,11 @@ const LoginPage = () => (
   </Grid>
 );
 
-export default connect()(LoginPage);
+LoginPage.propTypes = {
+  user: React.PropTypes.shape({
+    objectId: React.PropTypes.string,
+    username: React.PropTypes.string,
+  }),
+};
+
+export default connect(({ user: { data } }) => ({ user: data }))(LoginPage);
