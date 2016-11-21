@@ -116,7 +116,7 @@ npm run server
 ## Deploy to Github Pages
 
 ```
-npm run deploy:gh-pages
+npm run build && npm run deploy:gh-pages
 ```
 
 ## Deploy to Heroku
