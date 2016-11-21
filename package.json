@@ -8,7 +8,9 @@
   },
   "scripts": {
     "start": "npm run clean && webpack --config webpack/webpack.config.server.babel.js && ENABLE_EXTRACT_TEXT_PLUGIN=false node server/index.js",
-    "build": "npm run clean && npm run copy && NODE_ENV=production webpack -p --config webpack/webpack.config.server.babel.js && NODE_ENV=production webpack -p --config webpack/webpack.config.prod.babel.js && ./scripts/build.jsx > build/client/index.html",
+    "build": "npm run clean && npm run copy && npm run build:server && npm run build:client && ./scripts/build.jsx > build/client/index.html",
+    "build:server": "NODE_ENV=production webpack -p --config webpack/webpack.config.server.babel.js",
+    "build:client": "NODE_ENV=production webpack -p --config webpack/webpack.config.prod.babel.js",
     "build:parallel": "npm run clean && npm run copy && NODE_ENV=production parallel-webpack -p --config webpack/webpack.config.all.babel.js && ./scripts/build.jsx > build/client/index.html",
     "server": "NODE_ENV=production node server/index.js",
     "copy": "copyfiles -f ./src/favicon.ico ./build/client",
@@ -56,7 +58,8 @@
     "url-loader": "^0.5.6",
     "webpack": "^v2.1.0-beta.27",
     "webpack-dev-middleware": "^1.8.4",
-    "webpack-hot-middleware": "^2.13.2"
+    "webpack-hot-middleware": "^2.13.2",
+    "webpack-node-externals": "^1.5.4"
   },
   "dependencies": {
     "axios": "^0.15.2",

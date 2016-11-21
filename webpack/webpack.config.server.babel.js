@@ -2,6 +2,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import NodeExternals from 'webpack-node-externals';
 
 import baseConfig, {
   SRC_PATH, SERVER_DIST_PATH,
@@ -20,6 +21,8 @@ const config = {
     filename: '[name].js',
     libraryTarget: 'commonjs2',
   },
+
+  externals: [NodeExternals()],
 
   target: 'node',
 
