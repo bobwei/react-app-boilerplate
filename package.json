@@ -13,7 +13,7 @@
     "server": "NODE_ENV=production node server/index.js",
     "copy": "copyfiles -f ./src/favicon.ico ./build/client",
     "clean": "rimraf build/*",
-    "deploy:gh-pages": "npm run build && gh-pages -d build/client",
+    "deploy:gh-pages": "gh-pages -d build/client",
     "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
