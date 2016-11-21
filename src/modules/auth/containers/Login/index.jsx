@@ -1,11 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 import styles from './index.scss';
 import LoginForm from '../../components/LoginForm';
+import * as actions from '../../actions';
 
-const LoginPage = ({ user }) => (
+const LoginPage = ({ user, logout }) => (
   <Grid>
     <Row>
       <Col mdOffset={3} md={6}>
@@ -22,7 +24,7 @@ const LoginPage = ({ user }) => (
                 <div>
                   {user.username} 已登入
                 </div>
-                <button className={`btn btn-default ${styles.logout}`}>
+                <button className={`btn btn-default ${styles.logout}`} onClick={logout}>
                   登出
                 </button>
               </div>
@@ -39,6 +41,10 @@ LoginPage.propTypes = {
     objectId: React.PropTypes.string,
     username: React.PropTypes.string,
   }),
+  logout: React.PropTypes.func,
 };
 
-export default connect(({ user: { data } }) => ({ user: data }))(LoginPage);
+export default connect(
+  ({ user: { data } }) => ({ user: data }),
+  dispatch => bindActionCreators(actions, dispatch),
+)(LoginPage);

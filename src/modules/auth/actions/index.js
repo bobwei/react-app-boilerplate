@@ -9,3 +9,5 @@ export const login = params => dispatch => (
     .get('/login', { params })
     .then(({ data }) => dispatch(putCurrentUser(data)))
 );
+
+export const logout = createAction('logout');

@@ -1,6 +1,10 @@
 import { handleActions } from 'redux-actions';
 
-import { putCurrentUser } from '../actions';
+import { putCurrentUser, logout } from '../actions';
+
+export const initialState = {
+  data: {},
+};
 
 export default handleActions({
   [putCurrentUser]: (state, action) => ({
@@ -10,4 +14,7 @@ export default handleActions({
       ...action.payload,
     },
   }),
-}, { data: {} });
+  [logout]: () => ({
+    ...initialState,
+  }),
+}, { ...initialState });
