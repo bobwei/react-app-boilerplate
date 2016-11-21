@@ -4,6 +4,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import dotenv from 'dotenv';
 
 dotenv.config();
+
 const {
   ENABLE_EXTRACT_TEXT_PLUGIN,
   CLIENT_HISTORY,
