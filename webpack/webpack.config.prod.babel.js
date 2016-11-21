@@ -7,11 +7,6 @@ import baseConfig, {
   SRC_PATH, DIST_PATH, PUBLIC_PATH,
 } from './webpack.config.base.babel';
 
-const {
-  CLIENT_HISTORY,
-  AUTH_API_BASE_URL, PARSE_SERVER_APPLICATION_ID, PARSE_SERVER_JAVASCRIPT_KEY,
-} = process.env;
-
 const config = {
   ...baseConfig,
 
@@ -28,11 +23,7 @@ const config = {
 
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.CLIENT_HISTORY': JSON.stringify(CLIENT_HISTORY),
       'process.env.NODE_ENV': JSON.stringify('production'),
-      'process.env.AUTH_API_BASE_URL': JSON.stringify(AUTH_API_BASE_URL),
-      'process.env.PARSE_SERVER_APPLICATION_ID': JSON.stringify(PARSE_SERVER_APPLICATION_ID),
-      'process.env.PARSE_SERVER_JAVASCRIPT_KEY': JSON.stringify(PARSE_SERVER_JAVASCRIPT_KEY),
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true,

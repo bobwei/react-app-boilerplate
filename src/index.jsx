@@ -14,11 +14,11 @@ if (canUseDOM) {
   document.addEventListener('touchstart', () => {}, true);
 }
 
-AuthAPI.init({
-  AUTH_API_BASE_URL: process.env.AUTH_API_BASE_URL,
-  PARSE_SERVER_APPLICATION_ID: process.env.PARSE_SERVER_APPLICATION_ID,
-  PARSE_SERVER_JAVASCRIPT_KEY: process.env.PARSE_SERVER_JAVASCRIPT_KEY,
-});
+const {
+  __ENVS__,
+} = window;
+
+AuthAPI.init(__ENVS__);
 
 const store = configureStore({});
 

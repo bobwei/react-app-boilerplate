@@ -1,7 +1,10 @@
-/* eslint-disable react/no-danger */
+/* eslint-disable react/no-danger, react/forbid-prop-types */
 import React from 'react';
 
-const HTML = ({ language, title, serverRenderingBody, jsSrc, cssSrc }) => (
+const HTML = ({
+  language, title, serverRenderingBody, jsSrc, cssSrc,
+  envs,
+}) => (
   <html lang={language}>
     <head>
       <meta charSet="utf-8" />
@@ -17,6 +20,11 @@ const HTML = ({ language, title, serverRenderingBody, jsSrc, cssSrc }) => (
       <div id="app">
         <div dangerouslySetInnerHTML={{ __html: serverRenderingBody }} />
       </div>
+      {envs &&
+        <script
+          dangerouslySetInnerHTML={{ __html: `window.__ENVS__ = JSON.parse('${JSON.stringify(envs)}');` }}
+        />
+      }
       <script src={jsSrc} />
     </body>
   </html>
@@ -36,6 +44,7 @@ HTML.propTypes = {
   serverRenderingBody: React.PropTypes.string,
   jsSrc: React.PropTypes.string,
   cssSrc: React.PropTypes.string,
+  envs: React.PropTypes.object,
 };
 
 export default HTML;

@@ -8,6 +8,9 @@ import { Provider } from 'react-redux';
 import routes from '../../build/server/routes';
 import configureStore from '../../build/server/stores';
 import HTML from '../../src/html';
+import { envSelector } from '../../src/utils';
+
+const envs = envSelector(process.env);
 
 export default () => {
   const app = express();
@@ -32,6 +35,7 @@ export default () => {
         const html = renderToStaticMarkup(
           <HTML
             serverRenderingBody={serverRenderingBody}
+            envs={envs}
           />,
         );
         res.send(`<!doctype html>${html}`);
