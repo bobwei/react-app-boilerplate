@@ -42,6 +42,24 @@ This is a project template with batteries included to speed up project initiatio
 │   ├── favicon.ico
 │   ├── html.jsx
 │   ├── index.jsx
+│   ├── modules
+│   │   └── auth
+│   │       ├── actions
+│   │       │   └── index.js
+│   │       ├── api
+│   │       │   └── index.js
+│   │       ├── components
+│   │       │   └── LoginForm
+│   │       │       ├── index.jsx
+│   │       │       └── index.scss
+│   │       ├── containers
+│   │       │   └── Login
+│   │       │       ├── index.jsx
+│   │       │       └── index.scss
+│   │       ├── reducers
+│   │       │   └── index.js
+│   │       └── routes
+│   │           └── index.js
 │   ├── pages
 │   │   └── Home
 │   │       ├── containers
@@ -55,8 +73,12 @@ This is a project template with batteries included to speed up project initiatio
 │   │   └── index.jsx
 │   ├── stores
 │   │   └── index.js
-│   └── styles
-│       └── App.scss
+│   ├── styles
+│   │   ├── App.scss
+│   │   ├── Button.scss
+│   │   └── Form.scss
+│   └── utils
+│       └── index.js
 ├── webpack
 │   ├── webpack.config.all.babel.js
 │   ├── webpack.config.base.babel.js
