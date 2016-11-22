@@ -20,8 +20,10 @@ export default (initialState) => {
   );
 
   if (canUseDOM) {
-    persistStore(store, () => {
-      console.log('autoRehydrate completed');
+    persistStore(store, { whitelist: ['user'] }, () => {
+      if (process.env.NODE_ENV !== 'production') {
+        console.log('state autoRehydrate completed');
+      }
     });
   }
 
