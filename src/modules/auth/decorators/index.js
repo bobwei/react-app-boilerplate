@@ -3,13 +3,13 @@ import { routerActions } from 'react-router-redux';
 import { UserAuthWrapper } from 'redux-auth-wrapper';
 import isEmpty from 'lodash.isempty';
 
-export const failureRedirectPath = '/login';
+export const redirectQueryParamName = 'next';
 
 export const IsAuthenticated = UserAuthWrapper({
   authSelector: ({ user: { data } }) => ({ ...data }),
   redirectAction: routerActions.replace,
-  redirectQueryParamName: 'next',
-  failureRedirectPath,
+  redirectQueryParamName,
+  failureRedirectPath: '/login',
   wrapperDisplayName: 'IsAuthenticated',
 });
 
@@ -17,7 +17,7 @@ export const IsNotAuthenticated = UserAuthWrapper({
   authSelector: ({ user: { data } }) => ({ ...data }),
   predicate: isEmpty,
   redirectAction: routerActions.replace,
-  failureRedirectPath: (state, ownProps) => ownProps.location.query[failureRedirectPath] || '/',
+  failureRedirectPath: (state, ownProps) => ownProps.location.query[redirectQueryParamName] || '/',
   allowRedirectBack: false,
   wrapperDisplayName: 'IsNotAuthenticated',
 });
