@@ -34,8 +34,8 @@ HTML.defaultProps = {
   language: 'en',
   title: 'Propject',
   serverRenderingBody: '',
-  jsSrc: 'assets/app.js',
-  cssSrc: 'assets/main.css',
+  jsSrc: '/assets/app.js',
+  cssSrc: '/assets/main.css',
 };
 
 HTML.propTypes = {

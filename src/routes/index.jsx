@@ -10,6 +10,7 @@ const routes = (
     childRoutes={[
       require('../pages/Home/routes'),
       require('../modules/auth/routes'),
+      require('../pages/admin/routes'),
     ]}
   />
 );
