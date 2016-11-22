@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Router, browserHistory } from 'react-router';
+import { Router } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
 import theRoutes from '../../routes';
@@ -13,7 +13,6 @@ const Root = ({ store, history, routes }) => (
 );
 
 Root.defaultProps = {
-  history: browserHistory,
   routes: theRoutes,
 };
 

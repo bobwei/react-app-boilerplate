@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import canUseDOM from 'fbjs/lib/ExecutionEnvironment';
-import { hashHistory } from 'react-router';
+import { hashHistory, browserHistory } from 'react-router';
 
 import './styles/App.scss';
 import configureStore from './stores';
@@ -21,12 +21,14 @@ const {
 
 AuthAPI.init(__ENVS__);
 
-const store = configureStore({});
+const history = ((location.protocol === 'file:' || __ENVS__.CLIENT_HISTORY === 'hash') && hashHistory) ||
+                  browserHistory;
+const store = configureStore({}, history);
 
 ReactDOM.render(
   <Root
     store={store}
-    history={((location.protocol === 'file:' || __ENVS__.CLIENT_HISTORY === 'hash') && hashHistory) || undefined}
+    history={history}
   />,
   document.getElementById('app'),
 );
