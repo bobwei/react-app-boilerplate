@@ -56,15 +56,25 @@ This is a project template with batteries included to speed up project initiatio
 │   │       │   └── Login
 │   │       │       ├── index.jsx
 │   │       │       └── index.scss
+│   │       ├── decorators
+│   │       │   └── index.js
 │   │       ├── reducers
 │   │       │   └── index.js
 │   │       └── routes
 │   │           └── index.js
 │   ├── pages
-│   │   └── Home
-│   │       ├── containers
-│   │       │   ├── index.jsx
-│   │       │   └── index.scss
+│   │   ├── Home
+│   │   │   ├── containers
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── index.scss
+│   │   │   └── routes
+│   │   │       └── index.js
+│   │   └── admin
+│   │       ├── Portal
+│   │       │   ├── containers
+│   │       │   │   └── index.jsx
+│   │       │   └── routes
+│   │       │       └── index.js
 │   │       └── routes
 │   │           └── index.js
 │   ├── reducers
