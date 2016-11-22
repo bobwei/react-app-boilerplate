@@ -13,5 +13,7 @@ const envs = envSelector(process.env);
 console.log(`<!doctype html>${renderToStaticMarkup(
   <HTML
     envs={envs}
+    jsSrc={'assets/app.js'}
+    cssSrc={'assets/main.css'}
   />,
 )}`);
