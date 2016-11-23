@@ -7,10 +7,15 @@
 }
 
 .title {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .btnLogin {
   width: 120px;
   margin-top: 20px;
+  margin-left: 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
