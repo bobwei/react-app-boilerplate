@@ -20,7 +20,7 @@ const config = {
   resolve: {
     extensions: ['*', '.js', '.jsx'],
     modules: [
-      path.join(__dirname, '/../', 'src'),
+      SRC_PATH,
       'node_modules',
     ],
   },
