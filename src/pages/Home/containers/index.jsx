@@ -16,16 +16,19 @@ const Home = ({ user, logout }) => (
     </div>
     {isEmpty(user) &&
       <div>
-        <Link to="/login" className={`btn btn-default ${styles.btnLogin}`}>
-          Login
-        </Link>
         <Link to="/admin" className={`btn btn-default ${styles.btnLogin}`}>
           Admin Portal
+        </Link>
+        <Link to="/login" className={`btn btn-default ${styles.btnLogin}`}>
+          Login
         </Link>
       </div>
     }
     {!isEmpty(user) &&
       <div>
+        <Link to="/admin" className={`btn btn-default ${styles.btnLogin}`}>
+          Admin Portal
+        </Link>
         <button className={`btn btn-default ${styles.btnLogin}`} onClick={logout}>
           Logout
         </button>
