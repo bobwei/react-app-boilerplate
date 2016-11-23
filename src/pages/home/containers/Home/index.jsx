@@ -6,8 +6,8 @@ import { Link } from 'react-router';
 import isEmpty from 'lodash.isempty';
 
 import styles from './index.scss';
-import { userSelector } from '../../../modules/auth/selectors';
-import * as actions from '../../../modules/auth/actions';
+import { userSelector } from '../../../../modules/auth/selectors';
+import * as actions from '../../../../modules/auth/actions';
 
 const Home = ({ user, logout }) => (
   <div className={styles.index}>

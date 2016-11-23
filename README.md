@@ -35,7 +35,7 @@ This is a project template with batteries included to speed up project initiatio
 │   └── server.js
 ├── src
 │   ├── components
-│   │   ├── Layout
+│   │   ├── FormField
 │   │   │   └── index.jsx
 │   │   └── Root
 │   │       └── index.jsx
@@ -60,21 +60,32 @@ This is a project template with batteries included to speed up project initiatio
 │   │       │   └── index.js
 │   │       ├── reducers
 │   │       │   └── index.js
-│   │       └── routes
+│   │       ├── routes
+│   │       │   └── index.js
+│   │       └── selectors
 │   │           └── index.js
 │   ├── pages
-│   │   ├── Home
+│   │   ├── admin
+│   │   │   ├── components
+│   │   │   │   ├── Layout
+│   │   │   │   │   └── index.jsx
+│   │   │   │   └── NavigationBar
+│   │   │   │       └── index.jsx
 │   │   │   ├── containers
-│   │   │   │   ├── index.jsx
-│   │   │   │   └── index.scss
+│   │   │   │   └── Portal
+│   │   │   │       └── index.jsx
 │   │   │   └── routes
 │   │   │       └── index.js
-│   │   └── admin
-│   │       ├── Portal
-│   │       │   ├── containers
+│   │   └── home
+│   │       ├── components
+│   │       │   ├── Layout
 │   │       │   │   └── index.jsx
-│   │       │   └── routes
-│   │       │       └── index.js
+│   │       │   └── NavigationBar
+│   │       │       └── index.jsx
+│   │       ├── containers
+│   │       │   └── Home
+│   │       │       ├── index.jsx
+│   │       │       └── index.scss
 │   │       └── routes
 │   │           └── index.js
 │   ├── reducers

@@ -2,13 +2,10 @@
 import React from 'react';
 import { Route } from 'react-router';
 
-import Layout from '../components/Layout';
-
 const routes = (
   <Route
-    component={Layout}
     childRoutes={[
-      require('../pages/Home/routes'),
+      require('../pages/home/routes'),
       require('../modules/auth/routes'),
       require('../pages/admin/routes'),
     ]}
