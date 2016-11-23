@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 import { compose, withProps } from 'recompose';
 import { reduxForm, Field, SubmissionError } from 'redux-form';
 
+import FormField from 'components/FormField';
 import styles from './index.scss';
 import * as actions from '../../actions';
-import FormField from '../../../../components/FormField';
 
 const LoginForm = ({ handleSubmit, submitting, error }) => (
   <form onSubmit={handleSubmit}>

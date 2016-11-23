@@ -1,7 +1,8 @@
 {
   "parser": "babel-eslint",
   "plugins": [
-    "react"
+    "react",
+    "import"
   ],
   "extends": "airbnb",
   "env": {
@@ -12,5 +13,12 @@
   "rules": {
     "no-console": 0,
     "react/prop-types": [2, {"ignore": ["className", "children", "id", "onClick", "style", "dispatch", "params", "location"]}]
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack/webpack.config.base.babel.js"
+      }
+    }
   }
 }

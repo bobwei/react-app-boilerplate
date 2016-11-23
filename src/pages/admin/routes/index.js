@@ -1,5 +1,5 @@
+import { IsAuthenticated } from 'modules/auth/decorators';
 import Layout from '../components/Layout';
-import { IsAuthenticated } from '../../../modules/auth/decorators';
 
 module.exports = {
   path: '/admin',

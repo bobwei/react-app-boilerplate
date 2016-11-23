@@ -5,9 +5,9 @@ import { Route } from 'react-router';
 const routes = (
   <Route
     childRoutes={[
-      require('../pages/home/routes'),
-      require('../modules/auth/routes'),
-      require('../pages/admin/routes'),
+      require('pages/home/routes'),
+      require('modules/auth/routes'),
+      require('pages/admin/routes'),
     ]}
   />
 );
