@@ -3,6 +3,8 @@ import AuthAPI from '../api';
 
 export const putCurrentUser = createAction('putCurrentUser');
 
+export const resetCurrentUser = createAction('resetCurrentUser');
+
 export const login = params => dispatch => (
   AuthAPI
     .request()
@@ -10,4 +12,9 @@ export const login = params => dispatch => (
     .then(({ data }) => dispatch(putCurrentUser(data)))
 );
 
-export const logout = createAction('logout');
+export const logout = () => dispatch => (
+  AuthAPI
+    .request()
+    .post('/logout')
+    .then(() => dispatch(resetCurrentUser()))
+);
