@@ -3,38 +3,35 @@ import { Row, Col } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { compose, withProps } from 'recompose';
-import { reduxForm, Field } from 'redux-form';
+import { reduxForm, Field, SubmissionError } from 'redux-form';
 
 import styles from './index.scss';
 import * as actions from '../../actions';
+import FormField from '../../../../components/FormField';
 
 const LoginForm = ({ handleSubmit, submitting }) => (
   <form onSubmit={handleSubmit}>
-    <div className="form-group">
-      <label htmlFor="username">
-        帳號
-      </label>
-      <Field
-        name="username"
-        component="input"
-        type="text"
-        className="form-control"
-        placeholder="帳號"
-        autoFocus
-      />
-    </div>
-    <div className="form-group">
-      <label htmlFor="password">
-        密碼
-      </label>
-      <Field
-        name="password"
-        component="input"
-        type="password"
-        className="form-control"
-        placeholder="密碼"
-      />
-    </div>
+    <Field
+      name="username"
+      component={FormField}
+      label="帳號"
+      inputComponent="input"
+      inputProps={{
+        type: 'text',
+        className: 'form-control',
+        autoFocus: true,
+      }}
+    />
+    <Field
+      name="password"
+      component={FormField}
+      label="密碼"
+      inputComponent="input"
+      inputProps={{
+        type: 'password',
+        className: 'form-control',
+      }}
+    />
     <Row>
       <Col mdOffset={4} md={4}>
         <button type="submit" className={`btn btn-red btn-block ${styles.btnSubmit}`}>
@@ -57,7 +54,10 @@ export default compose(
   ),
   withProps(({ login }) => ({
     onSubmit(data) {
-      return login(data);
+      return login(data)
+        .catch(() => {
+          throw new SubmissionError({ username: '登入錯誤' });
+        });
     },
   })),
   reduxForm({
