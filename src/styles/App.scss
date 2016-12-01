@@ -9,8 +9,29 @@ $fa-font-path: '~font-awesome/fonts';
 
 @import './Button.scss';
 @import './Form.scss';
+@import './Panel.scss';
 
 body {
   color: #484848;
   letter-spacing: 1px;
+}
+
+a {
+  color: #222;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    color: lighten(#222, 20%);
+    opacity: 0.9;
+  }
+
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }

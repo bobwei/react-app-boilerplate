@@ -9,6 +9,9 @@ const Portal = () => (
   <Row>
     <Grid>
       <Col>
+        <Panel header="Filters" collapsible>
+          Filters
+        </Panel>
         <Panel header="Houses" bsStyle="info">
           <DataTable
             columns={[{
