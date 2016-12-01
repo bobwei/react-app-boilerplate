@@ -1,35 +1,32 @@
 import React from 'react';
-import { Row, Grid, Col, Panel } from 'react-bootstrap';
-import R from 'ramda';
+import {
+  Row, Grid, Col, Panel,
+  Form, FormGroup, ControlLabel, FormControl,
+} from 'react-bootstrap';
 
 import DataTable from 'components/DataTable';
-import data from 'components/DataTable/spec.json';
+import { data, columns } from './model';
 
 const Portal = () => (
   <Row>
     <Grid>
       <Col>
         <Panel header="Filters" collapsible>
-          Filters
+          <Form horizontal>
+            <FormGroup controlId="formHorizontalEmail">
+              <Col componentClass={ControlLabel} sm={2}>
+                Search
+              </Col>
+              <Col sm={10}>
+                <FormControl type="text" placeholder="Search by Name" autoFocus />
+              </Col>
+            </FormGroup>
+          </Form>
         </Panel>
         <Panel header="Houses" bsStyle="info">
           <DataTable
-            columns={[{
-              key: 'id',
-            }, {
-              key: 'user.thumbnail_url',
-              label: 'Host',
-              cell: (r, k) => (
-                <img src={R.path(R.split('.')(k))(r)} role="presentation" />
-              ),
-            }, {
-              key: 'name',
-              label: 'Name',
-            }]}
-            data={R.pipe(
-              R.path(['results_json', 'search_results']),
-              R.map(R.path(['listing'])),
-            )(data)}
+            columns={columns}
+            data={data}
           />
         </Panel>
       </Col>
