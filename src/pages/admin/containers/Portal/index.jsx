@@ -14,7 +14,14 @@ const Portal = () => (
             columns={[{
               key: 'id',
             }, {
+              key: 'user.thumbnail_url',
+              label: 'Host',
+              cell: (r, k) => (
+                <img src={R.path(R.split('.')(k))(r)} role="presentation" />
+              ),
+            }, {
               key: 'name',
+              label: 'Name',
             }]}
             data={R.pipe(
               R.path(['results_json', 'search_results']),

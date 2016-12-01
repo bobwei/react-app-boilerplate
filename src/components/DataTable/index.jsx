@@ -18,7 +18,7 @@ const DataTable = ({ settings, columns, data }) => (
     <tbody>
       {data.map(row => (
         <tr key={R.path([settings.keyField])(row)}>
-          {columns.map(({ key, cell = (r, k) => R.path([k])(r) }) => (
+          {columns.map(({ key, cell = (r, k) => R.path(R.split('.')(k))(r) }) => (
             <td key={key}>
               {cell(row, key)}
             </td>
