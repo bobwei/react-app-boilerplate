@@ -75,6 +75,7 @@
     "font-awesome": "^4.7.0",
     "lodash.isempty": "^4.4.0",
     "normalize.css": "^5.0.0",
+    "ramda": "^0.22.1",
     "react": "^15.3.2",
     "react-bootstrap": "^0.30.6",
     "react-dom": "^15.3.2",
