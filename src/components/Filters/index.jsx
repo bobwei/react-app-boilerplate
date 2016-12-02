@@ -1,8 +1,6 @@
 import React from 'react';
 import { Form, FormGroup, Col, Button } from 'react-bootstrap';
-import { connect } from 'react-redux';
-import { reduxForm, Field, propTypes } from 'redux-form';
-import compose from 'recompose/compose';
+import { Field, propTypes } from 'redux-form';
 import withProps from 'recompose/withProps';
 
 import FieldGroup from 'components/FieldGroup';
@@ -34,9 +32,4 @@ Filters.propTypes = {
   ...propTypes,
 };
 
-export default compose(
-  connect(),
-  reduxForm({
-    form: 'filters',
-  }),
-)(Filters);
+export default Filters;
