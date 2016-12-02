@@ -3,14 +3,15 @@ import { Form } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
 import compose from 'recompose/compose';
+import withProps from 'recompose/withProps';
 
-import HorizontalFormField from 'components/HorizontalFormField';
+import FieldGroup from 'components/FieldGroup';
 
 const Filters = () => (
   <Form horizontal>
     <Field
       name="name"
-      component={HorizontalFormField}
+      component={withProps({ horizontal: true })(FieldGroup)}
       label="Search"
       inputComponent="input"
       inputProps={{

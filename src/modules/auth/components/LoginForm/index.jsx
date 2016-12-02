@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { compose, withProps } from 'recompose';
 import { reduxForm, Field, SubmissionError } from 'redux-form';
 
-import FormField from 'components/FormField';
+import FieldGroup from 'components/FieldGroup';
 import styles from './index.scss';
 import * as actions from '../../actions';
 
@@ -18,7 +18,7 @@ const LoginForm = ({ handleSubmit, submitting, error }) => (
     }
     <Field
       name="username"
-      component={FormField}
+      component={FieldGroup}
       label="帳號"
       inputComponent="input"
       inputProps={{
@@ -29,7 +29,7 @@ const LoginForm = ({ handleSubmit, submitting, error }) => (
     />
     <Field
       name="password"
-      component={FormField}
+      component={FieldGroup}
       label="密碼"
       inputComponent="input"
       inputProps={{
