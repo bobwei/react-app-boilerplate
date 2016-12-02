@@ -7,12 +7,13 @@ import DataTable from 'components/DataTable';
 import Filters from 'components/Filters';
 
 import { data, columns } from './model';
+import { focusSelector } from '../../helpers';
 
 const Portal = () => (
   <Row>
     <Grid>
       <Col>
-        <Panel header="Filters" collapsible>
+        <Panel header="Filters" collapsible onEntered={focusSelector}>
           <Filters />
         </Panel>
         <Panel header="Houses" bsStyle="info">
