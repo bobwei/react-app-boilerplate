@@ -1,20 +1,30 @@
 import React from 'react';
-import {
-  Col,
-  Form, FormGroup, ControlLabel, FormControl,
-} from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { reduxForm, Field } from 'redux-form';
+import compose from 'recompose/compose';
+
+import HorizontalFormField from 'components/HorizontalFormField';
 
 const Filters = () => (
   <Form horizontal>
-    <FormGroup controlId="formHorizontalEmail">
-      <Col componentClass={ControlLabel} sm={2}>
-        Search
-      </Col>
-      <Col sm={10}>
-        <FormControl type="text" placeholder="Search by Name" autoFocus />
-      </Col>
-    </FormGroup>
+    <Field
+      name="name"
+      component={HorizontalFormField}
+      label="Search"
+      inputComponent="input"
+      inputProps={{
+        type: 'text',
+        className: 'form-control',
+        autoFocus: true,
+      }}
+    />
   </Form>
 );
 
-export default Filters;
+export default compose(
+  connect(),
+  reduxForm({
+    form: 'filters',
+  }),
+)(Filters);
