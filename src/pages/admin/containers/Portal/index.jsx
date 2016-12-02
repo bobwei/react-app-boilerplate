@@ -1,10 +1,11 @@
 import React from 'react';
 import {
   Row, Grid, Col, Panel,
-  Form, FormGroup, ControlLabel, FormControl,
 } from 'react-bootstrap';
 
 import DataTable from 'components/DataTable';
+import Filters from 'components/Filters';
+
 import { data, columns } from './model';
 
 const Portal = () => (
@@ -12,16 +13,7 @@ const Portal = () => (
     <Grid>
       <Col>
         <Panel header="Filters" collapsible>
-          <Form horizontal>
-            <FormGroup controlId="formHorizontalEmail">
-              <Col componentClass={ControlLabel} sm={2}>
-                Search
-              </Col>
-              <Col sm={10}>
-                <FormControl type="text" placeholder="Search by Name" autoFocus />
-              </Col>
-            </FormGroup>
-          </Form>
+          <Filters />
         </Panel>
         <Panel header="Houses" bsStyle="info">
           <DataTable
