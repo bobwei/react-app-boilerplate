@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Alert } from 'react-bootstrap';
+import { Row, Col, Alert, Form } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { compose, withProps } from 'recompose';
@@ -10,7 +10,7 @@ import styles from './index.scss';
 import * as actions from '../../actions';
 
 const LoginForm = ({ handleSubmit, submitting, error }) => (
-  <form onSubmit={handleSubmit}>
+  <Form onSubmit={handleSubmit}>
     {!!error &&
       <Alert bsStyle="warning">
         {error}
@@ -44,7 +44,7 @@ const LoginForm = ({ handleSubmit, submitting, error }) => (
         </button>
       </Col>
     </Row>
-  </form>
+  </Form>
 );
 
 LoginForm.propTypes = {
