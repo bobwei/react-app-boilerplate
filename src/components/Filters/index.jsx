@@ -5,11 +5,13 @@ import withProps from 'recompose/withProps';
 
 import FieldGroup from 'components/FieldGroup';
 
+const EnhancedFieldGroup = withProps({ horizontal: true })(FieldGroup);
+
 const Filters = ({ handleSubmit }) => (
   <Form horizontal onSubmit={handleSubmit}>
     <Field
       name="name"
-      component={withProps({ horizontal: true })(FieldGroup)}
+      component={EnhancedFieldGroup}
       label="Search"
       inputComponent="input"
       inputProps={{
