@@ -37,7 +37,7 @@ const Portal = ({ data, columns }) => {
   return (
     <Row>
       <Grid>
-        <Col>
+        <Col md={12}>
           <Panel header="Filters" collapsible onEntered={focusSelector}>
             <EnhancedFilters />
           </Panel>
