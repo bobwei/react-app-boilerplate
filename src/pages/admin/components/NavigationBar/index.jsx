@@ -11,12 +11,15 @@ const NavigationBar = () => (
           Admin Portal
         </Link>
       </Navbar.Brand>
+      <Navbar.Toggle />
     </Navbar.Header>
-    <Nav>
-      <LinkContainer to="/admin">
-        <NavItem eventKey={1}>Admin Portal</NavItem>
-      </LinkContainer>
-    </Nav>
+    <Navbar.Collapse>
+      <Nav>
+        <LinkContainer to="/">
+          <NavItem eventKey={1}>Home</NavItem>
+        </LinkContainer>
+      </Nav>
+    </Navbar.Collapse>
   </Navbar>
 );
 
