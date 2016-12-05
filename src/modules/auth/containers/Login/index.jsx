@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
+import compose from 'recompose/compose';
 
 import styles from './index.scss';
 import LoginForm from '../../components/LoginForm';
@@ -22,4 +23,6 @@ const LoginPage = () => (
   </Grid>
 );
 
-export default IsNotAuthenticated(LoginPage);
+export default compose(
+  IsNotAuthenticated,
+)(LoginPage);
