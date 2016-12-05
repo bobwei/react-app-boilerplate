@@ -4,6 +4,7 @@ import { Col, FormGroup, ControlLabel } from 'react-bootstrap';
 
 const FieldGroup = ({ input, meta, inputComponent, inputProps, label, horizontal }) => {
   const Input = React.createElement(inputComponent, {
+    ...FieldGroup.defaultProps.inputProps,
     ...input,
     ...inputProps,
     placeholder: label,
@@ -36,6 +37,9 @@ const FieldGroup = ({ input, meta, inputComponent, inputProps, label, horizontal
 
 FieldGroup.defaultProps = {
   horizontal: false,
+  inputProps: {
+    className: 'form-control',
+  },
 };
 
 FieldGroup.propTypes = {

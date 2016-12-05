@@ -19,7 +19,6 @@ const LoginForm = ({ handleSubmit, submitting, error }) => (
       inputComponent="input"
       inputProps={{
         type: 'text',
-        className: 'form-control',
         autoFocus: true,
       }}
     />
@@ -30,7 +29,6 @@ const LoginForm = ({ handleSubmit, submitting, error }) => (
       inputComponent="input"
       inputProps={{
         type: 'password',
-        className: 'form-control',
       }}
     />
     <Row>
