@@ -1,0 +1,1977 @@
+{
+  "results_json": {
+    "search_results": [
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 2,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [
+            "en",
+            "zh"
+          ],
+          "id": 1933639,
+          "instant_bookable": true,
+          "is_business_travel_ready": true,
+          "is_new_listing": false,
+          "lat": 25.0587225283128,
+          "lng": 121.53395845932853,
+          "name": "modern double room, 5 min to MRT",
+          "person_capacity": 4,
+          "picture_count": 8,
+          "picture_url": "https://a2.muscache.com/im/pictures/0f559573-51b1-435d-90ae-a5de78dcff55.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a2.muscache.com/im/pictures/0f559573-51b1-435d-90ae-a5de78dcff55.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/94d72f61-bb56-41b6-9613-9813005a32e8.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/2cd0e816-4c3d-4a88-b544-a0829512555f.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/1b7ec3c3-04ee-49d7-81e1-85b259512cb8.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/bfb27fbe-c79a-4976-ab97-c3a75ad385c0.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "Apartment",
+          "public_address": "Zhongshan, ",
+          "reviews_count": 87,
+          "star_rating": 5,
+          "room_type": "Entire home/apt",
+          "user": {
+            "first_name": "Kiki",
+            "id": 10007698,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/11544f29-ad56-4345-a9d2-2d51ea9a76ec.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "Kiki",
+            "id": 10007698,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/11544f29-ad56-4345-a9d2-2d51ea9a76ec.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": true,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 1591,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 2,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [
+            "en",
+            "zh",
+            "ja"
+          ],
+          "id": 15554097,
+          "instant_bookable": true,
+          "is_business_travel_ready": false,
+          "is_new_listing": true,
+          "lat": 25.06120013034454,
+          "lng": 121.53188215950517,
+          "name": "Taipei i trip❤4mins MRT❤Xingtian temple❤homey apt",
+          "person_capacity": 6,
+          "picture_count": 23,
+          "picture_url": "https://a2.muscache.com/im/pictures/901fb9e3-3655-458f-8330-f6c0f6d4e5eb.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a2.muscache.com/im/pictures/901fb9e3-3655-458f-8330-f6c0f6d4e5eb.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/f859404b-6c27-4fa5-93a4-96125b50df25.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/894a038f-f42b-4021-86b4-67de9549f8e8.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/a1b23147-b4d4-443e-bdfd-92f13827e993.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/c6ae05a4-4011-406c-ba2a-cfcceab4cd8d.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "House",
+          "public_address": "Zhongshan District",
+          "reviews_count": 1,
+          "star_rating": 0,
+          "room_type": "Entire home/apt",
+          "user": {
+            "first_name": "Jolene",
+            "id": 6177912,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/6e24c848-d754-43bc-9119-b162f76d2f67.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "Jolene",
+            "id": 6177912,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/6e24c848-d754-43bc-9119-b162f76d2f67.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": true,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 3182,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 1,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [
+            "en",
+            "zh",
+            "ja",
+            "ko"
+          ],
+          "id": 7217332,
+          "instant_bookable": true,
+          "is_business_travel_ready": false,
+          "is_new_listing": false,
+          "lat": 25.06046186736847,
+          "lng": 121.53445647887446,
+          "name": "only5 secand to Xingtian Temple MRT",
+          "person_capacity": 2,
+          "picture_count": 66,
+          "picture_url": "https://a2.muscache.com/im/pictures/43f2bd64-b258-469b-918a-a1dd0312d935.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a2.muscache.com/im/pictures/43f2bd64-b258-469b-918a-a1dd0312d935.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/0121ec7d-3487-4b86-ae06-fcd7e0ece48c.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/9521cf73-ead1-4a83-9f6a-d1aa7bd9004f.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/52e5ad5f-ef86-4fd1-87b2-8e2f1bac5341.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/5767fb66-93db-4bb0-9061-976a5630856f.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "House",
+          "public_address": "Zhongshan District",
+          "reviews_count": 56,
+          "star_rating": 4.5,
+          "room_type": "Entire home/apt",
+          "user": {
+            "first_name": "Tan Tan",
+            "id": 15706026,
+            "thumbnail_url": "https://a2.muscache.com/im/pictures/8b2fcd76-a489-4a92-9bea-d9e1e940d93f.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "Tan Tan",
+            "id": 15706026,
+            "thumbnail_url": "https://a2.muscache.com/im/pictures/8b2fcd76-a489-4a92-9bea-d9e1e940d93f.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": true,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 1464,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 1,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [
+            "en",
+            "zh"
+          ],
+          "id": 11643239,
+          "instant_bookable": true,
+          "is_business_travel_ready": false,
+          "is_new_listing": false,
+          "lat": 25.06007393072632,
+          "lng": 121.5341315998507,
+          "name": "Bright, cozy and clean private room",
+          "person_capacity": 1,
+          "picture_count": 6,
+          "picture_url": "https://a1.muscache.com/im/pictures/9c7e7cee-ff27-4570-9d63-14877cd50dad.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a1.muscache.com/im/pictures/9c7e7cee-ff27-4570-9d63-14877cd50dad.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/d9ea50d6-a650-49e6-bb50-c538b8722a21.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/91f44fa3-5007-4b13-a897-6eb6f3f8b727.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/18dec86c-cf5f-4443-84d8-da177799a146.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/5983885a-3c9c-47c7-89a0-ea2a93eba55b.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "Apartment",
+          "public_address": "Zhongshan District",
+          "reviews_count": 18,
+          "star_rating": 5,
+          "room_type": "Private room",
+          "user": {
+            "first_name": "Lai",
+            "id": 17278052,
+            "thumbnail_url": "https://a2.muscache.com/im/pictures/92d953e4-f392-45ab-8c9e-6f4d22d70fc7.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "Lai",
+            "id": 17278052,
+            "thumbnail_url": "https://a2.muscache.com/im/pictures/92d953e4-f392-45ab-8c9e-6f4d22d70fc7.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": true,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 700,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 1,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [
+            "en",
+            "es",
+            "fr",
+            "zh"
+          ],
+          "id": 12200400,
+          "instant_bookable": false,
+          "is_business_travel_ready": false,
+          "is_new_listing": false,
+          "lat": 25.051979326734543,
+          "lng": 121.53576101458529,
+          "name": "Baloo's home",
+          "person_capacity": 1,
+          "picture_count": 16,
+          "picture_url": "https://a1.muscache.com/im/pictures/ca7851f0-5689-470e-9816-018ffe83c846.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a1.muscache.com/im/pictures/ca7851f0-5689-470e-9816-018ffe83c846.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/24f442e4-e2ac-4079-9445-861032c3af81.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/4cb92cab-e94b-4102-b9ff-54156f8cb49b.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/c252e2dd-7ceb-4c1d-a82d-ca810aecd1e7.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/a3757e12-5f47-4a99-8f5e-73f1bcbfa382.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "Apartment",
+          "public_address": "Zhongshan District",
+          "reviews_count": 12,
+          "star_rating": 5,
+          "room_type": "Private room",
+          "user": {
+            "first_name": "Alex",
+            "id": 22107725,
+            "thumbnail_url": "https://a1.muscache.com/im/pictures/7cc0e83d-9bf4-4398-8331-9ee263b394da.jpg?aki_policy=profile_medium",
+            "is_superhost": true
+          },
+          "primary_host": {
+            "first_name": "Alex",
+            "id": 22107725,
+            "thumbnail_url": "https://a1.muscache.com/im/pictures/7cc0e83d-9bf4-4398-8331-9ee263b394da.jpg?aki_policy=profile_medium",
+            "is_superhost": true
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": false,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 891,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 1,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [
+            "en",
+            "zh"
+          ],
+          "id": 5458777,
+          "instant_bookable": false,
+          "is_business_travel_ready": false,
+          "is_new_listing": false,
+          "lat": 25.065247534283664,
+          "lng": 121.53214325724636,
+          "name": "地鐵與機場都超方便的和室套房",
+          "person_capacity": 1,
+          "picture_count": 6,
+          "picture_url": "https://a0.muscache.com/im/pictures/100204236/df62be37_original.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a0.muscache.com/im/pictures/100204236/df62be37_original.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/72780821/c3afdad6_original.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/acb84769-43ef-49a9-a381-922dd50ce6c6.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/72a72e7f-90e5-4bf8-a96f-af4d80c9bde5.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/03df1693-1931-481c-b0b1-6b4e01a7a773.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "Apartment",
+          "public_address": "Zhongshan District",
+          "reviews_count": 56,
+          "star_rating": 4.5,
+          "room_type": "Private room",
+          "user": {
+            "first_name": "Pei",
+            "id": 25612045,
+            "thumbnail_url": "https://a2.muscache.com/im/pictures/0c32fd58-3ff7-475e-804f-1f5600024a31.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "Pei",
+            "id": 25612045,
+            "thumbnail_url": "https://a2.muscache.com/im/pictures/0c32fd58-3ff7-475e-804f-1f5600024a31.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": false,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 764,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 0,
+          "beds": 3,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [],
+          "id": 5332664,
+          "instant_bookable": false,
+          "is_business_travel_ready": false,
+          "is_new_listing": false,
+          "lat": 25.063246271304724,
+          "lng": 121.53291187939433,
+          "name": "North-Europe LOFT High Ceiling Room",
+          "person_capacity": 5,
+          "picture_count": 31,
+          "picture_url": "https://a1.muscache.com/im/pictures/66622249/2859e3f0_original.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a1.muscache.com/im/pictures/66622249/2859e3f0_original.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/df7d45e2-3b43-4a1d-a7ad-0ebdc7620789.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/cece74aa-1907-4364-936c-7a586e16b790.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/abbbe1a0-dcc9-4db4-a62b-6292033754c0.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/75294749/16395e74_original.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "House",
+          "public_address": "Zhongshan District",
+          "reviews_count": 94,
+          "star_rating": 4.5,
+          "room_type": "Entire home/apt",
+          "user": {
+            "first_name": "Monkey",
+            "id": 27635035,
+            "thumbnail_url": "https://a0.muscache.com/im/users/27635035/profile_pic/1423745542/original.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "Monkey",
+            "id": 27635035,
+            "thumbnail_url": "https://a0.muscache.com/im/users/27635035/profile_pic/1423745542/original.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": false,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 2291,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 1,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [],
+          "id": 8707367,
+          "instant_bookable": true,
+          "is_business_travel_ready": false,
+          "is_new_listing": false,
+          "lat": 25.062129002209296,
+          "lng": 121.53088702867159,
+          "name": "S.H中山國小捷運站5分鐘精緻C室可小團體8人套房月租",
+          "person_capacity": 2,
+          "picture_count": 18,
+          "picture_url": "https://a0.muscache.com/im/pictures/110646603/cbce4593_original.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a0.muscache.com/im/pictures/110646603/cbce4593_original.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/110430029/6d56dda6_original.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/110430104/250e43d4_original.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/110430182/7f8c9562_original.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/110430216/3b799413_original.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "Condominium",
+          "public_address": "Zhongshan District",
+          "reviews_count": 10,
+          "star_rating": 4.5,
+          "room_type": "Private room",
+          "user": {
+            "first_name": "House",
+            "id": 10003081,
+            "thumbnail_url": "https://a0.muscache.com/im/users/10003081/profile_pic/1413534748/original.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "House",
+            "id": 10003081,
+            "thumbnail_url": "https://a0.muscache.com/im/users/10003081/profile_pic/1413534748/original.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": true,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 923,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 2,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [
+            "en",
+            "zh"
+          ],
+          "id": 2789610,
+          "instant_bookable": false,
+          "is_business_travel_ready": false,
+          "is_new_listing": false,
+          "lat": 25.05310544294474,
+          "lng": 121.53310620919285,
+          "name": "Taipei MRT Studio 到站即到家 MRT1 분",
+          "person_capacity": 4,
+          "picture_count": 13,
+          "picture_url": "https://a2.muscache.com/im/pictures/2ba63528-036c-4a0a-ae46-ecad341a5f42.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a2.muscache.com/im/pictures/2ba63528-036c-4a0a-ae46-ecad341a5f42.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/f3f232c7-10da-4e2b-b198-99c4396439f9.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/634cef6d-f92b-4ee4-9882-d2be5eef6d03.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/107769820/41a72529_original.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/664a843a-bc19-4083-b48e-59d9df4dd8d6.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "House",
+          "public_address": "Zhongshan, 中山區",
+          "reviews_count": 51,
+          "star_rating": 5,
+          "room_type": "Entire home/apt",
+          "user": {
+            "first_name": "Tina",
+            "id": 13718935,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/3dfc78c2-b37b-4229-aeb0-4d454e1074c9.jpg?aki_policy=profile_medium",
+            "is_superhost": true
+          },
+          "primary_host": {
+            "first_name": "Tina",
+            "id": 13718935,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/3dfc78c2-b37b-4229-aeb0-4d454e1074c9.jpg?aki_policy=profile_medium",
+            "is_superhost": true
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": false,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 2387,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 1,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [],
+          "id": 15038033,
+          "instant_bookable": true,
+          "is_business_travel_ready": false,
+          "is_new_listing": false,
+          "lat": 25.052272008240628,
+          "lng": 121.53334978746088,
+          "name": "台北市市中心五星級小豪宅飯店式管理-捷運松江南京站就在家門口",
+          "person_capacity": 2,
+          "picture_count": 48,
+          "picture_url": "https://a0.muscache.com/im/pictures/3a187b5a-8306-42aa-bf1c-bef9f8009e5f.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a0.muscache.com/im/pictures/3a187b5a-8306-42aa-bf1c-bef9f8009e5f.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/1887e174-880a-4cd2-bac3-344f0bb120fa.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/7e1017f3-b5ee-495e-a4ba-27680476722b.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/69c667b9-cc96-48cb-a8ea-8927a80fa975.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/05813976-3f82-4bf1-b08e-d2c42bf8499d.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "Apartment",
+          "public_address": "Zhongshan District",
+          "reviews_count": 14,
+          "star_rating": 5,
+          "room_type": "Entire home/apt",
+          "user": {
+            "first_name": "垚穎",
+            "id": 94988186,
+            "thumbnail_url": "https://a2.muscache.com/im/pictures/583be79e-a7f1-4599-914f-e9f3036351b3.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "垚穎",
+            "id": 94988186,
+            "thumbnail_url": "https://a2.muscache.com/im/pictures/583be79e-a7f1-4599-914f-e9f3036351b3.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": true,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 2164,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 3,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [
+            "en",
+            "zh",
+            "ja",
+            "ko"
+          ],
+          "id": 15537593,
+          "instant_bookable": true,
+          "is_business_travel_ready": false,
+          "is_new_listing": false,
+          "lat": 25.054122375703113,
+          "lng": 121.5357311787828,
+          "name": "HELLO 6-persons MRT Songjiang Nanjing 5 minutes",
+          "person_capacity": 6,
+          "picture_count": 14,
+          "picture_url": "https://a2.muscache.com/im/pictures/4ea630c9-aee5-432b-8619-58c9c1b8306a.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a2.muscache.com/im/pictures/4ea630c9-aee5-432b-8619-58c9c1b8306a.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/cbe6212f-48f5-4aaa-940d-41a0cde1e447.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/7529d69c-b965-4e1b-b21a-bb22547c214d.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/ba102187-62ea-49af-b82d-b79b1b6ff3fe.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/ebe5eddc-3bd5-419c-87ca-bebab7069709.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "Apartment",
+          "public_address": "Zhongshan District",
+          "reviews_count": 5,
+          "star_rating": 5,
+          "room_type": "Private room",
+          "user": {
+            "first_name": "Alan",
+            "id": 87890901,
+            "thumbnail_url": "https://a1.muscache.com/im/pictures/e9e9fab3-501d-43f9-9830-2ec41fba49e0.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "Alan",
+            "id": 87890901,
+            "thumbnail_url": "https://a1.muscache.com/im/pictures/e9e9fab3-501d-43f9-9830-2ec41fba49e0.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": true,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 2005,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 1,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [
+            "en",
+            "zh"
+          ],
+          "id": 4900301,
+          "instant_bookable": true,
+          "is_business_travel_ready": true,
+          "is_new_listing": false,
+          "lat": 25.059283097289267,
+          "lng": 121.53231143245017,
+          "name": "suite A6 @Xingtian Temple Station ",
+          "person_capacity": 2,
+          "picture_count": 8,
+          "picture_url": "https://a2.muscache.com/im/pictures/64755684/09d060f1_original.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a2.muscache.com/im/pictures/64755684/09d060f1_original.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/64755673/9f921350_original.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/63947669/3e639e7a_original.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/64755704/d40382af_original.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/64755723/646d0054_original.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "Apartment",
+          "public_address": "Zhongshan, 台灣台北",
+          "reviews_count": 41,
+          "star_rating": 4.5,
+          "room_type": "Entire home/apt",
+          "user": {
+            "first_name": "Kiki",
+            "id": 10007698,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/11544f29-ad56-4345-a9d2-2d51ea9a76ec.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "Kiki",
+            "id": 10007698,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/11544f29-ad56-4345-a9d2-2d51ea9a76ec.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": true,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 1432,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 1,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [
+            "id",
+            "ms",
+            "en",
+            "zh"
+          ],
+          "id": 8312800,
+          "instant_bookable": true,
+          "is_business_travel_ready": false,
+          "is_new_listing": false,
+          "lat": 25.05258426593855,
+          "lng": 121.5321049572323,
+          "name": "5★ location city centre MRT apt",
+          "person_capacity": 2,
+          "picture_count": 61,
+          "picture_url": "https://a0.muscache.com/im/pictures/dede1498-ba4e-468f-b80c-9889e4013a91.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a0.muscache.com/im/pictures/dede1498-ba4e-468f-b80c-9889e4013a91.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/ce45e9be-4875-4485-a67f-e09815b59c6b.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/dc4efe7f-d086-4375-8996-ef314661908f.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/9ef3ce7e-b814-4b75-9fd3-0a9154518d03.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/40f07ed1-694b-4939-9934-3ca645288bf5.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "Apartment",
+          "public_address": "Zhongshan District",
+          "reviews_count": 63,
+          "star_rating": 5,
+          "room_type": "Entire home/apt",
+          "user": {
+            "first_name": "Kuek",
+            "id": 43664259,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/82a42aaf-21f0-47e7-b68b-4bcec072b0ad.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "Kuek",
+            "id": 43664259,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/82a42aaf-21f0-47e7-b68b-4bcec072b0ad.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": true,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 2259,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 1,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [
+            "zh"
+          ],
+          "id": 1996229,
+          "instant_bookable": true,
+          "is_business_travel_ready": true,
+          "is_new_listing": false,
+          "lat": 25.052556113080158,
+          "lng": 121.5317518529519,
+          "name": "MRT Apartment-SongjiangNanjing*TWO",
+          "person_capacity": 2,
+          "picture_count": 21,
+          "picture_url": "https://a0.muscache.com/im/pictures/27607554/240b4406_original.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a0.muscache.com/im/pictures/27607554/240b4406_original.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/27607449/809647da_original.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/27607459/60227111_original.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/27607466/9af8a718_original.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/27607578/8f083eae_original.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "Apartment",
+          "public_address": "Zhongshan District",
+          "reviews_count": 48,
+          "star_rating": 5,
+          "room_type": "Entire home/apt",
+          "user": {
+            "first_name": "Jay",
+            "id": 8905818,
+            "thumbnail_url": "https://a2.muscache.com/im/users/8905818/profile_pic/1382760131/original.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "Jay",
+            "id": 8905818,
+            "thumbnail_url": "https://a2.muscache.com/im/users/8905818/profile_pic/1382760131/original.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": true,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 2482,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 1,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [
+            "en",
+            "zh"
+          ],
+          "id": 13059703,
+          "instant_bookable": false,
+          "is_business_travel_ready": false,
+          "is_new_listing": false,
+          "lat": 25.061202445652242,
+          "lng": 121.53550538971852,
+          "name": "行天宮正對面 溫馨雅房",
+          "person_capacity": 1,
+          "picture_count": 5,
+          "picture_url": "https://a1.muscache.com/im/pictures/0d2e1d70-f7f5-4298-b55c-ed40df1fbdee.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a1.muscache.com/im/pictures/0d2e1d70-f7f5-4298-b55c-ed40df1fbdee.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/20544c58-9184-42f7-908f-5be3c1f88360.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/fd78bc48-2592-4565-90f2-4de19a4f8341.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/d725ae19-07fe-451c-8834-2caf51ea2462.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/e8f7463d-ac16-4cfa-b4fe-9e0a56461096.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "House",
+          "public_address": "Zhongshan District",
+          "reviews_count": 2,
+          "star_rating": 0,
+          "room_type": "Shared room",
+          "user": {
+            "first_name": "Chia-Lun",
+            "id": 72328444,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/cdc5a158-2049-47b0-bbcc-fce62857debf.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "Chia-Lun",
+            "id": 72328444,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/cdc5a158-2049-47b0-bbcc-fce62857debf.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": false,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 891,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 1,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [],
+          "id": 12368784,
+          "instant_bookable": true,
+          "is_business_travel_ready": true,
+          "is_new_listing": false,
+          "lat": 25.0653187471155,
+          "lng": 121.53116850219038,
+          "name": "New open!! Zhongshan Elementary school MRT-Z STAR",
+          "person_capacity": 2,
+          "picture_count": 29,
+          "picture_url": "https://a0.muscache.com/im/pictures/203974c7-d86a-424e-83fd-360d53cc0a94.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a0.muscache.com/im/pictures/203974c7-d86a-424e-83fd-360d53cc0a94.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/1798348a-f931-4ba8-b86c-7d527d5c8789.jpg?aki_policy=x_medium",
+            "https://a0.muscache.com/im/pictures/ee7e7343-d478-4464-a0b5-4ea14051c457.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/d69ca246-6bfe-43f1-bdbe-0fd8b5dcb861.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/09d753c2-6be9-471d-9325-bba7e6bb63b0.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "Apartment",
+          "public_address": "Zhongshan, 台北市",
+          "reviews_count": 16,
+          "star_rating": 5,
+          "room_type": "Entire home/apt",
+          "user": {
+            "first_name": "結巴",
+            "id": 59754471,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/6a17114b-afd1-44b5-8522-64422453526f.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "結巴",
+            "id": 59754471,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/6a17114b-afd1-44b5-8522-64422453526f.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": true,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 986,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 4,
+          "beds": 5,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [
+            "en",
+            "zh",
+            "ja"
+          ],
+          "id": 1102678,
+          "instant_bookable": true,
+          "is_business_travel_ready": false,
+          "is_new_listing": false,
+          "lat": 25.053073743811865,
+          "lng": 121.53428572912067,
+          "name": "Taipei Manor I",
+          "person_capacity": 9,
+          "picture_count": 18,
+          "picture_url": "https://a0.muscache.com/im/pictures/16586502/c54f102f_original.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a0.muscache.com/im/pictures/16586502/c54f102f_original.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/16586915/90f45cd3_original.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/16586985/d4d98b42_original.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/16586839/612a861f_original.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/16586831/b0d0c747_original.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "Apartment",
+          "public_address": "Zhongshan District",
+          "reviews_count": 128,
+          "star_rating": 5,
+          "room_type": "Entire home/apt",
+          "user": {
+            "first_name": "Danny",
+            "id": 32611,
+            "thumbnail_url": "https://a2.muscache.com/im/users/32611/profile_pic/1436774084/original.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "Danny",
+            "id": 32611,
+            "thumbnail_url": "https://a2.muscache.com/im/users/32611/profile_pic/1436774084/original.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": true,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 5409,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      },
+      {
+        "listing": {
+          "bedrooms": 1,
+          "beds": 1,
+          "airbnb_plus_enabled": false,
+          "extra_host_languages": [],
+          "id": 15591121,
+          "instant_bookable": false,
+          "is_business_travel_ready": false,
+          "is_new_listing": true,
+          "lat": 25.052232719372263,
+          "lng": 121.53384414035779,
+          "name": "MRT松江南京全新裝潢雙人房",
+          "person_capacity": 2,
+          "picture_count": 11,
+          "picture_url": "https://a0.muscache.com/im/pictures/8149e229-79cf-45a5-9d3f-bd95de35895f.jpg?aki_policy=x_medium",
+          "picture_urls": [
+            "https://a0.muscache.com/im/pictures/8149e229-79cf-45a5-9d3f-bd95de35895f.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/b90634e9-5b60-453a-a2bd-4ed68db6589b.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/a7721665-ede7-4c5d-9aaa-b7771e4b1db2.jpg?aki_policy=x_medium",
+            "https://a2.muscache.com/im/pictures/0f8c3900-489f-4450-87ef-a284b7e4654d.jpg?aki_policy=x_medium",
+            "https://a1.muscache.com/im/pictures/b0582899-9763-4491-921c-9c06a719f296.jpg?aki_policy=x_medium"
+          ],
+          "property_type": "Townhouse",
+          "public_address": "Zhongshan District",
+          "reviews_count": 0,
+          "star_rating": 0,
+          "room_type": "Private room",
+          "user": {
+            "first_name": "Jenny",
+            "id": 96091447,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/430f7f15-fd06-4eea-b977-83f9b5a4459c.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "primary_host": {
+            "first_name": "Jenny",
+            "id": 96091447,
+            "thumbnail_url": "https://a0.muscache.com/im/pictures/430f7f15-fd06-4eea-b977-83f9b5a4459c.jpg?aki_policy=profile_medium",
+            "is_superhost": false
+          },
+          "coworker_hosted": false,
+          "listing_tags": []
+        },
+        "pricing_quote": {
+          "available": false,
+          "can_instant_book": false,
+          "check_in": null,
+          "check_out": null,
+          "guests": 1,
+          "rate": {
+            "amount": 1814,
+            "currency": "TWD"
+          },
+          "rate_type": "nightly",
+          "is_good_price": null,
+          "average_booked_price": null
+        },
+        "viewed_at": null
+      }
+    ],
+    "metadata": {
+      "search": {
+        "business_travel_reward_data": {},
+        "has_airbnb_plus_availability": false,
+        "has_business_travel_ready_availability": false,
+        "is_last_minute_eligible": false,
+        "last_minute_show_dist_sort": false,
+        "mobile_session_id": "d-xak_fs",
+        "native_currency": "TWD",
+        "price_type": "nightly",
+        "price_range_max_native": 30000,
+        "price_range_min_native": 320,
+        "search_id": "67611835-ac1e-4e5f-b750-537e188437a5"
+      },
+      "pagination": {
+        "next_offset": 18,
+        "result_count": 18
+      },
+      "facets": {
+        "bedrooms": [
+          {
+            "key": 9,
+            "value": "9",
+            "count": 1
+          },
+          {
+            "key": 8,
+            "value": "8",
+            "count": 1
+          },
+          {
+            "key": 7,
+            "value": "7",
+            "count": 2
+          },
+          {
+            "key": 6,
+            "value": "6",
+            "count": 2
+          },
+          {
+            "key": 5,
+            "value": "5",
+            "count": 2
+          },
+          {
+            "key": 4,
+            "value": "4",
+            "count": 7
+          },
+          {
+            "key": 3,
+            "value": "3",
+            "count": 10
+          },
+          {
+            "key": 2,
+            "value": "2",
+            "count": 21
+          },
+          {
+            "key": 1,
+            "value": "1",
+            "count": 130
+          },
+          {
+            "key": 0,
+            "value": "0",
+            "count": 135
+          }
+        ],
+        "bathrooms": [
+          {
+            "key": 4,
+            "value": "4.0",
+            "count": 2
+          },
+          {
+            "key": 3.5,
+            "value": "3.5",
+            "count": 2
+          },
+          {
+            "key": 3,
+            "value": "3.0",
+            "count": 3
+          },
+          {
+            "key": 2.5,
+            "value": "2.5",
+            "count": 4
+          },
+          {
+            "key": 2,
+            "value": "2.0",
+            "count": 8
+          },
+          {
+            "key": 1.5,
+            "value": "1.5",
+            "count": 12
+          },
+          {
+            "key": 1,
+            "value": "1.0",
+            "count": 134
+          },
+          {
+            "key": 0.5,
+            "value": "0.5",
+            "count": 134
+          },
+          {
+            "key": 0,
+            "value": "0.0",
+            "count": 135
+          }
+        ],
+        "beds": [
+          {
+            "key": 6,
+            "value": "6",
+            "count": 1
+          },
+          {
+            "key": 5,
+            "value": "5",
+            "count": 3
+          },
+          {
+            "key": 4,
+            "value": "4",
+            "count": 6
+          },
+          {
+            "key": 3,
+            "value": "3",
+            "count": 17
+          },
+          {
+            "key": 2,
+            "value": "2",
+            "count": 64
+          },
+          {
+            "key": 1,
+            "value": "1",
+            "count": 135
+          },
+          {
+            "key": 0,
+            "value": "0",
+            "count": 135
+          }
+        ],
+        "availability": [
+          {
+            "key": "Instant Book",
+            "value": "Instant Book",
+            "count": 92
+          }
+        ],
+        "room_type": [
+          {
+            "key": "Entire home/apt",
+            "value": "Entire home/apt",
+            "count": 85
+          },
+          {
+            "key": "Private room",
+            "value": "Private room",
+            "count": 46
+          },
+          {
+            "key": "Shared room",
+            "value": "Shared room",
+            "count": 4
+          }
+        ],
+        "hosting_amenity_ids": [
+          {
+            "key": 8,
+            "value": "Kitchen",
+            "count": 86
+          },
+          {
+            "key": 3,
+            "value": "Internet",
+            "count": 100
+          },
+          {
+            "key": 1,
+            "value": "TV",
+            "count": 124
+          },
+          {
+            "key": 40,
+            "value": "Essentials",
+            "count": 115
+          },
+          {
+            "key": 41,
+            "value": "Shampoo",
+            "count": 118
+          },
+          {
+            "key": 30,
+            "value": "Heating",
+            "count": 58
+          },
+          {
+            "key": 5,
+            "value": "Air conditioning",
+            "count": 127
+          },
+          {
+            "key": 33,
+            "value": "Washer",
+            "count": 113
+          },
+          {
+            "key": 34,
+            "value": "Dryer",
+            "count": 44
+          },
+          {
+            "key": 9,
+            "value": "Free parking on premises",
+            "count": 5
+          },
+          {
+            "key": 4,
+            "value": "Wireless Internet",
+            "count": 122
+          },
+          {
+            "key": 2,
+            "value": "Cable TV",
+            "count": 88
+          },
+          {
+            "key": 16,
+            "value": "Breakfast",
+            "count": 1
+          },
+          {
+            "key": 12,
+            "value": "Pets allowed",
+            "count": 9
+          },
+          {
+            "key": 31,
+            "value": "Family/kid friendly",
+            "count": 77
+          },
+          {
+            "key": 32,
+            "value": "Suitable for events",
+            "count": 13
+          },
+          {
+            "key": 11,
+            "value": "Smoking allowed",
+            "count": 3
+          },
+          {
+            "key": 6,
+            "value": "Wheelchair accessible",
+            "count": 33
+          },
+          {
+            "key": 21,
+            "value": "Elevator in building",
+            "count": 94
+          },
+          {
+            "key": 27,
+            "value": "Indoor fireplace",
+            "count": 1
+          },
+          {
+            "key": 28,
+            "value": "Buzzer/wireless intercom",
+            "count": 47
+          },
+          {
+            "key": 14,
+            "value": "Doorman",
+            "count": 40
+          },
+          {
+            "key": 7,
+            "value": "Pool",
+            "count": 26
+          },
+          {
+            "key": 25,
+            "value": "Hot tub",
+            "count": 47
+          },
+          {
+            "key": 15,
+            "value": "Gym",
+            "count": 31
+          },
+          {
+            "key": 43,
+            "value": "24-hour check-in",
+            "count": 71
+          },
+          {
+            "key": 44,
+            "value": "Hangers",
+            "count": 99
+          },
+          {
+            "key": 46,
+            "value": "Iron",
+            "count": 67
+          },
+          {
+            "key": 45,
+            "value": "Hair dryer",
+            "count": 97
+          },
+          {
+            "key": 47,
+            "value": "Laptop friendly workspace",
+            "count": 94
+          },
+          {
+            "key": 35,
+            "value": "Smoke detector",
+            "count": 90
+          },
+          {
+            "key": 36,
+            "value": "Carbon monoxide detector",
+            "count": 63
+          },
+          {
+            "key": 37,
+            "value": "First aid kit",
+            "count": 41
+          },
+          {
+            "key": 38,
+            "value": "Safety card",
+            "count": 52
+          },
+          {
+            "key": 39,
+            "value": "Fire extinguisher",
+            "count": 86
+          },
+          {
+            "key": 42,
+            "value": "Lock on bedroom door",
+            "count": 29
+          }
+        ],
+        "top_amenities": [
+          {
+            "key": 4,
+            "value": "Wireless Internet",
+            "count": 122
+          },
+          {
+            "key": 7,
+            "value": "Pool",
+            "count": 26
+          },
+          {
+            "key": 8,
+            "value": "Kitchen",
+            "count": 86
+          }
+        ],
+        "neighborhood_facet": [
+          {
+            "key": "Zhongshan",
+            "value": "Zhongshan",
+            "count": 135
+          }
+        ],
+        "top_neighborhoods": [
+          {
+            "key": "Zhongshan",
+            "value": "Zhongshan",
+            "count": 135
+          }
+        ],
+        "property_type_id": [
+          {
+            "key": 2,
+            "value": "House",
+            "count": 23
+          },
+          {
+            "key": 1,
+            "value": "Apartment",
+            "count": 98
+          },
+          {
+            "key": 3,
+            "value": "Bed & Breakfast",
+            "count": 1
+          },
+          {
+            "key": 37,
+            "value": "Condominium",
+            "count": 3
+          },
+          {
+            "key": 40,
+            "value": "Guesthouse",
+            "count": 1
+          },
+          {
+            "key": 35,
+            "value": "Loft",
+            "count": 1
+          },
+          {
+            "key": 16,
+            "value": "Tipi",
+            "count": 1
+          },
+          {
+            "key": 36,
+            "value": "Townhouse",
+            "count": 5
+          }
+        ],
+        "facilities_amenities": [
+          {
+            "key": 21,
+            "value": "Elevator in building",
+            "count": 94
+          },
+          {
+            "key": 9,
+            "value": "Free parking on premises",
+            "count": 5
+          },
+          {
+            "key": 15,
+            "value": "Gym",
+            "count": 31
+          },
+          {
+            "key": 25,
+            "value": "Hot tub",
+            "count": 47
+          },
+          {
+            "key": 7,
+            "value": "Pool",
+            "count": 26
+          },
+          {
+            "key": 6,
+            "value": "Wheelchair accessible",
+            "count": 33
+          }
+        ],
+        "house_rules_amenities": [
+          {
+            "key": 32,
+            "value": "Suitable for events",
+            "count": 13
+          },
+          {
+            "key": 12,
+            "value": "Pets allowed",
+            "count": 9
+          },
+          {
+            "key": 11,
+            "value": "Smoking allowed",
+            "count": 3
+          }
+        ],
+        "other_amenities": [
+          {
+            "key": 8,
+            "value": "Kitchen",
+            "count": 86
+          },
+          {
+            "key": 3,
+            "value": "Internet",
+            "count": 100
+          },
+          {
+            "key": 1,
+            "value": "TV",
+            "count": 124
+          },
+          {
+            "key": 41,
+            "value": "Shampoo",
+            "count": 118
+          },
+          {
+            "key": 30,
+            "value": "Heating",
+            "count": 58
+          },
+          {
+            "key": 5,
+            "value": "Air conditioning",
+            "count": 127
+          },
+          {
+            "key": 33,
+            "value": "Washer",
+            "count": 113
+          },
+          {
+            "key": 34,
+            "value": "Dryer",
+            "count": 44
+          },
+          {
+            "key": 4,
+            "value": "Wireless Internet",
+            "count": 122
+          },
+          {
+            "key": 2,
+            "value": "Cable TV",
+            "count": 88
+          },
+          {
+            "key": 16,
+            "value": "Breakfast",
+            "count": 1
+          },
+          {
+            "key": 31,
+            "value": "Family/kid friendly",
+            "count": 77
+          },
+          {
+            "key": 27,
+            "value": "Indoor fireplace",
+            "count": 1
+          },
+          {
+            "key": 28,
+            "value": "Buzzer/wireless intercom",
+            "count": 47
+          },
+          {
+            "key": 14,
+            "value": "Doorman",
+            "count": 40
+          },
+          {
+            "key": 43,
+            "value": "24-hour check-in",
+            "count": 71
+          },
+          {
+            "key": 44,
+            "value": "Hangers",
+            "count": 99
+          },
+          {
+            "key": 46,
+            "value": "Iron",
+            "count": 67
+          },
+          {
+            "key": 45,
+            "value": "Hair dryer",
+            "count": 97
+          },
+          {
+            "key": 47,
+            "value": "Laptop friendly workspace",
+            "count": 94
+          },
+          {
+            "key": 42,
+            "value": "Lock on bedroom door",
+            "count": 29
+          }
+        ],
+        "top_other_amenities": [
+          {
+            "key": 4,
+            "value": "Wireless Internet",
+            "count": 122
+          },
+          {
+            "key": 1,
+            "value": "TV",
+            "count": 124
+          },
+          {
+            "key": 8,
+            "value": "Kitchen",
+            "count": 86
+          }
+        ],
+        "languages": [
+          {
+            "key": 4096,
+            "value": "Bahasa Indonesia",
+            "count": 3
+          },
+          {
+            "key": 4194304,
+            "value": "Bahasa Malaysia",
+            "count": 3
+          },
+          {
+            "key": 1,
+            "value": "English",
+            "count": 96
+          },
+          {
+            "key": 64,
+            "value": "Español",
+            "count": 3
+          },
+          {
+            "key": 2,
+            "value": "Français",
+            "count": 3
+          },
+          {
+            "key": 16,
+            "value": "Italiano",
+            "count": 1
+          },
+          {
+            "key": 1024,
+            "value": "Português",
+            "count": 1
+          },
+          {
+            "key": 128,
+            "value": "中文",
+            "count": 132
+          },
+          {
+            "key": 8,
+            "value": "日本語",
+            "count": 21
+          },
+          {
+            "key": 16384,
+            "value": "한국어",
+            "count": 13
+          }
+        ],
+        "first_languages": [
+          {
+            "key": 1,
+            "value": "English",
+            "count": 96
+          },
+          {
+            "key": 64,
+            "value": "Español",
+            "count": 3
+          },
+          {
+            "key": 2,
+            "value": "Français",
+            "count": 3
+          }
+        ],
+        "description_languages": [
+          {
+            "key": 4096,
+            "value": "Bahasa Indonesia",
+            "count": 1
+          },
+          {
+            "key": 4194304,
+            "value": "Bahasa Malaysia",
+            "count": 1
+          },
+          {
+            "key": 1,
+            "value": "English",
+            "count": 61
+          },
+          {
+            "key": 65536,
+            "value": "ภาษาไทย",
+            "count": 1
+          },
+          {
+            "key": 128,
+            "value": "中文",
+            "count": 36
+          },
+          {
+            "key": 8,
+            "value": "日本語",
+            "count": 8
+          },
+          {
+            "key": 16384,
+            "value": "한국어",
+            "count": 5
+          }
+        ],
+        "first_description_languages": [
+          {
+            "key": 1,
+            "value": "English",
+            "count": 61
+          },
+          {
+            "key": 4096,
+            "value": "Bahasa Indonesia",
+            "count": 1
+          },
+          {
+            "key": 4194304,
+            "value": "Bahasa Malaysia",
+            "count": 1
+          }
+        ]
+      },
+      "listing_tags": {},
+      "listings_count": 132,
+      "urgency_commitment": {
+        "message": {
+          "headline": null,
+          "body": null,
+          "contextual_message": null
+        },
+        "message_type": null,
+        "show_percent_listings_left_message": false,
+        "listings_left_as_percent": null
+      },
+      "market_info": {
+        "headline": "Places in Taipei went fast last year",
+        "body": "Wondering when to book? This shows the percentage of available places for your travel dates at the same time last year. Places are likely to get booked at a similar rate this year.",
+        "data": []
+      },
+      "price_histogram": {
+        "average_price": 1873,
+        "histogram": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          3,
+          8,
+          5,
+          7,
+          20,
+          11,
+          24,
+          8,
+          30,
+          3,
+          3,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "search_feed_items": [],
+      "avg_price_by_room_type": {
+        "ratio": {
+          "Entire home/apt": 0.6439393939393939,
+          "Private room": 0.3484848484848485,
+          "Shared room": 0.030303030303030304
+        },
+        "avg_price": {
+          "Shared room": 18,
+          "Private room": 43,
+          "Entire home/apt": 85
+        }
+      },
+      "messages": {},
+      "overrides": {},
+      "breadcrumbs": [
+        {
+          "location_name": "Taiwan",
+          "canonical_location_name": "Taiwan",
+          "type": "country"
+        },
+        {
+          "location_name": "Taipei City",
+          "canonical_location_name": "Taipei City, Taiwan",
+          "type": "state"
+        },
+        {
+          "location_name": "Zhongshan District",
+          "canonical_location_name": "Zhongshan District, Taiwan",
+          "type": "city"
+        }
+      ],
+      "guided_search": {
+        "avg_gbm_score": 32.26771799723307,
+        "avg_usd_price": 58.72222222222222,
+        "min_stars": 4,
+        "min_review_count": 5
+      },
+      "location": {
+        "canonical_location": "Zhongshan District, Taiwan",
+        "display_location": "Zhongshan District"
+      },
+      "guidebook": null,
+      "geography": {
+        "accuracy": 7,
+        "precision": "street",
+        "country_code": "TW",
+        "country": "Taiwan",
+        "result_type": "route",
+        "state_short": "Taipei City",
+        "state": "Taipei City",
+        "city": "Zhongshan District",
+        "lat": 25.0595606,
+        "lng": 121.5332765,
+        "place_id": "ChIJKY0r9l6pQjQR1Rq3Q8MH_qM"
+      },
+      "refund_price": null
+    }
+  }
+}

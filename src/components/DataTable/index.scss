@@ -1,0 +1,43 @@
+.table {
+
+  thead {
+
+    tr {
+
+      th {
+        border-bottom-width: 1px;
+      }
+    }
+  }
+
+  tbody {
+
+    tr {
+
+      td {
+        vertical-align: middle;
+
+        a {
+          display: block;
+          padding: 5px 0;
+
+          &.action {
+
+            &.delete {
+              color: #e00007;
+
+              &:active {
+                color: darken(#e00007, 20%);
+                opacity: 0.5;
+              }
+
+              &:hover {
+                color: lighten(#e00007, 30%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
