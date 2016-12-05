@@ -1,13 +1,9 @@
 import React from 'react';
 import { Row, Col, Alert, Form } from 'react-bootstrap';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { compose, withProps } from 'recompose';
-import { reduxForm, Field, SubmissionError } from 'redux-form';
+import { Field } from 'redux-form';
 
 import FieldGroup from 'components/FieldGroup';
 import styles from './index.scss';
-import * as actions from '../../actions';
 
 const LoginForm = ({ handleSubmit, submitting, error }) => (
   <Form onSubmit={handleSubmit}>
@@ -53,20 +49,4 @@ LoginForm.propTypes = {
   error: React.PropTypes.string,
 };
 
-export default compose(
-  connect(
-    null,
-    dispatch => bindActionCreators(actions, dispatch),
-  ),
-  withProps(({ login }) => ({
-    onSubmit(data) {
-      return login(data)
-        .catch(() => {
-          throw new SubmissionError({ _error: '登入錯誤' });
-        });
-    },
-  })),
-  reduxForm({
-    form: 'login',
-  }),
-)(LoginForm);
+export default LoginForm;
