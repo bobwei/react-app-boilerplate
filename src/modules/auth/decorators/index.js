@@ -1,12 +1,16 @@
 /* eslint-disable import/prefer-default-export */
 import { routerActions } from 'react-router-redux';
 import { UserAuthWrapper } from 'redux-auth-wrapper';
-import isEmpty from 'lodash.isempty';
+import R from 'ramda';
+
+import { userSelector } from '../selectors';
+import { isAuthenticated } from '../predicates';
 
 export const redirectQueryParamName = 'next';
 
 export const IsAuthenticated = UserAuthWrapper({
-  authSelector: ({ user: { data } }) => ({ ...data }),
+  authSelector: userSelector,
+  predicate: isAuthenticated,
   redirectAction: routerActions.replace,
   redirectQueryParamName,
   failureRedirectPath: '/login',
@@ -14,8 +18,11 @@ export const IsAuthenticated = UserAuthWrapper({
 });
 
 export const IsNotAuthenticated = UserAuthWrapper({
-  authSelector: ({ user: { data } }) => ({ ...data }),
-  predicate: isEmpty,
+  authSelector: userSelector,
+  predicate: R.pipe(
+    isAuthenticated,
+    R.not,
+  ),
   redirectAction: routerActions.replace,
   failureRedirectPath: (state, ownProps) => ownProps.location.query[redirectQueryParamName] || '/',
   allowRedirectBack: false,

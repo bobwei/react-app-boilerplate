@@ -3,10 +3,12 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import isEmpty from 'lodash.isempty';
+import compose from 'recompose/compose';
 
 import { userSelector } from 'modules/auth/selectors';
 import * as actions from 'modules/auth/actions';
+import { isAuthenticated } from 'modules/auth/predicates';
+
 import styles from './index.scss';
 
 const Home = ({ user, logout }) => (
@@ -14,7 +16,7 @@ const Home = ({ user, logout }) => (
     <div className={styles.title}>
       React App Boilerplate
     </div>
-    {isEmpty(user) &&
+    {!isAuthenticated(user) &&
       <div>
         <Link to="/admin" className={`btn btn-default ${styles.btnLogin}`}>
           Admin Portal
@@ -24,7 +26,7 @@ const Home = ({ user, logout }) => (
         </Link>
       </div>
     }
-    {!isEmpty(user) &&
+    {isAuthenticated(user) &&
       <div>
         <Link to="/admin" className={`btn btn-default ${styles.btnLogin}`}>
           Admin Portal
@@ -42,7 +44,9 @@ Home.propTypes = {
   logout: React.PropTypes.func,
 };
 
-export default connect(
-  userSelector,
-  dispatch => bindActionCreators(actions, dispatch),
+export default compose(
+  connect(
+    state => ({ user: userSelector(state) }),
+    dispatch => bindActionCreators(actions, dispatch),
+  ),
 )(Home);
