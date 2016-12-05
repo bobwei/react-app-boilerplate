@@ -10,7 +10,7 @@ const EnhancedFieldGroup = withProps({ horizontal: true })(FieldGroup);
 const Filters = ({ handleSubmit }) => (
   <Form horizontal onSubmit={handleSubmit}>
     <Field
-      name="name"
+      name="q"
       component={EnhancedFieldGroup}
       label="Search"
       inputComponent="input"

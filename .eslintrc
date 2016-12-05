@@ -14,6 +14,7 @@
   "rules": {
     "no-console": 0,
     "no-alert": 0,
+    "import/prefer-default-export": 0,
     "react/prop-types": [2, {"ignore": ["className", "children", "id", "onClick", "style", "dispatch", "params", "location"]}]
   },
   "settings": {

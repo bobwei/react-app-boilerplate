@@ -4,7 +4,7 @@ import R from 'ramda';
 
 import styles from './index.scss';
 
-const DataTable = ({ settings, columns, data, filters }) => (
+const DataTable = ({ settings, columns, data }) => (
   <Table responsive bsClass={`table ${styles.table}`}>
     <thead>
       <tr>
@@ -17,10 +17,6 @@ const DataTable = ({ settings, columns, data, filters }) => (
     </thead>
     <tbody>
       {data
-        .filter(R.pipe(
-          R.prop('name'),
-          R.test(new RegExp(filters.name, 'i')),
-        ))
         .map(row => (
           <tr key={R.path([settings.keyField])(row)}>
             {columns.map(({ key, cell = (r, k) => R.path(R.split('.')(k))(r) }) => (
@@ -41,7 +37,6 @@ DataTable.defaultProps = {
   },
   columns: [],
   data: [],
-  filters: {},
 };
 
 DataTable.propTypes = {
@@ -50,7 +45,6 @@ DataTable.propTypes = {
   }),
   columns: React.PropTypes.arrayOf(React.PropTypes.any.isRequired),
   data: React.PropTypes.arrayOf(React.PropTypes.any),
-  filters: React.PropTypes.shape(React.PropTypes.any.isRequired),
 };
 
 export default DataTable;
