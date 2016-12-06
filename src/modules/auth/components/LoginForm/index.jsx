@@ -3,6 +3,7 @@ import { Row, Col, Alert, Form } from 'react-bootstrap';
 import { Field } from 'redux-form';
 
 import FieldGroup from 'components/FieldGroup';
+import Button from 'components/Button';
 import styles from './index.scss';
 
 const LoginForm = ({ handleSubmit, submitting, error }) => (
@@ -33,9 +34,9 @@ const LoginForm = ({ handleSubmit, submitting, error }) => (
     />
     <Row>
       <Col mdOffset={4} md={4}>
-        <button type="submit" className={`btn btn-red btn-block ${styles.btnSubmit}`} disabled={submitting}>
+        <Button bsStyle="main" className={styles.btnSubmit} type="submit" disabled={submitting} block>
           {(submitting) ? '讀取中...' : '登入'}
-        </button>
+        </Button>
       </Col>
     </Row>
   </Form>

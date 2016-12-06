@@ -12,7 +12,9 @@
 $btn-default-bg-color: #ff5a5f;
 $btn-default-color: white;
 
-.btn-red {
+.main {
+  @extend .btn;
+
   border-color: $btn-default-bg-color;
   background: $btn-default-bg-color;
   background-color: $btn-default-bg-color;
