@@ -10,6 +10,7 @@ import withProps from 'recompose/withProps';
 import { userSelector } from 'modules/auth/selectors';
 import * as actions from 'modules/auth/actions';
 import { isAuthenticated } from 'modules/auth/predicates';
+import Button from 'components/Button';
 
 import styles from './index.scss';
 
@@ -20,22 +21,22 @@ const Home = ({ user, logout, isLoggingOut }) => (
     </div>
     {!isAuthenticated(user) &&
       <div>
-        <Link to="/admin" className={`btn btn-default ${styles.btnLogin}`}>
+        <Button to="/admin" componentClass={Link} bsStyle="main" className={styles.btnLogin}>
           Admin Portal
-        </Link>
-        <Link to="/login" className={`btn btn-default ${styles.btnLogin}`}>
+        </Button>
+        <Button to="/login" componentClass={Link} bsStyle="default" className={styles.btnLogin}>
           Login
-        </Link>
+        </Button>
       </div>
     }
     {isAuthenticated(user) &&
       <div>
-        <Link to="/admin" className={`btn btn-default ${styles.btnLogin}`}>
+        <Button to="/admin" componentClass={Link} bsStyle="main" className={styles.btnLogin}>
           Admin Portal
-        </Link>
-        <button className={`btn btn-default ${styles.btnLogin}`} onClick={logout}>
+        </Button>
+        <Button bsStyle="default" className={styles.btnLogin} onClick={logout}>
           {(isLoggingOut) ? 'Loading...' : 'Logout'}
-        </button>
+        </Button>
       </div>
     }
   </div>
