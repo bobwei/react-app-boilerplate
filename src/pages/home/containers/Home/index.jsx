@@ -21,7 +21,7 @@ const Home = ({ user, logout, isLoggingOut }) => (
     </div>
     {!isAuthenticated(user) &&
       <div>
-        <Button to="/admin" componentClass={Link} bsStyle="main" className={styles.btnLogin}>
+        <Button to="/admin" componentClass={Link} bsStyle="default" className={styles.btnLogin}>
           Admin Portal
         </Button>
         <Button to="/login" componentClass={Link} bsStyle="default" className={styles.btnLogin}>
