@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable max-len */
 import React from 'react';
 import { Col, FormGroup, ControlLabel } from 'react-bootstrap';
 
@@ -43,6 +43,13 @@ FieldGroup.defaultProps = {
 };
 
 FieldGroup.propTypes = {
+  /* props from redux-form */
+  input: React.PropTypes.shape(React.PropTypes.any.isRequired),
+  meta: React.PropTypes.shape(React.PropTypes.any.isRequired),
+
+  inputComponent: React.PropTypes.oneOfType([React.PropTypes.func, React.PropTypes.string]).isRequired,
+  inputProps: React.PropTypes.shape(React.PropTypes.any.isRequired),
+  label: React.PropTypes.string,
   horizontal: React.PropTypes.bool,
 };
 
