@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Alert, Form } from 'react-bootstrap';
 import { Field } from 'redux-form';
 import R from 'ramda';
-import withProps from 'recompose/withProps';
+import mapProps from 'recompose/mapProps';
 
 import FieldGroup from '../FieldGroup';
 import styles from './index.scss';
@@ -34,7 +34,7 @@ const DataForm = ({
 );
 
 DataForm.defaultProps = {
-  alert: withProps(({ error }) => ({
+  alert: mapProps(({ error }) => ({
     bsStyle: 'warning',
     children: R.ifElse(R.is(String), R.identity, str => JSON.stringify(str))(error),
   }))(Alert),

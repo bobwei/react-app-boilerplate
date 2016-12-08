@@ -28,6 +28,9 @@ const Home = ({ user, logout, isLoggingOut }) => (
         <Button to="/login" componentClass={Link} bsStyle="default" className={styles.btnLogin}>
           Login
         </Button>
+        <Button to="/signup" componentClass={Link} bsStyle="default" className={styles.btnLogin}>
+          Signup
+        </Button>
       </div>
     }
     {isAuthenticated(user) &&

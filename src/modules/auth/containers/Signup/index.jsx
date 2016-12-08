@@ -6,13 +6,13 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { reduxForm, SubmissionError } from 'redux-form';
 
-import LoginForm from '../../components/LoginForm';
+import SignupForm from '../../components/SignupForm';
 import { IsNotAuthenticated } from '../../decorators';
 import * as actions from '../../actions';
 import Page from '../../components/Page';
 
-const LoginPage = () => {
-  const EnhancedLoginForm = compose(
+const SignupPage = () => {
+  const EnhancedSignupForm = compose(
     connect(
       null,
       dispatch => bindActionCreators(actions, dispatch),
@@ -21,18 +21,18 @@ const LoginPage = () => {
       onSubmit(data) {
         return login(data)
           .catch(() => {
-            throw new SubmissionError({ _error: 'Login Error' });
+            throw new SubmissionError({ _error: 'Signup Error' });
           });
       },
     })),
     reduxForm({
-      form: 'login',
+      form: 'signup',
     }),
-  )(LoginForm);
+  )(SignupForm);
   return (
     <Page>
-      <Panel header="Login">
-        <EnhancedLoginForm />
+      <Panel header="Signup">
+        <EnhancedSignupForm />
       </Panel>
     </Page>
   );
@@ -40,4 +40,4 @@ const LoginPage = () => {
 
 export default compose(
   IsNotAuthenticated,
-)(LoginPage);
+)(SignupPage);
