@@ -16,7 +16,10 @@ const FieldGroup = ({ input, meta, inputComponent, inputProps, label, horizontal
       {horizontal &&
         <div>
           <Col componentClass={ControlLabel} sm={2}>
-            {label} ( {meta.error} )
+            {label}
+            {(!!meta.touched && !!meta.error) &&
+              <span className={styles.error}>{meta.error}</span>
+            }
           </Col>
           <Col sm={10}>
             {Input}
