@@ -1,13 +1,13 @@
 import compose from 'recompose/compose';
 import withProps from 'recompose/withProps';
 
-import DataForm from 'components/DataForm';
+import DataForm, { SubmitButton } from 'components/DataForm';
 
 export default compose(
   withProps({
     fields: [{
       name: 'username',
-      label: '帳號',
+      label: 'Username',
       inputComponent: 'input',
       inputProps: {
         type: 'text',
@@ -15,11 +15,14 @@ export default compose(
       },
     }, {
       name: 'password',
-      label: '密碼',
+      label: 'Password',
       inputComponent: 'input',
       inputProps: {
         type: 'password',
       },
     }],
+    submitButton: withProps({
+      submitLabel: 'Login',
+    })(SubmitButton),
   }),
 )(DataForm);

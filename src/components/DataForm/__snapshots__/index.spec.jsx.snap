@@ -10,7 +10,7 @@ exports[`test can render form correctly 1`] = `
         className="btnSubmit main btn btn-block"
         disabled={false}
         type="submit">
-        登入
+        Save
       </button>
     </div>
   </div>
@@ -34,7 +34,7 @@ exports[`test can render form with error correctly 1`] = `
         className="btnSubmit main btn btn-block"
         disabled={false}
         type="submit">
-        登入
+        Save
       </button>
     </div>
   </div>

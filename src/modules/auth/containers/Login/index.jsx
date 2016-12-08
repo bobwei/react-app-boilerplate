@@ -20,7 +20,7 @@ const EnhancedLoginForm = compose(
     onSubmit(data) {
       return login(data)
         .catch(() => {
-          throw new SubmissionError({ _error: '登入錯誤' });
+          throw new SubmissionError({ _error: 'Login Error' });
         });
     },
   })),
@@ -35,7 +35,7 @@ const LoginPage = () => (
       <Col mdOffset={3} md={6}>
         <div className={styles.loginForm}>
           <div className={styles.header}>
-            登入
+            Login
           </div>
           <div className={styles.body}>
             <EnhancedLoginForm />
