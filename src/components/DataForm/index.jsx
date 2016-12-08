@@ -1,18 +1,20 @@
 import React from 'react';
 import { Row, Col, Alert, Form } from 'react-bootstrap';
 import { Field } from 'redux-form';
+import R from 'ramda';
+import mapProps from 'recompose/mapProps';
 
 import FieldGroup from '../FieldGroup';
 import Button from '../Button';
 import styles from './index.scss';
 
-const DataForm = ({ handleSubmit, submitting, error, fields }) => (
+const DataForm = ({
+  handleSubmit, submitting, error,
+  alert,
+  fields,
+}) => (
   <Form onSubmit={handleSubmit}>
-    {!!error &&
-      <Alert bsStyle="warning">
-        {error}
-      </Alert>
-    }
+    {error && React.createElement(alert, { error })}
     {fields.map(field => (
       <Field
         key={field.name}
@@ -30,10 +32,22 @@ const DataForm = ({ handleSubmit, submitting, error, fields }) => (
   </Form>
 );
 
+DataForm.defaultProps = {
+  alert: mapProps(({ error }) => ({
+    bsStyle: 'warning',
+    children: R.ifElse(R.is(String), R.identity, str => JSON.stringify(str))(error),
+  }))(Alert),
+  fields: [],
+};
+
 DataForm.propTypes = {
+  /* form props */
   handleSubmit: React.PropTypes.func,
   submitting: React.PropTypes.bool,
   error: React.PropTypes.string,
+
+  /* component props */
+  alert: React.PropTypes.func,
   fields: React.PropTypes.arrayOf(React.PropTypes.shape({
     ...FieldGroup.propTypes,
   })),

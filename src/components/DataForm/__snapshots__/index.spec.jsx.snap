@@ -1,0 +1,42 @@
+exports[`test can render form correctly 1`] = `
+<form
+  className=""
+  onSubmit={undefined}>
+  <div
+    className="row">
+    <div
+      className="col-md-4 col-md-offset-4">
+      <button
+        className="btnSubmit main btn btn-block"
+        disabled={false}
+        type="submit">
+        登入
+      </button>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`test can render form with error correctly 1`] = `
+<form
+  className=""
+  onSubmit={undefined}>
+  <div
+    className="alert alert-warning"
+    role="alert">
+    login error
+  </div>
+  <div
+    className="row">
+    <div
+      className="col-md-4 col-md-offset-4">
+      <button
+        className="btnSubmit main btn btn-block"
+        disabled={false}
+        type="submit">
+        登入
+      </button>
+    </div>
+  </div>
+</form>
+`;
