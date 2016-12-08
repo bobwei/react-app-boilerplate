@@ -17,9 +17,9 @@ const SignupPage = () => {
       null,
       dispatch => bindActionCreators(actions, dispatch),
     ),
-    withProps(({ login }) => ({
+    withProps(({ signup }) => ({
       onSubmit(data) {
-        return login(data)
+        return signup(data)
           .catch(() => {
             throw new SubmissionError({ _error: 'Signup Error' });
           });

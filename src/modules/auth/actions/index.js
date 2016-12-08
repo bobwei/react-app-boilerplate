@@ -17,3 +17,10 @@ export const logout = () => dispatch => (
     .post('/logout')
     .then(() => dispatch(reset()))
 );
+
+export const signup = params => dispatch => (
+  AuthAPI
+    .request()
+    .post('/users', params)
+    .then(({ data }) => dispatch(put(data)))
+);
