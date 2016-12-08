@@ -1,7 +1,8 @@
 import compose from 'recompose/compose';
 import withProps from 'recompose/withProps';
 
-import DataForm, { SubmitButton } from 'components/DataForm';
+import DataForm from 'components/DataForm';
+import SubmitButton from 'components/SubmitButton';
 
 export default compose(
   withProps({

@@ -11,6 +11,7 @@ import { userSelector } from 'modules/auth/selectors';
 import * as actions from 'modules/auth/actions';
 import { isAuthenticated } from 'modules/auth/predicates';
 import Button from 'components/Button';
+import SubmitButton from 'components/SubmitButton';
 
 import styles from './index.scss';
 
@@ -31,12 +32,16 @@ const Home = ({ user, logout, isLoggingOut }) => (
     }
     {isAuthenticated(user) &&
       <div>
-        <Button to="/admin" componentClass={Link} bsStyle="main" className={styles.btnLogin}>
+        <Button to="/admin" componentClass={Link} bsStyle="default" className={styles.btnLogin}>
           Admin Portal
         </Button>
-        <Button bsStyle="default" className={styles.btnLogin} onClick={logout}>
-          {(isLoggingOut) ? 'Loading...' : 'Logout'}
-        </Button>
+        <SubmitButton
+          className={styles.btnLogin}
+          submitting={isLoggingOut}
+          submitLabel="Logout"
+          bsStyle="default"
+          onClick={logout}
+        />
       </div>
     }
   </div>
