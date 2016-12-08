@@ -10,6 +10,7 @@ import LoginForm from '../../components/LoginForm';
 import { IsNotAuthenticated } from '../../decorators';
 import * as actions from '../../actions';
 import Page from '../../components/Page';
+import { loginForm } from '../../validations';
 
 const LoginPage = () => {
   const EnhancedLoginForm = compose(
@@ -20,13 +21,14 @@ const LoginPage = () => {
     withProps(({ login }) => ({
       onSubmit(data) {
         return login(data)
-          .catch(() => {
-            throw new SubmissionError({ _error: 'Login Error' });
+          .catch(({ response: { data: { error } } }) => {
+            throw new SubmissionError({ _error: error });
           });
       },
     })),
     reduxForm({
       form: 'login',
+      validate: loginForm,
     }),
   )(LoginForm);
   return (

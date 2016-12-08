@@ -10,6 +10,7 @@ import SignupForm from '../../components/SignupForm';
 import { IsNotAuthenticated } from '../../decorators';
 import * as actions from '../../actions';
 import Page from '../../components/Page';
+import { signupForm } from '../../validations';
 
 const SignupPage = () => {
   const EnhancedSignupForm = compose(
@@ -20,13 +21,14 @@ const SignupPage = () => {
     withProps(({ signup }) => ({
       onSubmit(data) {
         return signup(data)
-          .catch(() => {
-            throw new SubmissionError({ _error: 'Signup Error' });
+          .catch(({ response: { data: { error } } }) => {
+            throw new SubmissionError({ _error: error });
           });
       },
     })),
     reduxForm({
       form: 'signup',
+      validate: signupForm,
     }),
   )(SignupForm);
   return (

@@ -12,7 +12,7 @@ const DataForm = ({
   handleSubmit, submitting, error,
   alert, fields, submitButton,
 }) => (
-  <Form onSubmit={handleSubmit}>
+  <Form onSubmit={handleSubmit} noValidate>
     {error && React.createElement(alert, { error })}
     {fields.map(field => (
       <Field

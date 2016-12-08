@@ -2,6 +2,8 @@
 import React from 'react';
 import { Col, FormGroup, ControlLabel } from 'react-bootstrap';
 
+import styles from './index.scss';
+
 const FieldGroup = ({ input, meta, inputComponent, inputProps, label, horizontal }) => {
   const Input = React.createElement(inputComponent, {
     ...FieldGroup.defaultProps.inputProps,
@@ -14,7 +16,7 @@ const FieldGroup = ({ input, meta, inputComponent, inputProps, label, horizontal
       {horizontal &&
         <div>
           <Col componentClass={ControlLabel} sm={2}>
-            {label}
+            {label} ( {meta.error} )
           </Col>
           <Col sm={10}>
             {Input}
@@ -25,6 +27,9 @@ const FieldGroup = ({ input, meta, inputComponent, inputProps, label, horizontal
         <div>
           <ControlLabel>
             {label}
+            {(!!meta.touched && !!meta.error) &&
+              <span className={styles.error}>{meta.error}</span>
+            }
           </ControlLabel>
           <div>
             {Input}
