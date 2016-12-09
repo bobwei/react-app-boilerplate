@@ -35,34 +35,77 @@ This is a project template with batteries included to speed up project initiatio
 │   └── server.js
 ├── src
 │   ├── components
-│   │   ├── FormField
+│   │   ├── Button
+│   │   │   ├── index.jsx
+│   │   │   └── index.scss
+│   │   ├── DataForm
+│   │   │   ├── __snapshots__
+│   │   │   │   └── index.spec.jsx.snap
+│   │   │   ├── index.jsx
+│   │   │   ├── index.scss
+│   │   │   └── index.spec.jsx
+│   │   ├── DataTable
+│   │   │   ├── __snapshots__
+│   │   │   │   └── index.spec.jsx.snap
+│   │   │   ├── index.jsx
+│   │   │   ├── index.scss
+│   │   │   ├── index.spec.jsx
+│   │   │   └── spec.json
+│   │   ├── FieldGroup
+│   │   │   ├── index.jsx
+│   │   │   └── index.scss
+│   │   ├── Filters
 │   │   │   └── index.jsx
-│   │   └── Root
+│   │   ├── Root
+│   │   │   └── index.jsx
+│   │   └── SubmitButton
 │   │       └── index.jsx
 │   ├── favicon.ico
 │   ├── html.jsx
 │   ├── index.jsx
 │   ├── modules
-│   │   └── auth
+│   │   ├── api
+│   │   │   └── index.js
+│   │   ├── auth
+│   │   │   ├── actions
+│   │   │   │   └── index.js
+│   │   │   ├── api
+│   │   │   │   └── index.js
+│   │   │   ├── components
+│   │   │   │   ├── LoginForm
+│   │   │   │   │   └── index.jsx
+│   │   │   │   ├── Page
+│   │   │   │   │   ├── index.jsx
+│   │   │   │   │   └── index.scss
+│   │   │   │   └── SignupForm
+│   │   │   │       └── index.jsx
+│   │   │   ├── containers
+│   │   │   │   ├── Login
+│   │   │   │   │   └── index.jsx
+│   │   │   │   └── Signup
+│   │   │   │       └── index.jsx
+│   │   │   ├── decorators
+│   │   │   │   └── index.js
+│   │   │   ├── predicates
+│   │   │   │   └── index.js
+│   │   │   ├── reducers
+│   │   │   │   └── index.js
+│   │   │   ├── routes
+│   │   │   │   └── index.js
+│   │   │   ├── selectors
+│   │   │   │   └── index.js
+│   │   │   └── validations
+│   │   │       └── index.js
+│   │   ├── forms
+│   │   │   └── validations
+│   │   │       ├── index.js
+│   │   │       └── index.spec.js
+│   │   └── parse-server
 │   │       ├── actions
 │   │       │   └── index.js
 │   │       ├── api
 │   │       │   └── index.js
-│   │       ├── components
-│   │       │   └── LoginForm
-│   │       │       ├── index.jsx
-│   │       │       └── index.scss
-│   │       ├── containers
-│   │       │   └── Login
-│   │       │       ├── index.jsx
-│   │       │       └── index.scss
-│   │       ├── decorators
-│   │       │   └── index.js
-│   │       ├── reducers
-│   │       │   └── index.js
-│   │       ├── routes
-│   │       │   └── index.js
-│   │       └── selectors
+│   │       └── reducers
 │   │           └── index.js
 │   ├── pages
 │   │   ├── admin
@@ -73,9 +116,16 @@ This is a project template with batteries included to speed up project initiatio
 │   │   │   │       └── index.jsx
 │   │   │   ├── containers
 │   │   │   │   └── Portal
-│   │   │   │       └── index.jsx
-│   │   │   └── routes
-│   │   │       └── index.js
+│   │   │   │       ├── index.jsx
+│   │   │   │       └── model.js
+│   │   │   ├── helpers
+│   │   │   │   └── index.js
+│   │   │   ├── reducers
+│   │   │   │   └── index.js
+│   │   │   ├── routes
+│   │   │   │   └── index.js
+│   │   │   └── selectors
+│   │   │       └── index.jsx
 │   │   └── home
 │   │       ├── components
 │   │       │   ├── Layout
@@ -96,8 +146,9 @@ This is a project template with batteries included to speed up project initiatio
 │   │   └── index.js
 │   ├── styles
 │   │   ├── App.scss
-│   │   ├── Button.scss
-│   │   └── Form.scss
+│   │   ├── Form.scss
+│   │   ├── Panel.scss
+│   │   └── Table.scss
 │   └── utils
 │       └── index.js
 ├── webpack
