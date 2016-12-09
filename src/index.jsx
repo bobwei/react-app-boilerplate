@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import canUseDOM from 'fbjs/lib/ExecutionEnvironment';
 import { hashHistory, browserHistory } from 'react-router';
+import watch from 'redux-watch';
 
+import Root from 'components/Root';
+import configAPI from 'modules/api';
+import { userSelector } from 'modules/auth/selectors';
 import './styles/App.scss';
 import configureStore from './stores';
-import Root from './components/Root';
-import AuthAPI from './modules/auth/api';
 
 /* initialize */
 
@@ -15,15 +17,12 @@ if (canUseDOM) {
   document.addEventListener('touchstart', () => {}, true);
 }
 
-const {
-  __ENVS__,
-} = window;
-
-AuthAPI.init(__ENVS__);
-
+const { __ENVS__ } = window;
 const history = ((location.protocol === 'file:' || __ENVS__.CLIENT_HISTORY === 'hash') && hashHistory) ||
                   browserHistory;
 const store = configureStore({}, history);
+const w = watch(() => userSelector(store.getState()));
+store.subscribe(w(user => configAPI({ ...__ENVS__, user })));
 
 ReactDOM.render(
   <Root

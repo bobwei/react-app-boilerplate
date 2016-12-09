@@ -1,16 +1,19 @@
 import React from 'react';
 import { Row, Grid, Col, Panel } from 'react-bootstrap';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { reduxForm } from 'redux-form';
 import compose from 'recompose/compose';
 import withProps from 'recompose/withProps';
+import lifecycle from 'recompose/lifecycle';
 
 import DataTable from 'components/DataTable';
 import Filters from 'components/Filters';
+import * as actions from 'modules/parse-server/actions';
 
 import { columns as testColumns } from './model';
 import { focusSelector } from '../../helpers';
-import { visibleDataSelector } from '../../selectors';
+import { dataSelector } from '../../selectors';
 
 const FILTERS_FORM_NAME = 'filters';
 
@@ -24,8 +27,15 @@ const Portal = ({ columns }) => {
   )(Filters);
 
   const EnhancedDataTable = compose(
-    connect(visibleDataSelector(FILTERS_FORM_NAME)),
+    connect(dataSelector, dispatch => bindActionCreators(actions, dispatch)),
+    lifecycle({
+      componentDidMount() {
+        const { fetchData } = this.props;
+        fetchData('_User');
+      },
+    }),
     withProps(() => ({
+      settings: { keyField: 'objectId' },
       columns,
     })),
   )(DataTable);

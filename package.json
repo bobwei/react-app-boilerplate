@@ -95,6 +95,7 @@
     "redux-form": "^6.2.1",
     "redux-persist": "^4.0.0-beta1",
     "redux-thunk": "^2.1.0",
+    "redux-watch": "^1.1.1",
     "reselect": "^2.5.4"
   },
   "jest": {

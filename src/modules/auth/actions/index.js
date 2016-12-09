@@ -1,8 +1,11 @@
 import { createAction } from 'redux-actions';
+
 import AuthAPI from '../api';
 
-export const put = createAction('put');
-export const reset = createAction('reset');
+export const modulePrefix = 'modules/auth';
+
+export const put = createAction(`${modulePrefix}:put`);
+export const reset = createAction(`${modulePrefix}:reset`);
 
 export const login = params => dispatch => (
   AuthAPI
