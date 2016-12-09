@@ -28,7 +28,7 @@ const config = {
     new webpack.DefinePlugin({}),
     new ExtractTextPlugin({
       filename: '[name].css',
-      allChunks: true,
+      // allChunks: true,
     }),
     new webpack.LoaderOptionsPlugin({
       options: {

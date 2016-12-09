@@ -36,14 +36,6 @@ const config = {
         test: /\.json$/,
         loader: 'json-loader',
       },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader',
-      },
-      {
-        test: /\.sass/,
-        loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&indentedSyntax',
-      },
       (() => {
         if (ENABLE_EXTRACT_TEXT_PLUGIN === 'false') {
           return {

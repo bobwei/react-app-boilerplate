@@ -39,7 +39,7 @@ const config = {
     new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin({
       filename: '[name].css',
-      allChunks: true,
+      // allChunks: true,
     }),
   ],
 
