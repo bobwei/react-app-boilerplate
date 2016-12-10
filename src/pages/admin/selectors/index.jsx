@@ -1,7 +1,17 @@
 import { getFormValues } from 'redux-form';
 import R from 'ramda';
+import { createSelector } from 'reselect';
 
 export const dataSelector = state => state.admin;
+
+export const dataAndFilterSelector = filterFormName => createSelector(
+  dataSelector,
+  getFormValues(filterFormName),
+  (data, where) => ({
+    ...data,
+    where,
+  }),
+);
 
 export const visibleDataSelector = filterFormName => (state) => {
   const { q } = getFormValues(filterFormName)(state) || {};
