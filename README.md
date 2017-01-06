@@ -14,6 +14,7 @@ This is a project template with batteries included to speed up project initiatio
 *   hot reload
 *   docker
 *   dotenv
+*   modularize
 
 ## Project Structure
 
