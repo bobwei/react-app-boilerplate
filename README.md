@@ -36,30 +36,7 @@ This is a project template with batteries included to speed up project initiatio
 │   └── server.js
 ├── src
 │   ├── components
-│   │   ├── Button
-│   │   │   ├── index.jsx
-│   │   │   └── index.scss
-│   │   ├── DataForm
-│   │   │   ├── __snapshots__
-│   │   │   │   └── index.spec.jsx.snap
-│   │   │   ├── index.jsx
-│   │   │   ├── index.scss
-│   │   │   └── index.spec.jsx
-│   │   ├── DataTable
-│   │   │   ├── __snapshots__
-│   │   │   │   └── index.spec.jsx.snap
-│   │   │   ├── index.jsx
-│   │   │   ├── index.scss
-│   │   │   ├── index.spec.jsx
-│   │   │   └── spec.json
-│   │   ├── FieldGroup
-│   │   │   ├── index.jsx
-│   │   │   └── index.scss
-│   │   ├── Filters
-│   │   │   └── index.jsx
-│   │   ├── Root
-│   │   │   └── index.jsx
-│   │   └── SubmitButton
+│   │   └── Root
 │   │       └── index.jsx
 │   ├── favicon.ico
 │   ├── html.jsx
@@ -101,46 +78,71 @@ This is a project template with batteries included to speed up project initiatio
 │   │   │   └── validations
 │   │   │       ├── index.js
 │   │   │       └── index.spec.js
-│   │   └── parse-server
-│   │       ├── actions
-│   │       │   └── index.js
-│   │       ├── api
-│   │       │   └── index.js
-│   │       ├── reducers
-│   │       │   └── index.js
-│   │       └── utils
-│   │           └── index.js
-│   ├── pages
-│   │   ├── admin
-│   │   │   ├── components
-│   │   │   │   ├── Layout
-│   │   │   │   │   └── index.jsx
-│   │   │   │   └── NavigationBar
+│   │   ├── pages
+│   │   │   ├── admin
+│   │   │   │   ├── components
+│   │   │   │   │   ├── Layout
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   └── NavigationBar
+│   │   │   │   │       └── index.jsx
+│   │   │   │   ├── containers
+│   │   │   │   │   └── Portal
+│   │   │   │   │       ├── index.jsx
+│   │   │   │   │       └── model.js
+│   │   │   │   ├── helpers
+│   │   │   │   │   └── index.js
+│   │   │   │   ├── reducers
+│   │   │   │   │   └── index.js
+│   │   │   │   ├── routes
+│   │   │   │   │   └── index.js
+│   │   │   │   └── selectors
 │   │   │   │       └── index.jsx
-│   │   │   ├── containers
-│   │   │   │   └── Portal
-│   │   │   │       ├── index.jsx
-│   │   │   │       └── model.js
-│   │   │   ├── helpers
+│   │   │   └── home
+│   │   │       ├── components
+│   │   │       │   ├── Layout
+│   │   │       │   │   └── index.jsx
+│   │   │       │   └── NavigationBar
+│   │   │       │       └── index.jsx
+│   │   │       ├── containers
+│   │   │       │   └── Home
+│   │   │       │       ├── index.jsx
+│   │   │       │       └── index.scss
+│   │   │       └── routes
+│   │   │           └── index.js
+│   │   ├── parse-server
+│   │   │   ├── actions
+│   │   │   │   └── index.js
+│   │   │   ├── api
 │   │   │   │   └── index.js
 │   │   │   ├── reducers
 │   │   │   │   └── index.js
-│   │   │   ├── routes
-│   │   │   │   └── index.js
-│   │   │   └── selectors
-│   │   │       └── index.jsx
-│   │   └── home
-│   │       ├── components
-│   │       │   ├── Layout
-│   │       │   │   └── index.jsx
-│   │       │   └── NavigationBar
-│   │       │       └── index.jsx
-│   │       ├── containers
-│   │       │   └── Home
-│   │       │       ├── index.jsx
-│   │       │       └── index.scss
-│   │       └── routes
-│   │           └── index.js
+│   │   │   └── utils
+│   │   │       └── index.js
+│   │   └── ui
+│   │       └── components
+│   │           ├── Button
+│   │           │   ├── index.jsx
+│   │           │   └── index.scss
+│   │           ├── DataForm
+│   │           │   ├── __snapshots__
+│   │           │   │   └── index.spec.jsx.snap
+│   │           │   ├── index.jsx
+│   │           │   ├── index.scss
+│   │           │   └── index.spec.jsx
+│   │           ├── DataTable
+│   │           │   ├── __snapshots__
+│   │           │   │   └── index.spec.jsx.snap
+│   │           │   ├── index.jsx
+│   │           │   ├── index.scss
+│   │           │   ├── index.spec.jsx
+│   │           │   └── spec.json
+│   │           ├── FieldGroup
+│   │           │   ├── index.jsx
+│   │           │   └── index.scss
+│   │           ├── Filters
+│   │           │   └── index.jsx
+│   │           └── SubmitButton
+│   │               └── index.jsx
 │   ├── reducers
 │   │   └── index.js
 │   ├── routes
