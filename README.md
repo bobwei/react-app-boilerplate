@@ -105,7 +105,9 @@ This is a project template with batteries included to speed up project initiatio
 │   │       │   └── index.js
 │   │       ├── api
 │   │       │   └── index.js
-│   │       └── reducers
+│   │       ├── reducers
+│   │       │   └── index.js
+│   │       └── utils
 │   │           └── index.js
 │   ├── pages
 │   │   ├── admin
