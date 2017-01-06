@@ -58,7 +58,7 @@ Home.propTypes = {
 
 export default compose(
   connect(
-    state => ({ user: userSelector(state) }),
+    state => ({ user: userSelector()(state) }),
     dispatch => bindActionCreators(actions, dispatch),
   ),
   withState('isLoggingOut', 'setIsLoggingOut', false),

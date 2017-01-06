@@ -1,7 +1,3 @@
 /* eslint-disable import/prefer-default-export */
-import { createSelector } from 'reselect';
-
-export const userSelector = createSelector(
-  [({ user }) => user],
-  r => r,
-);
+export const userSelector = (getState = state => state.user) =>
+  state => getState(state);

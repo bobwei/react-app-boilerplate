@@ -22,7 +22,7 @@ const { __ENVS__ } = window;
 const history = ((location.protocol === 'file:' || __ENVS__.CLIENT_HISTORY === 'hash') && hashHistory) ||
                   browserHistory;
 const store = configureStore({}, history);
-const w = watch(() => userSelector(store.getState()));
+const w = watch(() => userSelector()(store.getState()));
 store.subscribe(w(user => configAPI({ ...__ENVS__, user })));
 
 ReactDOM.render(

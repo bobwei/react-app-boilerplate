@@ -9,7 +9,7 @@ import { isAuthenticated } from '../predicates';
 export const redirectQueryParamName = 'next';
 
 export const IsAuthenticated = UserAuthWrapper({
-  authSelector: userSelector,
+  authSelector: userSelector(),
   predicate: isAuthenticated,
   redirectAction: routerActions.replace,
   redirectQueryParamName,
@@ -18,7 +18,7 @@ export const IsAuthenticated = UserAuthWrapper({
 });
 
 export const IsNotAuthenticated = UserAuthWrapper({
-  authSelector: userSelector,
+  authSelector: userSelector(),
   predicate: R.pipe(
     isAuthenticated,
     R.not,
