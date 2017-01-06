@@ -23,11 +23,6 @@ const config = {
       SRC_PATH,
       'node_modules',
     ],
-    alias: {
-      components: path.resolve(SRC_PATH, 'components'),
-      modules: path.resolve(SRC_PATH, 'modules'),
-      pages: path.resolve(SRC_PATH, 'pages'),
-    },
   },
 
   module: {

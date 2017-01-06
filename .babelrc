@@ -1,6 +1,13 @@
 {
   "presets": ["latest", "react"],
   "plugins": [
-    "transform-object-rest-spread"
+    "transform-object-rest-spread",
+    ["module-resolver", {
+      "alias": {
+        "components": "./src/components",
+        "modules": "./src/modules",
+        "pages": "./src/pages"
+      }
+    }]
   ]
 }
