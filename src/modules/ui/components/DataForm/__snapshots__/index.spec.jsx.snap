@@ -1,6 +1,7 @@
 exports[`test can render form correctly 1`] = `
 <form
   className=""
+  noValidate={true}
   onSubmit={undefined}>
   <div
     className="row">
@@ -20,6 +21,7 @@ exports[`test can render form correctly 1`] = `
 exports[`test can render form with error correctly 1`] = `
 <form
   className=""
+  noValidate={true}
   onSubmit={undefined}>
   <div
     className="alert alert-warning"
