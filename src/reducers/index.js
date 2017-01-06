@@ -3,7 +3,7 @@ import { reducer as formReducer } from 'redux-form';
 import { routerReducer } from 'react-router-redux';
 
 import authReducer from 'modules/auth/reducers';
-import adminReducer from 'pages/admin/reducers';
+import adminReducer from 'modules/pages/admin/reducers';
 
 export default combineReducers({
   form: formReducer,
