@@ -7,6 +7,7 @@ import watch from 'redux-watch';
 import Root from 'components/Root';
 import configAPI from 'modules/api';
 import { userSelector } from 'modules/auth/selectors';
+
 import './styles/App.scss';
 import configureStore from './stores';
 

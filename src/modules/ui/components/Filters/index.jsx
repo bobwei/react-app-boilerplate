@@ -3,7 +3,7 @@ import { Form, FormGroup, Col, Button } from 'react-bootstrap';
 import { Field, propTypes } from 'redux-form';
 import withProps from 'recompose/withProps';
 
-import FieldGroup from 'components/FieldGroup';
+import FieldGroup from 'modules/ui/components/FieldGroup';
 
 const EnhancedFieldGroup = withProps({ horizontal: true })(FieldGroup);
 

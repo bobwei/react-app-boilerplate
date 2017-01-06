@@ -10,8 +10,8 @@ import withProps from 'recompose/withProps';
 import { userSelector } from 'modules/auth/selectors';
 import * as actions from 'modules/auth/actions';
 import { isAuthenticated } from 'modules/auth/predicates';
-import Button from 'components/Button';
-import SubmitButton from 'components/SubmitButton';
+import Button from 'modules/ui/components/Button';
+import SubmitButton from 'modules/ui/components/SubmitButton';
 
 import styles from './index.scss';
 

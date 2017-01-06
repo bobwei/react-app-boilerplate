@@ -8,8 +8,8 @@ import withProps from 'recompose/withProps';
 import lifecycle from 'recompose/lifecycle';
 import shallowEqual from 'recompose/shallowEqual';
 
-import DataTable from 'components/DataTable';
-import Filters from 'components/Filters';
+import DataTable from 'modules/ui/components/DataTable';
+import Filters from 'modules/ui/components/Filters';
 import * as actions from 'modules/parse-server/actions';
 import { transformQuery } from 'modules/parse-server/utils';
 
