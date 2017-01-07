@@ -1,5 +1,4 @@
 import React from 'react';
-import { Modal } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { goBack as goBackAction } from 'react-router-redux';
 import R from 'ramda';
@@ -7,17 +6,16 @@ import compose from 'recompose/compose';
 import mapProps from 'recompose/mapProps';
 import withProps from 'recompose/withProps';
 
+import Modal from 'modules/ui/components/Modal';
+
 import NavigationBar from '../NavigationBar';
-import styles from './index.scss';
 
 const Layout = ({ modal, goBack, children }) => (
   <div>
     <NavigationBar />
     {modal &&
-      <Modal show onHide={goBack} bsSize="large">
-        <Modal.Body className={styles.modalBody}>
-          {children}
-        </Modal.Body>
+      <Modal show onHide={goBack}>
+        {children}
       </Modal>
     }
     {!modal &&
