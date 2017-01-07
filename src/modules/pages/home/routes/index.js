@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 import Layout from '../components/Layout';
 
 module.exports = {
