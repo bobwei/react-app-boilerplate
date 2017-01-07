@@ -36,7 +36,7 @@ Layout.propTypes = {
 export default compose(
   mapProps(props => ({
     modal: R.pathOr(Layout.defaultProps.modal, ['location', 'state', 'modal'])(props),
-    children: props.children,
+    ...R.pick(['children'])(props),
   })),
   connect(),
   withProps(({ dispatch }) => ({
