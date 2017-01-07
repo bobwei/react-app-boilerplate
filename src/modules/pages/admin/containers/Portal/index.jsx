@@ -1,5 +1,6 @@
 import React from 'react';
-import { Row, Grid, Col, Panel } from 'react-bootstrap';
+import { Row, Grid, Col, Panel, Nav, NavItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { reduxForm } from 'redux-form';
@@ -16,6 +17,7 @@ import { transformQuery } from 'modules/parse-server/utils';
 import { columns as testColumns } from './model';
 import { focusSelector } from '../../helpers';
 import { dataAndFilterSelector } from '../../selectors';
+import styles from './index.scss';
 
 export const FILTERS_FORM_NAME = 'filters';
 
@@ -54,7 +56,16 @@ const Portal = ({ columns }) => {
   return (
     <Row>
       <Grid>
-        <Col md={12}>
+        <Col md={3} className={styles.columnLeft}>
+          <Panel header="Sidebar" className={styles.sidebar}>
+            <Nav bsStyle="pills" stacked>
+              <LinkContainer to="/admin">
+                <NavItem>Users</NavItem>
+              </LinkContainer>
+            </Nav>
+          </Panel>
+        </Col>
+        <Col md={9}>
           <Panel header="Filters" collapsible onEntered={focusSelector}>
             <EnhancedFilters />
           </Panel>
