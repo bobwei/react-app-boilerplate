@@ -10,13 +10,13 @@ import lifecycle from 'recompose/lifecycle';
 import shallowEqual from 'recompose/shallowEqual';
 
 import DataTable from 'modules/ui/components/DataTable';
-import Filters from 'modules/ui/components/Filters';
 import * as actions from 'modules/parse-server/actions';
 import { transformQuery } from 'modules/parse-server/utils';
 
 import { columns as testColumns } from './model';
 import { focusSelector } from '../../helpers';
 import { dataAndFilterSelector } from '../../selectors';
+import Filters from '../../components/Filters';
 import styles from './index.scss';
 
 export const FILTERS_FORM_NAME = 'filters';
