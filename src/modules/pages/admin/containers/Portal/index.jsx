@@ -7,6 +7,7 @@ import { reduxForm } from 'redux-form';
 import compose from 'recompose/compose';
 import lifecycle from 'recompose/lifecycle';
 import shallowEqual from 'recompose/shallowEqual';
+import pure from 'recompose/pure';
 
 import DataTable from 'modules/ui/components/DataTable';
 import * as actions from 'modules/parse-server/actions';
@@ -84,4 +85,6 @@ Portal.propTypes = {
   columns: React.PropTypes.arrayOf(React.PropTypes.any),
 };
 
-export default Portal;
+export default compose(
+  pure,
+)(Portal);
