@@ -3,7 +3,7 @@ import { Row, Grid, Col, Panel, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { reduxForm } from 'redux-form';
+import { reduxForm, getFormValues } from 'redux-form';
 import compose from 'recompose/compose';
 import lifecycle from 'recompose/lifecycle';
 import shallowEqual from 'recompose/shallowEqual';
@@ -26,10 +26,14 @@ const EnhancedFilters = compose(
 )(Filters);
 
 const query = transformQuery(['username']);
-
 const EnhancedDataTable = compose(
   connect(
-    state => ({ data: state.admin.data }),
+    (state, { filterFormName }) => ({
+      /* data for table rows */
+      data: state.admin.data,
+      /* where for fetching with query */
+      where: getFormValues(filterFormName)(state),
+    }),
     dispatch => bindActionCreators(actions, dispatch),
   ),
   lifecycle({
@@ -66,6 +70,7 @@ const Portal = ({ filterFormName, columns }) => (
         </Panel>
         <Panel header={'Data'} bsStyle="info">
           <EnhancedDataTable
+            filterFormName={filterFormName}
             settings={{ keyField: 'objectId' }}
             columns={columns}
           />
