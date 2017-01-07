@@ -21,7 +21,7 @@ const Home = () => (
           }}
           componentClass={Link}
         >
-          Admin Portal
+          open Admin Portal in modal
         </Button>
       </p>
     </Jumbotron>
