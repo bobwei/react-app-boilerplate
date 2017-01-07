@@ -82,7 +82,8 @@ This is a project template with batteries included to speed up project initiatio
 │   │   │   ├── admin
 │   │   │   │   ├── components
 │   │   │   │   │   ├── Layout
-│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   │   ├── index.jsx
+│   │   │   │   │   │   └── index.scss
 │   │   │   │   │   └── NavigationBar
 │   │   │   │   │       └── index.jsx
 │   │   │   │   ├── containers
@@ -100,13 +101,13 @@ This is a project template with batteries included to speed up project initiatio
 │   │   │   └── home
 │   │   │       ├── components
 │   │   │       │   ├── Layout
-│   │   │       │   │   └── index.jsx
+│   │   │       │   │   ├── index.jsx
+│   │   │       │   │   └── index.scss
 │   │   │       │   └── NavigationBar
 │   │   │       │       └── index.jsx
 │   │   │       ├── containers
 │   │   │       │   └── Home
-│   │   │       │       ├── index.jsx
-│   │   │       │       └── index.scss
+│   │   │       │       └── index.jsx
 │   │   │       └── routes
 │   │   │           └── index.js
 │   │   ├── parse-server
@@ -141,6 +142,9 @@ This is a project template with batteries included to speed up project initiatio
 │   │           │   └── index.scss
 │   │           ├── Filters
 │   │           │   └── index.jsx
+│   │           ├── Modal
+│   │           │   ├── index.jsx
+│   │           │   └── index.scss
 │   │           └── SubmitButton
 │   │               └── index.jsx
 │   ├── reducers
