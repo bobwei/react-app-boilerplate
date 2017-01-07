@@ -14,10 +14,8 @@ const Layout = ({ modal, goBack, children }) => (
   <div>
     <NavigationBar />
     {modal &&
-      <Modal show onHide={goBack} bsSize="large">
-        <Modal show onHide={goBack}>
-          {children}
-        </Modal>
+      <Modal show onHide={goBack}>
+        {children}
       </Modal>
     }
     {!modal &&
