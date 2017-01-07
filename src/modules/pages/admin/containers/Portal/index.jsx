@@ -19,20 +19,18 @@ import { dataAndFilterSelector } from '../../selectors';
 import Filters from '../../components/Filters';
 import styles from './index.scss';
 
-export const FILTERS_FORM_NAME = 'filters';
+const EnhancedFilters = compose(
+  connect(),
+  reduxForm({
+    onSubmit() {},
+  }),
+)(Filters);
 
-const Portal = ({ columns }) => {
-  const EnhancedFilters = compose(
-    connect(),
-    reduxForm({
-      form: FILTERS_FORM_NAME,
-      onSubmit() {},
-    }),
-  )(Filters);
+const Portal = ({ filterFormName, columns }) => {
   const query = transformQuery(['username']);
   const EnhancedDataTable = compose(
     connect(
-      dataAndFilterSelector(FILTERS_FORM_NAME),
+      dataAndFilterSelector(filterFormName),
       dispatch => bindActionCreators(actions, dispatch),
     ),
     lifecycle({
@@ -67,7 +65,9 @@ const Portal = ({ columns }) => {
         </Col>
         <Col md={9}>
           <Panel header="Filters" collapsible onEntered={focusSelector}>
-            <EnhancedFilters />
+            <EnhancedFilters
+              form={filterFormName}
+            />
           </Panel>
           <Panel header={'Data'} bsStyle="info">
             <EnhancedDataTable />
@@ -79,10 +79,12 @@ const Portal = ({ columns }) => {
 };
 
 Portal.defaultProps = {
+  filterFormName: 'filter',
   columns: testColumns,
 };
 
 Portal.propTypes = {
+  filterFormName: React.PropTypes.string,
   columns: React.PropTypes.arrayOf(React.PropTypes.any),
 };
 
