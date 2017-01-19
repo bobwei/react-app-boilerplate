@@ -19,8 +19,8 @@
   },
   "settings": {
     "import/resolver": {
-      "webpack": {
-        "config": "webpack/webpack.config.base.babel.js"
+      "babel-module": {
+        "extensions": ["*", ".js", ".jsx"]
       }
     }
   }
