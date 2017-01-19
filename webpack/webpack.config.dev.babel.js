@@ -47,7 +47,6 @@ const config = {
       {
         test: /\.(js|jsx)$/,
         loaders: [
-          'react-hot-loader',
           'babel-loader',
           'eslint-loader',
         ],

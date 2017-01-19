@@ -8,6 +8,7 @@
         "modules": "./src/modules",
         "pages": "./src/pages"
       }
-    }]
+    }],
+    "react-hot-loader/babel"
   ]
 }
