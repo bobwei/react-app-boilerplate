@@ -1,5 +1,6 @@
 {
   "name": "react-app-boilerplate",
+  "version": "1.0.0",
   "author": "Bob Wei <bob61016@gmail.com>",
   "description": "A base skeleton template for react and webpack",
   "license": "MIT",
