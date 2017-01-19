@@ -1,5 +1,6 @@
 import R from 'ramda';
-import _ from 'lodash/fp';
+import get from 'lodash/fp/get';
+import set from 'lodash/fp/set';
 
 export const required = (msg = 'required') => [
   [R.isNil, R.always(msg)],
@@ -8,7 +9,7 @@ export const required = (msg = 'required') => [
 
 export const validate = R.curry((conds, key, obj) => (
   R.pipe(
-    _.get(key),
+    get(key),
     R.cond(conds),
   )(obj)
 ));
@@ -21,6 +22,6 @@ export const validateWithRules = R.curry((rules, data) => (
       R.isNil,
       R.not,
     )),
-    R.reduce((errors, [key, msg]) => _.set(key)(msg)(errors), {}),
+    R.reduce((errors, [key, msg]) => set(key)(msg)(errors), {}),
   )(rules)
 ));
