@@ -41,7 +41,7 @@ const config = {
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new ExtractTextPlugin({
       filename: '_[name].css',
       allChunks: true,
