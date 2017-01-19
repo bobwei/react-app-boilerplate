@@ -36,7 +36,6 @@ const config = {
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
-    new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin({
       filename: '[name].css',
       // allChunks: true,
