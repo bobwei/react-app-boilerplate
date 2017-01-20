@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  web:
+  react-app-boilerplate:
     build: .
     env_file: .env
     ports:
