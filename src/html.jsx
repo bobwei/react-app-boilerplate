@@ -32,7 +32,7 @@ const HTML = ({
 
 HTML.defaultProps = {
   language: 'en',
-  title: 'Propject',
+  title: 'Project',
   serverRenderingBody: '',
   jsSrc: '/assets/app.js',
   cssSrc: '/assets/main.css',
