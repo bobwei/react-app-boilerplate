@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default {
-  init({
+  config({
     AUTH_API_BASE_URL, PARSE_SERVER_APPLICATION_ID, PARSE_SERVER_JAVASCRIPT_KEY,
     user: { data: { sessionToken } },
   }) {
@@ -18,6 +18,9 @@ export default {
   },
 
   request() {
+    if (!this.axios) {
+      this.config(process.env);
+    }
     return this.axios;
   },
 };
