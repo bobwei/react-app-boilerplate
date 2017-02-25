@@ -15,7 +15,7 @@ import withState from 'recompose/withState';
   - isLoading prop is injected to wrapped component
 */
 const updateOnMountAndKeysChange = (
-  update = () => Promise.resolve(),
+  update = ({ update: fn }) => fn(),
   keys = ['location'],
   shouldDisplayLoadingState = true,
 ) => compose(
