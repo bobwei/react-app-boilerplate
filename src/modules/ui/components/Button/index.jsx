@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import { Button as BootstrapButton } from 'react-bootstrap';
 import classnames from 'classnames';
@@ -7,7 +6,6 @@ import compose from 'recompose/compose';
 import mapProps from 'recompose/mapProps';
 import nest from 'recompose/nest';
 import branch from 'recompose/branch';
-import renderComponent from 'recompose/renderComponent';
 import { Link } from 'react-router';
 import { LinkContainer } from 'react-router-bootstrap';
 
