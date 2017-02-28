@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { goBack as goBackAction } from 'react-router-redux';
+import { replace } from 'react-router-redux';
 import R from 'ramda';
 import compose from 'recompose/compose';
 import mapProps from 'recompose/mapProps';
@@ -13,12 +13,16 @@ import Modal from 'modules/ui/components/Modal';
 
 import NavigationBar from '../NavigationBar';
 
-const Layout = ({ modal, goBack, children, previousChildren }) => (
+const Layout = ({
+  children, previousChildren,
+  modalProps: { modal, ...modalProps },
+  onHide,
+}) => (
   <div>
     <NavigationBar />
     {modal &&
       <div>
-        <Modal show onHide={goBack}>
+        <Modal show onHide={onHide} {...modalProps}>
           {children}
         </Modal>
         {previousChildren}
@@ -31,23 +35,35 @@ const Layout = ({ modal, goBack, children, previousChildren }) => (
 );
 
 Layout.defaultProps = {
-  modal: false,
+  modalProps: {
+    modal: false,
+    backTo: '/',
+  },
 };
 
 Layout.propTypes = {
-  modal: React.PropTypes.bool,
-  goBack: React.PropTypes.func,
   previousChildren: React.PropTypes.element,
+  modalProps: React.PropTypes.shape({
+    modal: React.PropTypes.bool,
+    title: React.PropTypes.string,
+    backTo: React.PropTypes.string.isRequired,
+  }),
+  onHide: React.PropTypes.func,
 };
 
 export default compose(
   mapProps(props => ({
-    modal: R.pathOr(Layout.defaultProps.modal, ['location', 'state', 'modal'])(props),
-    children: props.children,
+    modalProps: R.path(['location', 'state', 'modalProps'])(props),
+    ...R.pick(['children', 'main', 'location'])(props),
   })),
   connect(),
-  withProps(({ dispatch }) => ({
-    goBack: R.compose(dispatch, goBackAction),
+  withProps(({ dispatch, location }) => ({
+    onHide: R.compose(
+      dispatch,
+      replace,
+      R.path(['state', 'modalProps', 'backTo']),
+      R.always(location),
+    ),
   })),
   withState('previousChildren', 'setPreviousChildren', null),
   lifecycle({
