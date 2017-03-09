@@ -2,26 +2,26 @@ import React from 'react';
 import { Table } from 'react-bootstrap';
 import R from 'ramda';
 
-import styles from './index.scss';
+import Cell from 'modules/ui/components/Cell';
 
-const DataTable = ({ settings, columns, data }) => (
-  <Table responsive bsClass={`table ${styles.table}`}>
+const DataTable = ({ settings, columns, data, ...restTableProps }) => (
+  <Table responsive>
     <thead>
       <tr>
-        {columns.map(({ key, label }) => (
-          <th key={key}>
-            {label || key}
+        {columns.map(({ prop, label }) => (
+          <th key={prop}>
+            {label || prop}
           </th>
         ))}
       </tr>
     </thead>
     <tbody>
       {data
-        .map(row => (
+        .map((row, index, rows) => (
           <tr key={R.path([settings.keyField])(row)}>
-            {columns.map(({ key, cell = (r, k) => R.path(R.split('.')(k))(r) }) => (
-              <td key={key}>
-                {cell(row, key)}
+            {columns.map(({ prop, cell = Cell, ...restColumnProps }) => (
+              <td key={prop}>
+                {cell({ row, prop, index, rows, ...restTableProps, ...restColumnProps })}
               </td>
             ))}
           </tr>
@@ -43,7 +43,14 @@ DataTable.propTypes = {
   settings: React.PropTypes.shape({
     keyField: React.PropTypes.string,
   }),
-  columns: React.PropTypes.arrayOf(React.PropTypes.any.isRequired),
+  columns: React.PropTypes.arrayOf(React.PropTypes.shape({
+    prop: React.PropTypes.string.isRequired,
+    label: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.element,
+    ]),
+    cell: React.PropTypes.func,
+  })),
   data: React.PropTypes.arrayOf(React.PropTypes.any),
 };
 

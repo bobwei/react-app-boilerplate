@@ -10,9 +10,9 @@ it('can render table correctly', () => {
   const component = renderer.create(
     <DataTable
       columns={[{
-        key: 'id',
+        prop: 'id',
       }, {
-        key: 'name',
+        prop: 'name',
       }]}
       data={R.pipe(
         R.path(['results_json', 'search_results']),

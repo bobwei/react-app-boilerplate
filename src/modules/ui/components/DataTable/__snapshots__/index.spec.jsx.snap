@@ -1,8 +1,8 @@
 exports[`test can render table correctly 1`] = `
 <div
-  className="table table-responsive">
+  className="table-responsive">
   <table
-    className="table table">
+    className="table">
     <thead>
       <tr>
         <th>
@@ -16,146 +16,218 @@ exports[`test can render table correctly 1`] = `
     <tbody>
       <tr>
         <td>
-          1933639
+          <span>
+            1933639
+          </span>
         </td>
         <td>
-          modern double room, 5 min to MRT
-        </td>
-      </tr>
-      <tr>
-        <td>
-          15554097
-        </td>
-        <td>
-          Taipei i trip❤4mins MRT❤Xingtian temple❤homey apt
+          <span>
+            modern double room, 5 min to MRT
+          </span>
         </td>
       </tr>
       <tr>
         <td>
-          7217332
+          <span>
+            15554097
+          </span>
         </td>
         <td>
-          only5 secand to Xingtian Temple MRT
-        </td>
-      </tr>
-      <tr>
-        <td>
-          11643239
-        </td>
-        <td>
-          Bright, cozy and clean private room
+          <span>
+            Taipei i trip❤4mins MRT❤Xingtian temple❤homey apt
+          </span>
         </td>
       </tr>
       <tr>
         <td>
-          12200400
+          <span>
+            7217332
+          </span>
         </td>
         <td>
-          Baloo\'s home
-        </td>
-      </tr>
-      <tr>
-        <td>
-          5458777
-        </td>
-        <td>
-          地鐵與機場都超方便的和室套房
+          <span>
+            only5 secand to Xingtian Temple MRT
+          </span>
         </td>
       </tr>
       <tr>
         <td>
-          5332664
+          <span>
+            11643239
+          </span>
         </td>
         <td>
-          North-Europe LOFT High Ceiling Room
-        </td>
-      </tr>
-      <tr>
-        <td>
-          8707367
-        </td>
-        <td>
-          S.H中山國小捷運站5分鐘精緻C室可小團體8人套房月租
+          <span>
+            Bright, cozy and clean private room
+          </span>
         </td>
       </tr>
       <tr>
         <td>
-          2789610
+          <span>
+            12200400
+          </span>
         </td>
         <td>
-          Taipei MRT Studio 到站即到家 MRT1 분
-        </td>
-      </tr>
-      <tr>
-        <td>
-          15038033
-        </td>
-        <td>
-          台北市市中心五星級小豪宅飯店式管理-捷運松江南京站就在家門口
+          <span>
+            Baloo\'s home
+          </span>
         </td>
       </tr>
       <tr>
         <td>
-          15537593
+          <span>
+            5458777
+          </span>
         </td>
         <td>
-          HELLO 6-persons MRT Songjiang Nanjing 5 minutes
-        </td>
-      </tr>
-      <tr>
-        <td>
-          4900301
-        </td>
-        <td>
-          suite A6 @Xingtian Temple Station 
+          <span>
+            地鐵與機場都超方便的和室套房
+          </span>
         </td>
       </tr>
       <tr>
         <td>
-          8312800
+          <span>
+            5332664
+          </span>
         </td>
         <td>
-          5★ location city centre MRT apt
-        </td>
-      </tr>
-      <tr>
-        <td>
-          1996229
-        </td>
-        <td>
-          MRT Apartment-SongjiangNanjing*TWO
+          <span>
+            North-Europe LOFT High Ceiling Room
+          </span>
         </td>
       </tr>
       <tr>
         <td>
-          13059703
+          <span>
+            8707367
+          </span>
         </td>
         <td>
-          行天宮正對面 溫馨雅房
-        </td>
-      </tr>
-      <tr>
-        <td>
-          12368784
-        </td>
-        <td>
-          New open!! Zhongshan Elementary school MRT-Z STAR
+          <span>
+            S.H中山國小捷運站5分鐘精緻C室可小團體8人套房月租
+          </span>
         </td>
       </tr>
       <tr>
         <td>
-          1102678
+          <span>
+            2789610
+          </span>
         </td>
         <td>
-          Taipei Manor I
+          <span>
+            Taipei MRT Studio 到站即到家 MRT1 분
+          </span>
         </td>
       </tr>
       <tr>
         <td>
-          15591121
+          <span>
+            15038033
+          </span>
         </td>
         <td>
-          MRT松江南京全新裝潢雙人房
+          <span>
+            台北市市中心五星級小豪宅飯店式管理-捷運松江南京站就在家門口
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            15537593
+          </span>
+        </td>
+        <td>
+          <span>
+            HELLO 6-persons MRT Songjiang Nanjing 5 minutes
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            4900301
+          </span>
+        </td>
+        <td>
+          <span>
+            suite A6 @Xingtian Temple Station 
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            8312800
+          </span>
+        </td>
+        <td>
+          <span>
+            5★ location city centre MRT apt
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            1996229
+          </span>
+        </td>
+        <td>
+          <span>
+            MRT Apartment-SongjiangNanjing*TWO
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            13059703
+          </span>
+        </td>
+        <td>
+          <span>
+            行天宮正對面 溫馨雅房
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            12368784
+          </span>
+        </td>
+        <td>
+          <span>
+            New open!! Zhongshan Elementary school MRT-Z STAR
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            1102678
+          </span>
+        </td>
+        <td>
+          <span>
+            Taipei Manor I
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            15591121
+          </span>
+        </td>
+        <td>
+          <span>
+            MRT松江南京全新裝潢雙人房
+          </span>
         </td>
       </tr>
     </tbody>
