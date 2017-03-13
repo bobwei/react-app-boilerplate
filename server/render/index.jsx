@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import routes from '../../build/server/routes';
 import configureStore from '../../build/server/stores';
 import HTML from '../../src/html';
-import { envSelector } from '../../src/utils';
+import envSelector from '../../src/modules/envs/selectors';
 
 const envs = envSelector(process.env);
 
@@ -16,7 +16,7 @@ export default () => {
   const app = express();
 
   app.get('*', (req, res) => {
-    const store = configureStore({});
+    const store = configureStore({ envs });
 
     match({
       routes,
