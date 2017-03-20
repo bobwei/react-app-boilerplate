@@ -8,7 +8,7 @@
     "node": "^6.9.0"
   },
   "scripts": {
-    "start": "npm run clean && webpack --config webpack/webpack.config.server.babel.js && ENABLE_EXTRACT_TEXT_PLUGIN=false node server/index.js",
+    "start": "npm run clean && webpack --config webpack/webpack.config.server.babel.js && node server/index.js",
     "build": "npm run clean && npm run copy && npm run build:server && npm run build:client && ./scripts/build.jsx > build/client/index.html",
     "build:server": "webpack -p --config webpack/webpack.config.server.babel.js",
     "build:client": "webpack -p --config webpack/webpack.config.prod.babel.js",
@@ -41,7 +41,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.9.0",
-    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "extract-text-webpack-plugin": "v2.1.0",
     "file-loader": "^0.9.0",
     "gh-pages": "^0.12.0",
     "glob": "^7.0.0",

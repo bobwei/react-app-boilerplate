@@ -1,4 +1,4 @@
-/* eslint-disable global-require, import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies */
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import dotenv from 'dotenv';
@@ -6,7 +6,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const {
-  ENABLE_EXTRACT_TEXT_PLUGIN,
   CLIENT_HISTORY,
 } = process.env;
 
@@ -31,38 +30,35 @@ const config = {
         test: /\.json$/,
         loader: 'json-loader',
       },
-      (() => {
-        if (ENABLE_EXTRACT_TEXT_PLUGIN === 'false') {
-          return {
-            test: /\.scss$/,
-            exclude: /(App.scss)/,
-            loader: 'style-loader!css-loader?modules&localIdentName=[local]__[hash:base64:5]!postcss-loader!sass-loader',
-          };
-        }
-        return {
-          test: /\.scss$/,
-          exclude: /(App.scss)/,
-          loader: ExtractTextPlugin.extract({
-            fallbackLoader: 'style-loader',
-            loader: 'css-loader?modules&localIdentName=[local]__[hash:base64:5]!postcss-loader!sass-loader',
-          }),
-        };
-      })(),
-      (() => {
-        if (ENABLE_EXTRACT_TEXT_PLUGIN === 'false') {
-          return {
-            include: /(App.scss)/,
-            loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded',
-          };
-        }
-        return {
-          include: /(App.scss)/,
-          loader: ExtractTextPlugin.extract({
-            fallbackLoader: 'style-loader',
-            loader: 'css-loader!postcss-loader!sass-loader?outputStyle=expanded',
-          }),
-        };
-      })(),
+      {
+        test: /\.scss$/,
+        exclude: /(App.scss)/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              query: {
+                modules: true,
+                localIdentName: '[path]__[name]__[local]--[hash:base64:5]',
+              },
+            },
+            'postcss-loader',
+            'sass-loader',
+          ],
+        }),
+      },
+      {
+        include: /(App.scss)/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            'postcss-loader',
+            'sass-loader',
+          ],
+        }),
+      },
       {
         test: /\.(png|jpg|gif|woff|woff2)$/,
         loader: 'url-loader?limit=8192',
