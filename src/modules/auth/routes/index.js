@@ -1,7 +1,7 @@
 module.exports = {
   childRoutes: [
     {
-      path: '/login',
+      path: 'login',
       getComponent(nextState, cb) {
         require.ensure([], (require) => {
           cb(null, require('../containers/Login').default);
@@ -9,7 +9,7 @@ module.exports = {
       },
     },
     {
-      path: '/signup',
+      path: 'signup',
       getComponent(nextState, cb) {
         require.ensure([], (require) => {
           cb(null, require('../containers/Signup').default);
