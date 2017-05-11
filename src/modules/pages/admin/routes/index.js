@@ -2,7 +2,7 @@ import { IsAuthenticated } from 'modules/auth/decorators';
 import Layout from '../components/Layout';
 
 module.exports = {
-  path: '/admin',
+  path: 'admin',
   component: IsAuthenticated(Layout),
   childRoutes: [
     {
