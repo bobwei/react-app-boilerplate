@@ -1,17 +1,15 @@
 import express from 'express';
 import compression from 'compression';
-import dotenv from 'dotenv';
+import 'dotenv/config';
 
 import assets from './assets';
 import render from './render';
 
-dotenv.config();
-
-const { NODE_ENV, PORT } = process.env;
+const { NODE_ENV, PORT = 5012 } = process.env;
 
 /* server configs */
 const app = express();
-app.set('port', (PORT || 5012));
+app.set('port', PORT);
 
 /* middlewares */
 app.use(compression());
