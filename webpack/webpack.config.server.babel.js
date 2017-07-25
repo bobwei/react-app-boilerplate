@@ -55,7 +55,7 @@ const config = {
       ...baseConfig.module.loaders,
       {
         test: /\.(js|jsx)$/,
-        loaders: ['babel-loader', 'eslint-loader'],
+        loaders: ['babel-loader'],
         include: SRC_PATH,
         exclude: /node_modules/,
       },
