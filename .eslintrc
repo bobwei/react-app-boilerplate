@@ -4,7 +4,10 @@
     "react",
     "import"
   ],
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
   "env": {
     "es6": true,
     "node": true,
