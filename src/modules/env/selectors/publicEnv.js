@@ -1,10 +1,5 @@
 import R from 'ramda';
 
 export default R.pick([
-  'CLIENT_HISTORY',
-  'AUTH_API_BASE_URL',
-  'PARSE_SERVER_APPLICATION_ID',
-  'PARSE_SERVER_JAVASCRIPT_KEY',
-  'PARSE_SERVER_API_BASE_URL',
-  'BASE_URL',
+  'BASE_SERVER_URL',
 ]);
