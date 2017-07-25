@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import canUseDOM from 'fbjs/lib/ExecutionEnvironment';
 import { browserHistory } from 'react-router';
 
-import Root from 'components/Root';
+import Root from 'modules/ui/components/Root';
 
 import './styles/App.scss';
 import configureStore from './stores/configureStore';
