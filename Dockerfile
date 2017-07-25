@@ -1,6 +1,4 @@
-FROM node:7.0.0
-
-RUN npm install -g yarn
+FROM node:8.2.1
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
@@ -10,6 +8,6 @@ ADD yarn.lock .
 RUN yarn
 
 ADD . .
-RUN npm run build
+RUN yarn build
 
-CMD [ "npm", "run", "server" ]
+CMD [ "yarn", "server" ]

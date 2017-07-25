@@ -4,9 +4,6 @@
   "author": "Bob Wei <bob61016@gmail.com>",
   "description": "A base skeleton template for react and webpack",
   "license": "MIT",
-  "engines": {
-    "node": "^6.9.0"
-  },
   "scripts": {
     "start": "npm run clean && webpack --config webpack/webpack.config.server.babel.js && ENABLE_EXTRACT_TEXT_PLUGIN=false node server/index.js",
     "build": "npm run clean && npm run copy && npm run build:server && npm run build:client && ./scripts/build.jsx > build/client/index.html",
