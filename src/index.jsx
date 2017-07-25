@@ -18,16 +18,16 @@ if (canUseDOM) {
   document.addEventListener('touchstart', () => {}, true);
 }
 
-const { __ENVS__ } = window;
-const history = ((location.protocol === 'file:' || __ENVS__.CLIENT_HISTORY === 'hash') && hashHistory) ||
+const { __ENV__ } = window;
+const history = ((location.protocol === 'file:' || __ENV__.CLIENT_HISTORY === 'hash') && hashHistory) ||
                   browserHistory;
 const store = configureStore(undefined, history);
 
 const w = watch(() => userSelector()(store.getState()));
-store.subscribe(w(user => configAPI({ ...__ENVS__, user })));
+store.subscribe(w(user => configAPI({ ...__ENV__, user })));
 
 configAPI({
-  ...__ENVS__,
+  ...__ENV__,
   user: userSelector()(store.getState()),
 });
 

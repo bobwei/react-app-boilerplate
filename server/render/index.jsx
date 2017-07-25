@@ -10,13 +10,13 @@ import configureStore from '../../build/server/stores';
 import HTML from '../../src/html';
 import publicEnv from '../../src/modules/env/selectors/publicEnv';
 
-const envs = publicEnv(process.env);
+const env = publicEnv(process.env);
 
 export default () => {
   const app = express();
 
   app.get('*', (req, res) => {
-    const store = configureStore({ envs });
+    const store = configureStore({ env });
 
     match({
       routes,
@@ -35,7 +35,7 @@ export default () => {
         const html = renderToStaticMarkup(
           <HTML
             serverRenderingBody={serverRenderingBody}
-            envs={envs}
+            env={env}
           />,
         );
         res.send(`<!doctype html>${html}`);
