@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
 
-module.exports = {
+const route = {
   path: '/',
   component: Layout,
   childRoutes: [
@@ -15,3 +15,5 @@ module.exports = {
     },
   ],
 };
+
+export default route;
