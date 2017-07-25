@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import canUseDOM from 'fbjs/lib/ExecutionEnvironment';
+import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
 import { persistStore, autoRehydrate } from 'redux-persist';
 import { routerMiddleware } from 'react-router-redux';
 

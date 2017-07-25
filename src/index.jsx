@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import canUseDOM from 'fbjs/lib/ExecutionEnvironment';
+import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
 import { browserHistory } from 'react-router';
 
 import Root from 'modules/ui/components/Root';
@@ -19,10 +19,7 @@ const history = browserHistory;
 const store = configureStore(undefined, history);
 
 ReactDOM.render(
-  <Root
-    store={store}
-    history={history}
-  />,
+  <Root store={store} history={history} />,
   document.getElementById('app'),
 );
 
