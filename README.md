@@ -2,6 +2,11 @@
 
 This is a project template with batteries included to speed up project initiation.
 
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Production Build](#production-build)
+
+
 ## Features
 
 *   react-router
@@ -16,198 +21,47 @@ This is a project template with batteries included to speed up project initiatio
 *   dotenv
 *   modularize
 
-## Project Structure
 
+## Getting Started
+
+- Config ENV
+- Install Node Dependencies
+- Start
+
+
+### Config ENV
+
+create env from example
 ```
-.
-├── Dockerfile
-├── Procfile
-├── README.md
-├── docker-compose.prod.yml
-├── package.json
-├── scripts
-│   └── build.jsx
-├── server
-│   ├── assets
-│   │   └── index.js
-│   ├── index.js
-│   ├── render
-│   │   └── index.jsx
-│   └── server.js
-├── src
-│   ├── components
-│   │   └── Root
-│   │       └── index.jsx
-│   ├── favicon.ico
-│   ├── html.jsx
-│   ├── index.jsx
-│   ├── modules
-│   │   ├── api
-│   │   │   └── index.js
-│   │   ├── auth
-│   │   │   ├── actions
-│   │   │   │   └── index.js
-│   │   │   ├── api
-│   │   │   │   └── index.js
-│   │   │   ├── components
-│   │   │   │   ├── LoginForm
-│   │   │   │   │   └── index.jsx
-│   │   │   │   ├── Page
-│   │   │   │   │   ├── index.jsx
-│   │   │   │   │   └── index.scss
-│   │   │   │   └── SignupForm
-│   │   │   │       └── index.jsx
-│   │   │   ├── containers
-│   │   │   │   ├── Login
-│   │   │   │   │   └── index.jsx
-│   │   │   │   └── Signup
-│   │   │   │       └── index.jsx
-│   │   │   ├── decorators
-│   │   │   │   └── index.js
-│   │   │   ├── predicates
-│   │   │   │   └── index.js
-│   │   │   ├── reducers
-│   │   │   │   └── index.js
-│   │   │   ├── routes
-│   │   │   │   └── index.js
-│   │   │   ├── selectors
-│   │   │   │   └── index.js
-│   │   │   └── validations
-│   │   │       └── index.js
-│   │   ├── forms
-│   │   │   └── validations
-│   │   │       ├── index.js
-│   │   │       └── index.spec.js
-│   │   ├── pages
-│   │   │   ├── admin
-│   │   │   │   ├── components
-│   │   │   │   │   ├── Layout
-│   │   │   │   │   │   ├── index.jsx
-│   │   │   │   │   │   └── index.scss
-│   │   │   │   │   └── NavigationBar
-│   │   │   │   │       └── index.jsx
-│   │   │   │   ├── containers
-│   │   │   │   │   └── Portal
-│   │   │   │   │       ├── index.jsx
-│   │   │   │   │       └── model.js
-│   │   │   │   ├── helpers
-│   │   │   │   │   └── index.js
-│   │   │   │   ├── reducers
-│   │   │   │   │   └── index.js
-│   │   │   │   ├── routes
-│   │   │   │   │   └── index.js
-│   │   │   │   └── selectors
-│   │   │   │       └── index.jsx
-│   │   │   └── home
-│   │   │       ├── components
-│   │   │       │   ├── Layout
-│   │   │       │   │   ├── index.jsx
-│   │   │       │   │   └── index.scss
-│   │   │       │   └── NavigationBar
-│   │   │       │       └── index.jsx
-│   │   │       ├── containers
-│   │   │       │   └── Home
-│   │   │       │       └── index.jsx
-│   │   │       └── routes
-│   │   │           └── index.js
-│   │   ├── parse-server
-│   │   │   ├── actions
-│   │   │   │   └── index.js
-│   │   │   ├── api
-│   │   │   │   └── index.js
-│   │   │   ├── reducers
-│   │   │   │   └── index.js
-│   │   │   └── utils
-│   │   │       └── index.js
-│   │   └── ui
-│   │       └── components
-│   │           ├── Button
-│   │           │   ├── index.jsx
-│   │           │   └── index.scss
-│   │           ├── DataForm
-│   │           │   ├── __snapshots__
-│   │           │   │   └── index.spec.jsx.snap
-│   │           │   ├── index.jsx
-│   │           │   ├── index.scss
-│   │           │   └── index.spec.jsx
-│   │           ├── DataTable
-│   │           │   ├── __snapshots__
-│   │           │   │   └── index.spec.jsx.snap
-│   │           │   ├── index.jsx
-│   │           │   ├── index.scss
-│   │           │   ├── index.spec.jsx
-│   │           │   └── spec.json
-│   │           ├── FieldGroup
-│   │           │   ├── index.jsx
-│   │           │   └── index.scss
-│   │           ├── Filters
-│   │           │   └── index.jsx
-│   │           ├── Modal
-│   │           │   ├── index.jsx
-│   │           │   └── index.scss
-│   │           └── SubmitButton
-│   │               └── index.jsx
-│   ├── reducers
-│   │   └── index.js
-│   ├── routes
-│   │   └── index.jsx
-│   ├── stores
-│   │   └── index.js
-│   ├── styles
-│   │   ├── App.scss
-│   │   ├── Form.scss
-│   │   ├── Panel.scss
-│   │   └── Table.scss
-│   └── utils
-│       └── index.js
-├── webpack
-│   ├── webpack.config.all.babel.js
-│   ├── webpack.config.base.babel.js
-│   ├── webpack.config.dev.babel.js
-│   ├── webpack.config.prod.babel.js
-│   └── webpack.config.server.babel.js
-└── yarn.lock
+mkdir .envs
+cp .example.env .envs/.dev.env
 ```
 
-## Development Flow
+link to env
+```
+ln -s .envs/.dev.env .env
+```
 
-First time
+### Install Node Dependencies
+
 ```
 yarn
-mv .example.env .env
 ```
 
-Development server
-```
-npm start
-```
-
-## Production Flow
-
-Build static assets
-```
-npm run build
-```
-
-Run production server
-```
-npm run server
-```
-
-## Deploy to Github Pages
+### Start
 
 ```
-npm run build && npm run deploy:gh-pages
+yarn start
 ```
 
-## Deploy to Heroku
 
-create heroku app
+
+# Production Build
+
 ```
-heroku apps:create myapp
-heroku config:push
+yarn build
 ```
 
 ```
-git push heroku master
+yarn server
 ```
