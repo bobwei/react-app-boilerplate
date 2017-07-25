@@ -15,6 +15,8 @@
     "precommit": "lint-staged --verbose",
     "format": "prettier --single-quote --trailing-comma all '{scripts,server,src,webpack,__{tests,mocks}__}/**/*.js' --write",
     "lint-staged": "lint-staged --verbose",
+    "test": "jest --onlyChanged --watch",
+    "test:all": "jest",
     "deploy:gh-pages": "gh-pages -d build/client",
     "heroku-postbuild": "npm run build"
   },
@@ -48,7 +50,7 @@
     "glob": "^7.0.0",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^18.1.0",
+    "jest": "^20.0.4",
     "json-loader": "^0.5.4",
     "lint-staged": "^4.0.2",
     "minimist": "^1.2.0",
@@ -103,10 +105,16 @@
     "reselect": "^2.5.4"
   },
   "jest": {
-    "testPathDirs": [
+    "roots": [
       "<rootDir>/src"
     ],
     "testEnvironment": "node",
+    "verbose": true,
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/env-setup.js",
+      "<rootDir>/node_modules/"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/__tests__/env-setup.js",
     "moduleNameMapper": {
       "^.+\\.(css|scss)$": "identity-obj-proxy",
       "^.+\\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/fileMock.js"

@@ -1,16 +1,22 @@
-exports[`test can render form correctly 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`can render form correctly 1`] = `
 <form
   className=""
   noValidate={true}
-  onSubmit={undefined}>
+  onSubmit={undefined}
+>
   <div
-    className="row">
+    className="row"
+  >
     <div
-      className="col-md-4 col-md-offset-4">
+      className="col-md-4 col-md-offset-4"
+    >
       <button
         className="btnSubmit main btn btn-block"
         disabled={false}
-        type="submit">
+        type="submit"
+      >
         Save
       </button>
     </div>
@@ -18,24 +24,29 @@ exports[`test can render form correctly 1`] = `
 </form>
 `;
 
-exports[`test can render form with error correctly 1`] = `
+exports[`can render form with error correctly 1`] = `
 <form
   className=""
   noValidate={true}
-  onSubmit={undefined}>
+  onSubmit={undefined}
+>
   <div
     className="alert alert-warning"
-    role="alert">
+    role="alert"
+  >
     login error
   </div>
   <div
-    className="row">
+    className="row"
+  >
     <div
-      className="col-md-4 col-md-offset-4">
+      className="col-md-4 col-md-offset-4"
+    >
       <button
         className="btnSubmit main btn btn-block"
         disabled={false}
-        type="submit">
+        type="submit"
+      >
         Save
       </button>
     </div>

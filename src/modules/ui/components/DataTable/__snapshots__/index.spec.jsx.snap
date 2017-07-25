@@ -1,8 +1,12 @@
-exports[`test can render table correctly 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`can render table correctly 1`] = `
 <div
-  className="table-responsive">
+  className="table-responsive"
+>
   <table
-    className="table">
+    className="table"
+  >
     <thead>
       <tr>
         <th>
@@ -70,7 +74,7 @@ exports[`test can render table correctly 1`] = `
         </td>
         <td>
           <span>
-            Baloo\'s home
+            Baloo's home
           </span>
         </td>
       </tr>
