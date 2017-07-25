@@ -3,7 +3,7 @@ import React from 'react';
 
 const HTML = ({
   language, title, serverRenderingBody, jsSrc, cssSrc,
-  envs,
+  env,
 }) => (
   <html lang={language}>
     <head>
@@ -20,9 +20,9 @@ const HTML = ({
       <div id="app">
         <div dangerouslySetInnerHTML={{ __html: serverRenderingBody }} />
       </div>
-      {envs &&
+      {env &&
         <script
-          dangerouslySetInnerHTML={{ __html: `window.__ENVS__ = JSON.parse('${JSON.stringify(envs)}');` }}
+          dangerouslySetInnerHTML={{ __html: `window.__ENV__ = JSON.parse('${JSON.stringify(env)}');` }}
         />
       }
       <script src={jsSrc} />
@@ -44,7 +44,7 @@ HTML.propTypes = {
   serverRenderingBody: React.PropTypes.string,
   jsSrc: React.PropTypes.string,
   cssSrc: React.PropTypes.string,
-  envs: React.PropTypes.object,
+  env: React.PropTypes.object,
 };
 
 export default HTML;

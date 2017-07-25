@@ -4,7 +4,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import dotenv from 'dotenv';
 
 import HTML from '../src/html';
-import { envSelector } from '../src/utils';
+import envSelector from '../src/modules/envs/selectors';
 
 dotenv.config();
 
