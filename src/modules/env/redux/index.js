@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
 
 const initialState = (canUseDOM) ? window.__ENV__ : {};
