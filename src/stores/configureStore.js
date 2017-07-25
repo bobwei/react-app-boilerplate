@@ -6,7 +6,7 @@ import { routerMiddleware } from 'react-router-redux';
 
 import rootReducer from '../reducers';
 
-export default (initialState, history) => {
+export default (initialState, history, callback) => {
   const middlewares = [thunkMiddleware];
   if (history) {
     middlewares.push(routerMiddleware(history));
@@ -24,7 +24,7 @@ export default (initialState, history) => {
   );
 
   if (canUseDOM) {
-    persistStore(store, { whitelist: [] });
+    persistStore(store, { whitelist: [] }, callback);
   }
 
   return store;
