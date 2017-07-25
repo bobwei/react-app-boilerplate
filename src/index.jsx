@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import canUseDOM from 'fbjs/lib/ExecutionEnvironment';
-import { hashHistory, browserHistory } from 'react-router';
+import { browserHistory } from 'react-router';
 
 import Root from 'components/Root';
 
@@ -15,9 +15,7 @@ if (canUseDOM) {
   document.addEventListener('touchstart', () => {}, true);
 }
 
-const { __ENV__ } = window;
-const history = ((location.protocol === 'file:' || __ENV__.CLIENT_HISTORY === 'hash') && hashHistory) ||
-                  browserHistory;
+const history = browserHistory;
 const store = configureStore(undefined, history);
 
 ReactDOM.render(
