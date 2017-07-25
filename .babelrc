@@ -7,9 +7,7 @@
     "transform-object-rest-spread",
     ["module-resolver", {
       "alias": {
-        "components": "./src/components",
-        "modules": "./src/modules",
-        "pages": "./src/pages"
+        "modules": "./src/modules"
       }
     }],
     "react-hot-loader/babel"
