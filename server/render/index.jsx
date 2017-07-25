@@ -8,9 +8,9 @@ import { Provider } from 'react-redux';
 import routes from '../../build/server/routes';
 import configureStore from '../../build/server/stores';
 import HTML from '../../src/html';
-import envSelector from '../../src/modules/env/selectors';
+import publicEnv from '../../src/modules/env/selectors/publicEnv';
 
-const envs = envSelector(process.env);
+const envs = publicEnv(process.env);
 
 export default () => {
   const app = express();
