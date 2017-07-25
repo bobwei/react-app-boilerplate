@@ -21,7 +21,7 @@
     "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.3",
+    "autoprefixer": "^7.1.2",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
@@ -33,8 +33,8 @@
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "bower-webpack-plugin": "^0.1.9",
-    "chai": "^3.2.0",
-    "copyfiles": "^1.0.0",
+    "chai": "^4.1.0",
+    "copyfiles": "^1.2.0",
     "css-loader": "^0.28.4",
     "eslint": "^4.3.0",
     "eslint-config-airbnb": "^15.1.0",
@@ -47,7 +47,7 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "gh-pages": "^0.12.0",
-    "glob": "^7.0.0",
+    "glob": "^7.1.2",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
@@ -60,10 +60,10 @@
     "postcss-loader": "^2.0.6",
     "prettier": "^1.5.3",
     "proxy-middleware": "^0.15.0",
-    "react-addons-test-utils": "^15.0.0",
+    "react-addons-test-utils": "^15.6.0",
     "react-hot-loader": "v3.0.0-beta.6",
-    "react-test-renderer": "^15.4.1",
-    "rimraf": "^2.4.3",
+    "react-test-renderer": "^15.6.1",
+    "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
@@ -105,7 +105,9 @@
     "reselect": "^2.5.4"
   },
   "jest": {
-    "roots": ["<rootDir>/src"],
+    "roots": [
+      "<rootDir>/src"
+    ],
     "testEnvironment": "node",
     "verbose": true,
     "testPathIgnorePatterns": [
@@ -119,6 +121,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": ["yarn run format", "git add"]
+    "*.{js,jsx}": [
+      "yarn run format",
+      "git add"
+    ]
   }
 }
