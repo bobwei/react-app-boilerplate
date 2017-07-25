@@ -4,16 +4,15 @@ import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 import baseConfig, {
-  SRC_PATH, DIST_PATH, PUBLIC_PATH,
+  SRC_PATH,
+  DIST_PATH,
+  PUBLIC_PATH,
 } from './webpack.config.base.babel';
 
 const config = {
   ...baseConfig,
 
-  entry: [
-    'babel-polyfill',
-    path.join(SRC_PATH, 'index'),
-  ],
+  entry: ['babel-polyfill', path.join(SRC_PATH, 'index')],
 
   output: {
     path: path.join(DIST_PATH, 'assets'),
@@ -30,9 +29,7 @@ const config = {
       debug: false,
       options: {
         context: __dirname,
-        postcss: () => [
-          require('autoprefixer'),
-        ],
+        postcss: () => [require('autoprefixer')],
       },
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
@@ -51,10 +48,7 @@ const config = {
       ...baseConfig.module.loaders,
       {
         test: /\.(js|jsx)$/,
-        loaders: [
-          'babel-loader',
-          'eslint-loader',
-        ],
+        loaders: ['babel-loader', 'eslint-loader'],
         include: SRC_PATH,
         exclude: /node_modules/,
       },

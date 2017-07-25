@@ -19,7 +19,10 @@ export default () => {
     /*
       mount assets for production
     */
-    app.use('/assets', express.static(`${__dirname}/../../build/client/assets`));
+    app.use(
+      '/assets',
+      express.static(`${__dirname}/../../build/client/assets`),
+    );
   }
 
   return app;

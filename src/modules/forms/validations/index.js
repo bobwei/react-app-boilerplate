@@ -7,21 +7,14 @@ export const required = (msg = 'required') => [
   [R.isEmpty, R.always(msg)],
 ];
 
-export const validate = R.curry((conds, key, obj) => (
-  R.pipe(
-    get(key),
-    R.cond(conds),
-  )(obj)
-));
+export const validate = R.curry((conds, key, obj) =>
+  R.pipe(get(key), R.cond(conds))(obj),
+);
 
-export const validateWithRules = R.curry((rules, data) => (
+export const validateWithRules = R.curry((rules, data) =>
   R.pipe(
     R.map(({ key, validate: validateFn }) => [key, validateFn(key, data)]),
-    R.filter(R.pipe(
-      R.nth(1),
-      R.isNil,
-      R.not,
-    )),
+    R.filter(R.pipe(R.nth(1), R.isNil, R.not)),
     R.reduce((errors, [key, msg]) => set(key)(msg)(errors), {}),
-  )(rules)
-));
+  )(rules),
+);

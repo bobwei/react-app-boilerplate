@@ -5,7 +5,8 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import NodeExternals from 'webpack-node-externals';
 
 import baseConfig, {
-  SRC_PATH, SERVER_DIST_PATH,
+  SRC_PATH,
+  SERVER_DIST_PATH,
 } from './webpack.config.base.babel';
 
 const config = {
@@ -35,9 +36,7 @@ const config = {
       debug: false,
       options: {
         context: __dirname,
-        postcss: () => [
-          require('autoprefixer'),
-        ],
+        postcss: () => [require('autoprefixer')],
       },
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
@@ -56,10 +55,7 @@ const config = {
       ...baseConfig.module.loaders,
       {
         test: /\.(js|jsx)$/,
-        loaders: [
-          'babel-loader',
-          'eslint-loader',
-        ],
+        loaders: ['babel-loader', 'eslint-loader'],
         include: SRC_PATH,
         exclude: /node_modules/,
       },

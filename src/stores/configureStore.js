@@ -17,11 +17,7 @@ export default (initialState, history, callback) => {
     enhancers.push(autoRehydrate());
   }
 
-  const store = createStore(
-    rootReducer,
-    initialState,
-    compose(...enhancers),
-  );
+  const store = createStore(rootReducer, initialState, compose(...enhancers));
 
   if (canUseDOM) {
     persistStore(store, { whitelist: [] }, callback);
