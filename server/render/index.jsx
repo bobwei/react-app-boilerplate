@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import express from 'express';
 import React from 'react';
 import { renderToStaticMarkup, renderToString } from 'react-dom/server';
