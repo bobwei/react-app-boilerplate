@@ -24,7 +24,7 @@ export default (initialState, history) => {
   );
 
   if (canUseDOM) {
-    persistStore(store, { whitelist: ['user', 'admin'] });
+    persistStore(store, { whitelist: [] });
   }
 
   return store;
