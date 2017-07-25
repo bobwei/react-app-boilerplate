@@ -5,7 +5,6 @@ const routes = (
   <Route
     childRoutes={[
       require('modules/pages/home/routes'),
-      require('modules/auth/routes'),
     ]}
   />
 );
