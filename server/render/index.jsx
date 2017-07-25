@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import routes from '../../build/server/routes';
 import configureStore from '../../build/server/stores';
 import HTML from '../../src/html';
-import envSelector from '../../src/modules/envs/selectors';
+import envSelector from '../../src/modules/env/selectors';
 
 const envs = envSelector(process.env);
 
