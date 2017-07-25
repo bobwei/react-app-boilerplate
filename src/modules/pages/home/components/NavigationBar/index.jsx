@@ -24,11 +24,6 @@ const NavigationBar = ({ isAuthenticated, logout, isLoggingOut }) => (
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
-      <Nav>
-        <LinkContainer to="/admin">
-          <NavItem eventKey={1}>Admin Portal</NavItem>
-        </LinkContainer>
-      </Nav>
       {!isAuthenticated &&
         <Nav pullRight>
           <LinkContainer to="/login">
