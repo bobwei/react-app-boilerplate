@@ -6,11 +6,7 @@ const route = {
   childRoutes: [
     {
       indexRoute: {
-        getComponent(nextState, cb) {
-          require.ensure([], require => {
-            cb(null, require('../components/Home').default);
-          });
-        },
+        component: require('../components/Home').default,
       },
     },
   ],
