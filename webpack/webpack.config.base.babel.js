@@ -38,7 +38,14 @@ const config = {
                 localIdentName: '[path]__[name]__[local]--[hash:base64:5]',
               },
             },
-            'postcss-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                config: {
+                  path: path.join(__dirname, 'postcss.config.js'),
+                },
+              },
+            },
             'sass-loader',
           ],
         }),
