@@ -1,4 +1,3 @@
-/* eslint-disable global-require */
 const configAPI = (__ENVS__) => {
   const AuthAPI = require('modules/auth/api').default;
   AuthAPI.config(__ENVS__);
