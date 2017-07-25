@@ -34,6 +34,7 @@ const config = {
       minimize: true,
       debug: false,
       options: {
+        context: __dirname,
         postcss: () => [
           require('autoprefixer'),
         ],
@@ -45,6 +46,7 @@ const config = {
     new ExtractTextPlugin({
       filename: '_[name].css',
       allChunks: true,
+      // disable: process.env.NODE_ENV !== 'production',
     }),
   ],
 

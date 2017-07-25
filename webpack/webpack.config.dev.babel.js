@@ -29,9 +29,11 @@ const config = {
     new ExtractTextPlugin({
       filename: '[name].css',
       // allChunks: true,
+      disable: process.env.NODE_ENV !== 'production',
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
+        context: __dirname,
         port: WEBPACK_DEV_SERVER_PORT,
         postcss: () => [
           require('autoprefixer'),
