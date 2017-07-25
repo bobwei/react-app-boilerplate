@@ -6,7 +6,7 @@ import { hashHistory, browserHistory } from 'react-router';
 import Root from 'components/Root';
 
 import './styles/App.scss';
-import configureStore from './stores';
+import configureStore from './stores/configureStore';
 
 /* initialize */
 

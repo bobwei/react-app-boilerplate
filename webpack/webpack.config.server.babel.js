@@ -13,7 +13,7 @@ const config = {
 
   entry: {
     routes: path.join(SRC_PATH, 'routes'),
-    stores: path.join(SRC_PATH, 'stores'),
+    'stores/configureStore': path.join(SRC_PATH, 'stores', 'configureStore'),
   },
 
   output: {
