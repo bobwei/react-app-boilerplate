@@ -9,10 +9,8 @@ import HTML from '../src/html';
 
 const env = publicEnv(process.env);
 
-console.log(`<!doctype html>${renderToStaticMarkup(
-  <HTML
-    env={env}
-    jsSrc={'assets/app.js'}
-    cssSrc={'assets/main.css'}
-  />,
-)}`);
+console.log(
+  `<!doctype html>${renderToStaticMarkup(
+    <HTML env={env} jsSrc={'assets/app.js'} cssSrc={'assets/main.css'} />,
+  )}`,
+);

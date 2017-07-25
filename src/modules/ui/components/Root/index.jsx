@@ -5,10 +5,9 @@ import { Router } from 'react-router';
 
 import routes from '../../../../routes';
 
-const Root = ({ store, history }) => (
+const Root = ({ store, history }) =>
   <Provider store={store}>
     <Router history={history} routes={routes} />
-  </Provider>
-);
+  </Provider>;
 
 export default Root;

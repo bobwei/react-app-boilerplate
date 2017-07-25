@@ -9,11 +9,14 @@ import data from './spec.json';
 it('can render table correctly', () => {
   const component = renderer.create(
     <DataTable
-      columns={[{
-        prop: 'id',
-      }, {
-        prop: 'name',
-      }]}
+      columns={[
+        {
+          prop: 'id',
+        },
+        {
+          prop: 'name',
+        },
+      ]}
       data={R.pipe(
         R.path(['results_json', 'search_results']),
         R.map(R.path(['listing'])),

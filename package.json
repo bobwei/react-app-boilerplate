@@ -13,7 +13,7 @@
     "copy": "copyfiles -f ./src/favicon.ico ./build/client",
     "clean": "rimraf build/*",
     "precommit": "lint-staged --verbose",
-    "format": "prettier --single-quote --trailing-comma all '{scripts,server,src,webpack,__{tests,mocks}__}/**/*.js' --write",
+    "format": "prettier --single-quote --trailing-comma all '{scripts,server,src,webpack,__{tests,mocks}__}/**/*.{js,jsx}' --write",
     "lint-staged": "lint-staged --verbose",
     "test": "jest --onlyChanged --watch",
     "test:all": "jest",

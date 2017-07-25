@@ -9,18 +9,18 @@ import styles from './index.scss';
 import SubmitButton from '../SubmitButton';
 
 const DataForm = ({
-  handleSubmit, submitting, error,
-  alert, fields, submitButton,
-}) => (
+  handleSubmit,
+  submitting,
+  error,
+  alert,
+  fields,
+  submitButton,
+}) =>
   <Form onSubmit={handleSubmit} noValidate>
     {error && React.createElement(alert, { error })}
-    {fields.map(field => (
-      <Field
-        key={field.name}
-        component={FieldGroup}
-        {...field}
-      />
-    ))}
+    {fields.map(field =>
+      <Field key={field.name} component={FieldGroup} {...field} />,
+    )}
     <Row>
       <Col mdOffset={4} md={4}>
         {React.createElement(submitButton, {
@@ -30,13 +30,14 @@ const DataForm = ({
         })}
       </Col>
     </Row>
-  </Form>
-);
+  </Form>;
 
 DataForm.defaultProps = {
   alert: mapProps(({ error }) => ({
     bsStyle: 'warning',
-    children: R.ifElse(R.is(String), R.identity, str => JSON.stringify(str))(error),
+    children: R.ifElse(R.is(String), R.identity, str => JSON.stringify(str))(
+      error,
+    ),
   }))(Alert),
   fields: [],
   submitButton: SubmitButton,
@@ -50,9 +51,11 @@ DataForm.propTypes = {
 
   /* component props */
   alert: React.PropTypes.func,
-  fields: React.PropTypes.arrayOf(React.PropTypes.shape({
-    ...FieldGroup.propTypes,
-  })),
+  fields: React.PropTypes.arrayOf(
+    React.PropTypes.shape({
+      ...FieldGroup.propTypes,
+    }),
+  ),
   submitButton: React.PropTypes.func,
 };
 

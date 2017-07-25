@@ -11,7 +11,15 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 import styles from './index.scss';
 
-const BASE_BS_STYLES = ['default', 'primary', 'success', 'info', 'warning', 'danger', 'link'];
+const BASE_BS_STYLES = [
+  'default',
+  'primary',
+  'success',
+  'info',
+  'warning',
+  'danger',
+  'link',
+];
 
 /* override boorstrap button */
 
@@ -26,16 +34,21 @@ BootstrapButton.propTypes = {
 };
 
 const Button = compose(
-  mapProps(R.pipe(
-    R.ifElse(
-      R.propSatisfies(bsStyle => R.indexOf(bsStyle)(BASE_BS_STYLES) >= 0, 'bsStyle'),
-      props => props,
-      ({ bsStyle, className, ...rest }) => ({
-        ...rest,
-        className: classnames(className, styles[bsStyle]),
-      }),
+  mapProps(
+    R.pipe(
+      R.ifElse(
+        R.propSatisfies(
+          bsStyle => R.indexOf(bsStyle)(BASE_BS_STYLES) >= 0,
+          'bsStyle',
+        ),
+        props => props,
+        ({ bsStyle, className, ...rest }) => ({
+          ...rest,
+          className: classnames(className, styles[bsStyle]),
+        }),
+      ),
     ),
-  )),
+  ),
   /* if componentClass is Link, wrap it with LinkContainer */
   branch(
     R.pipe(

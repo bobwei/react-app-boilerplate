@@ -1,14 +1,13 @@
 /* eslint-disable react/no-danger, react/forbid-prop-types */
 import React from 'react';
 
-const HTML = ({
-  language, title, serverRenderingBody, jsSrc, cssSrc,
-  env,
-}) => (
+const HTML = ({ language, title, serverRenderingBody, jsSrc, cssSrc, env }) =>
   <html lang={language}>
     <head>
       <meta charSet="utf-8" />
-      <title>{title}</title>
+      <title>
+        {title}
+      </title>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <meta
         name="viewport"
@@ -22,13 +21,13 @@ const HTML = ({
       </div>
       {env &&
         <script
-          dangerouslySetInnerHTML={{ __html: `window.__ENV__ = JSON.parse('${JSON.stringify(env)}');` }}
-        />
-      }
+          dangerouslySetInnerHTML={{
+            __html: `window.__ENV__ = JSON.parse('${JSON.stringify(env)}');`,
+          }}
+        />}
       <script src={jsSrc} />
     </body>
-  </html>
-);
+  </html>;
 
 HTML.defaultProps = {
   language: 'en',
