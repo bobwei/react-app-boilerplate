@@ -4,7 +4,7 @@ import { Route } from 'react-router';
 const routes = (
   <Route
     childRoutes={[
-      require('modules/pages/home/routes'),
+      require('modules/pages/home/routes').default,
     ]}
   />
 );

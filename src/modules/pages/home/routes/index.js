@@ -8,7 +8,7 @@ const route = {
       indexRoute: {
         getComponent(nextState, cb) {
           require.ensure([], (require) => {
-            cb(null, require('../containers/Home').default);
+            cb(null, require('../components/Home').default);
           });
         },
       },
