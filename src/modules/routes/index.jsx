@@ -4,7 +4,11 @@ import Route from 'react-router-dom/Route';
 
 const Routes = () =>
   <Switch>
-    <Route component={require('modules/pages/home/routes').default} />
+    <Route
+      exact
+      path="/"
+      component={require('modules/pages/home/components/Home').default}
+    />
   </Switch>;
 
 export default Routes;
