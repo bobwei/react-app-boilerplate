@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/lib/Navbar';
-import Link from 'react-router/lib/Link';
+import Link from 'react-router-dom/Link';
 import compose from 'recompose/compose';
 
 const NavigationBar = () =>

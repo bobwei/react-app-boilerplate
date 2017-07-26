@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Router } from 'react-router';
 
-import routes from 'modules/routes';
+import Routes from 'modules/routes';
 
-const Root = ({ store, history }) =>
+const Root = ({ store, Router }) =>
   <Provider store={store}>
-    <Router history={history} routes={routes} />
+    <Router>
+      <Routes />
+    </Router>
   </Provider>;
 
 export default Root;
