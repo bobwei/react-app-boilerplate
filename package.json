@@ -86,6 +86,7 @@
     "normalize.css": "^7.0.0",
     "normalizr": "^3.2.3",
     "prop-types": "^15.5.10",
+    "query-string": "^5.0.0",
     "ramda": "^0.24.1",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
