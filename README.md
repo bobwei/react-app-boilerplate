@@ -5,6 +5,7 @@ This is a project template with batteries included to speed up project initiatio
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Production Build](#production-build)
+- [Testing](#testing)
 - [Auth State](https://github.com/bobwei/redux-modular-auth)
 - [State Management](https://github.com/bobwei/redux-modular-models)
 
@@ -57,8 +58,7 @@ yarn start
 ```
 
 
-
-# Production Build
+## Production Build
 
 ```
 yarn build
@@ -66,4 +66,19 @@ yarn build
 
 ```
 yarn server
+```
+
+
+## Testing
+
+### Test Changed Only
+
+```
+yarn test
+```
+
+### Test all
+
+```
+yarn test:all
 ```
