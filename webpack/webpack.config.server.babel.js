@@ -13,10 +13,9 @@ const config = {
   ...baseConfig,
 
   entry: {
-    'modules/routes': path.join(SRC_PATH, 'modules/routes'),
-    'modules/stores/configureStore': path.join(
+    'modules/ui/components/Root': path.join(
       SRC_PATH,
-      'modules/stores/configureStore',
+      'modules/ui/components/Root',
     ),
   },
 
