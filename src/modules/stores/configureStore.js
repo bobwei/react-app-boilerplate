@@ -5,7 +5,7 @@ import { persistStore, autoRehydrate } from 'redux-persist';
 
 import rootReducer from 'modules/reducers';
 
-export default (initialState, history, callback) => {
+export default (initialState, callback) => {
   const middlewares = [thunkMiddleware];
 
   const enhancers = [applyMiddleware(...middlewares)];

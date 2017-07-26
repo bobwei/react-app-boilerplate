@@ -13,7 +13,7 @@ if (canUseDOM) {
 }
 
 const history = browserHistory;
-const store = configureStore(undefined, history);
+const store = configureStore();
 
 ReactDOM.render(
   <Root store={store} history={history} />,
