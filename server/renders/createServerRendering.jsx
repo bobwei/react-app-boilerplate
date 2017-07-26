@@ -4,9 +4,10 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import StaticRouter from 'react-router-dom/StaticRouter';
 import withProps from 'recompose/withProps';
 
+import getPublicEnv from 'modules/env/selectors/getPublicEnv';
+import configureStore from 'modules/stores/configureStore';
+
 import HTML from '../../src/html';
-import getPublicEnv from '../../src/modules/env/selectors/getPublicEnv';
-import configureStore from '../../src/modules/stores/configureStore';
 import Root from '../../build/server/modules/ui/components/Root';
 
 const createServerRendering = () => {
