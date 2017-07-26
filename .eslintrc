@@ -21,6 +21,7 @@
     "import/prefer-default-export": 0,
     "global-require": 0,
     "react/jsx-wrap-multilines": 0,
+    "react/forbid-prop-types": 0,
     "react/prop-types": [2, {"ignore": ["className", "children", "id", "onClick", "style", "dispatch", "params", "location"]}]
   },
   "settings": {
