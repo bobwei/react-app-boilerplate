@@ -1,18 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Redirect from 'react-router-dom/Redirect';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import Button from 'react-bootstrap/lib/Button';
 import connect from 'react-redux/lib/connect/connect';
-import R from 'ramda';
 import compose from 'recompose/compose';
-import branch from 'recompose/branch';
-import renderComponent from 'recompose/renderComponent';
 
 import mapStateToProps from './mapStateToProps';
 import mapDispatchToProps from './mapDispatchToProps';
+import redirectIfAuthenticated from '../../hocs/redirectIfAuthenticated';
 
 const LoginForm = ({ login }) =>
   <Grid>
@@ -31,5 +28,5 @@ LoginForm.propTypes = {
 
 export default compose(
   connect(mapStateToProps, mapDispatchToProps),
-  branch(R.prop('isAuthenticated'), renderComponent(() => <Redirect to="/" />)),
+  redirectIfAuthenticated(),
 )(LoginForm);
