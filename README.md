@@ -5,6 +5,7 @@ This is a project template with batteries included to speed up project initiatio
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Production Build](#production-build)
+- [Auth State](https://github.com/bobwei/redux-modular-auth)
 
 
 ## Features

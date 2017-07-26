@@ -5099,6 +5099,15 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
+recompose@^0.23.5:
+  version "0.23.5"
+  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.23.5.tgz#72ac8261246bec378235d187467d02a721e8b1de"
+  dependencies:
+    change-emitter "^0.1.2"
+    fbjs "^0.8.1"
+    hoist-non-react-statics "^1.0.0"
+    symbol-observable "^1.0.4"
+
 recompose@^0.24.0:
   version "0.24.0"
   resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.24.0.tgz#262e93f974439eb17e7779824d88cce90492a5dd"
@@ -5142,7 +5151,7 @@ reduce-reducers@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/reduce-reducers/-/reduce-reducers-0.1.2.tgz#fa1b4718bc5292a71ddd1e5d839c9bea9770f14b"
 
-redux-actions@^2.2.1:
+redux-actions@^2.0.3, redux-actions@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/redux-actions/-/redux-actions-2.2.1.tgz#d64186b25649a13c05478547d7cd7537b892410d"
   dependencies:
@@ -5163,6 +5172,16 @@ redux-form@^7.0.2:
     lodash "^4.17.3"
     lodash-es "^4.17.3"
     prop-types "^15.5.9"
+
+redux-modular-auth@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/redux-modular-auth/-/redux-modular-auth-1.4.0.tgz#394a1e6108458aad0d5f54da6cb4e051df8a0f4d"
+  dependencies:
+    ramda "^0.24.1"
+    react-redux "^5.0.5"
+    recompose "^0.23.5"
+    redux-actions "^2.0.3"
+    reselect "^3.0.1"
 
 redux-persist@^4.8.2:
   version "4.8.2"

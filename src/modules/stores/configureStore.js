@@ -16,7 +16,7 @@ export default (initialState, callback) => {
   const store = createStore(rootReducer, initialState, compose(...enhancers));
 
   if (canUseDOM) {
-    persistStore(store, { whitelist: [] }, callback);
+    persistStore(store, { whitelist: ['auth'] }, callback);
   }
 
   return store;

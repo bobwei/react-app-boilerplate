@@ -97,6 +97,7 @@
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
     "redux-form": "^7.0.2",
+    "redux-modular-auth": "^1.4.0",
     "redux-persist": "^4.8.2",
     "redux-thunk": "^2.1.0",
     "redux-watch": "^1.1.1",
