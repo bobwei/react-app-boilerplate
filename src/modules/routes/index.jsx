@@ -19,6 +19,11 @@ const Routes = () =>
           component={require('modules/pages/home/components/Home').default}
         />
         <Route
+          exact
+          path="/login"
+          component={require('modules/auth/components/LoginForm').default}
+        />
+        <Route
           path="/dashboard"
           component={
             require('modules/pages/dashboard/components/Dashboard').default
