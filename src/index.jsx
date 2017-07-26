@@ -12,10 +12,8 @@ if (canUseDOM) {
   document.addEventListener('touchstart', () => {}, true);
 }
 
-const store = configureStore();
-
 ReactDOM.render(
-  <Root store={store} Router={BrowserRouter} />,
+  <Root configureStore={configureStore} Router={BrowserRouter} />,
   document.getElementById('app'),
 );
 

@@ -5,7 +5,7 @@ import { persistStore, autoRehydrate } from 'redux-persist';
 
 import rootReducer from 'modules/reducers';
 
-export default (initialState, callback) => {
+export default (initialState, callback = () => {}) => {
   const middlewares = [thunkMiddleware];
 
   const enhancers = [applyMiddleware(...middlewares)];
@@ -17,6 +17,8 @@ export default (initialState, callback) => {
 
   if (canUseDOM) {
     persistStore(store, { whitelist: ['auth'] }, callback);
+  } else {
+    callback();
   }
 
   return store;
