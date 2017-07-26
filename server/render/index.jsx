@@ -1,18 +1,12 @@
 import express from 'express';
 import React from 'react';
-import { renderToStaticMarkup, renderToString } from 'react-dom/server';
-import { match, RouterContext } from 'react-router';
-import { Provider } from 'react-redux';
-
-import routes from '../../build/server/modules/routes';
-import configureStore from '../../build/server/modules/stores/configureStore';
+import { renderToStaticMarkup } from 'react-dom/server';
 import HTML from '../../src/html';
 import publicEnv from '../../src/modules/env/selectors/publicEnv';
 
-const env = publicEnv(process.env);
-
 export default () => {
   const app = express();
+  const env = publicEnv(process.env);
 
   app.get('*', (req, res) => {
     const html = renderToStaticMarkup(
