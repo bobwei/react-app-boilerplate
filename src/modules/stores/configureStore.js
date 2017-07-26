@@ -4,7 +4,7 @@ import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
 import { persistStore, autoRehydrate } from 'redux-persist';
 import { routerMiddleware } from 'react-router-redux';
 
-import rootReducer from '../reducers';
+import rootReducer from 'modules/reducers';
 
 export default (initialState, history, callback) => {
   const middlewares = [thunkMiddleware];

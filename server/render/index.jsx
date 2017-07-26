@@ -5,7 +5,7 @@ import { match, RouterContext } from 'react-router';
 import { Provider } from 'react-redux';
 
 import routes from '../../build/server/modules/routes';
-import configureStore from '../../build/server/stores/configureStore';
+import configureStore from '../../build/server/modules/stores/configureStore';
 import HTML from '../../src/html';
 import publicEnv from '../../src/modules/env/selectors/publicEnv';
 

@@ -4,9 +4,8 @@ import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
 import { browserHistory } from 'react-router';
 
 import Root from 'modules/ui/components/Root';
-
-import './styles/App.scss';
-import configureStore from './stores/configureStore';
+import configureStore from 'modules/stores/configureStore';
+import 'modules/styles/App.scss';
 
 /* initialize */
 
