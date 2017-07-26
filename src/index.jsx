@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
-import BrowserRouter from 'react-router-dom/BrowserRouter';
+import Router from 'react-router-dom/BrowserRouter';
 
 import Root from 'modules/ui/components/Root';
 import configureStore from 'modules/stores/configureStore';
@@ -13,7 +13,7 @@ if (canUseDOM) {
 }
 
 ReactDOM.render(
-  <Root configureStore={configureStore} Router={BrowserRouter} />,
+  <Root configureStore={configureStore} Router={Router} />,
   document.getElementById('app'),
 );
 
