@@ -4139,6 +4139,10 @@ normalize.css@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-7.0.0.tgz#abfb1dd82470674e0322b53ceb1aaf412938e4bf"
 
+normalizr@^3.2.3:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/normalizr/-/normalizr-3.2.3.tgz#88755c64de418b040fa6ad1329b2de5c3250ac49"
+
 npm-path@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/npm-path/-/npm-path-2.0.3.tgz#15cff4e1c89a38da77f56f6055b24f975dfb2bbe"
@@ -5183,6 +5187,17 @@ redux-modular-auth@^1.4.0:
     redux-actions "^2.0.3"
     reselect "^3.0.1"
 
+redux-modular-models@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/redux-modular-models/-/redux-modular-models-1.6.0.tgz#9354779349341206dfbd8bc81888a8fd645e3752"
+  dependencies:
+    normalizr "^3.2.3"
+    ramda "^0.24.1"
+    redux "^3.7.0"
+    redux-actions "^2.0.3"
+    redux-persist "^4.8.2"
+    reselect "^3.0.1"
+
 redux-persist@^4.8.2:
   version "4.8.2"
   resolved "https://registry.yarnpkg.com/redux-persist/-/redux-persist-4.8.2.tgz#7941202e0ce0a9fcc0263d66965f5263d34f43b9"
@@ -5201,7 +5216,7 @@ redux-watch@^1.1.1:
   dependencies:
     object-path "^0.9.2"
 
-redux@^3.7.2:
+redux@^3.7.0, redux@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
   dependencies:
