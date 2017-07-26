@@ -37,6 +37,6 @@ NavigationBar.propTypes = {
   logout: PropTypes.func.isRequired,
 };
 
-export default compose(connect(mapStateToProps, mapDispatchToProps))(
-  NavigationBar,
-);
+export default compose(
+  connect(mapStateToProps, mapDispatchToProps, undefined, { pure: false }),
+)(NavigationBar);
