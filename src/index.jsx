@@ -7,8 +7,6 @@ import Root from 'modules/ui/components/Root';
 import configureStore from 'modules/stores/configureStore';
 import 'modules/styles/App.scss';
 
-/* initialize */
-
 // to allow :active styles to work in your CSS on a page in Mobile Safari
 if (canUseDOM) {
   document.addEventListener('touchstart', () => {}, true);
