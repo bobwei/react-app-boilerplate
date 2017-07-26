@@ -3,7 +3,7 @@ import compression from 'compression';
 import 'dotenv/config';
 
 import assets from './assets';
-import render from './render';
+import createRendering from './renders/createClientRendering';
 
 const { NODE_ENV, PORT = 5012 } = process.env;
 
@@ -14,7 +14,7 @@ app.set('port', PORT);
 /* middlewares */
 app.use(compression());
 app.use(assets());
-app.use(render());
+app.use(createRendering());
 
 /* start server */
 app.listen(app.get('port'), () => {

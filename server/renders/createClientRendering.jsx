@@ -4,7 +4,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import HTML from '../../src/html';
 import getPublicEnv from '../../src/modules/env/selectors/getPublicEnv';
 
-export default () => {
+const createClientRendering = () => {
   const app = express();
   const env = getPublicEnv(process.env);
 
@@ -17,3 +17,5 @@ export default () => {
 
   return app;
 };
+
+export default createClientRendering;
