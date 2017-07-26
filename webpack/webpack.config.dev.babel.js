@@ -48,7 +48,12 @@ const config = {
       ...baseConfig.module.loaders,
       {
         test: /\.(js|jsx)$/,
-        loaders: ['babel-loader', 'eslint-loader'],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: { cacheDirectory: true },
+          },
+        ],
         include: SRC_PATH,
         exclude: /node_modules/,
       },
