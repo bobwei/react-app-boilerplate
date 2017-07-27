@@ -12,6 +12,7 @@ import formPropTypes from 'redux-form/lib/propTypes';
 import compose from 'recompose/compose';
 
 import FieldGroup from 'modules/forms/components/FieldGroup';
+import withRequest from 'modules/parse-server/requests/withRequest';
 
 import mapStateToProps from './mapStateToProps';
 import mapDispatchToProps from './mapDispatchToProps';
@@ -61,6 +62,7 @@ LoginForm.propTypes = {
 };
 
 export default compose(
+  withRequest({ requestPropName: 'apiRequest' }),
   connect(mapStateToProps, mapDispatchToProps),
   redirectIfAuthenticated(),
   reduxForm({
