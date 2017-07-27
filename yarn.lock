@@ -5181,9 +5181,9 @@ redux-form@^7.0.2:
     lodash-es "^4.17.3"
     prop-types "^15.5.9"
 
-redux-modular-auth@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/redux-modular-auth/-/redux-modular-auth-1.4.0.tgz#394a1e6108458aad0d5f54da6cb4e051df8a0f4d"
+redux-modular-auth@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/redux-modular-auth/-/redux-modular-auth-1.5.0.tgz#4b367725c2714b14e636043fae93a0f3e517a837"
   dependencies:
     ramda "^0.24.1"
     react-redux "^5.0.5"
