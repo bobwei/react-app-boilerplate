@@ -2,6 +2,7 @@ import React from 'react';
 import Jumbotron from 'react-bootstrap/lib/Jumbotron';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
+import withRouter from 'react-router-dom/withRouter';
 import { requireAuth } from 'redux-modular-auth';
 import compose from 'recompose/compose';
 
@@ -17,6 +18,7 @@ const Dashboard = () =>
   </Grid>;
 
 export default compose(
+  withRouter,
   requireAuth({
     UnauthenticatedComponent: AuthenticationRedirect,
   }),

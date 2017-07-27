@@ -5,6 +5,7 @@ import Link from 'react-router-dom/Link';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import LinkContainer from 'react-router-bootstrap/lib/LinkContainer';
+import withRouter from 'react-router-dom/withRouter';
 
 import connect from 'react-redux/lib/connect/connect';
 import compose from 'recompose/compose';
@@ -38,5 +39,6 @@ NavigationBar.propTypes = {
 };
 
 export default compose(
-  connect(mapStateToProps, mapDispatchToProps, undefined, { pure: false }),
+  withRouter,
+  connect(mapStateToProps, mapDispatchToProps),
 )(NavigationBar);
