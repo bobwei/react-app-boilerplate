@@ -26,8 +26,8 @@ const config = {
         loader: 'json-loader',
       },
       {
-        test: /\.scss$/,
-        exclude: /(App.scss)/,
+        test: /\.(scss|css)$/,
+        exclude: /(App.scss|node_modules)/,
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
