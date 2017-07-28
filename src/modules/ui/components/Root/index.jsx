@@ -1,7 +1,7 @@
 /* eslint-disable react/require-default-props, react/no-unused-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Provider } from 'react-redux';
+import Provider from 'react-redux/es/components/Provider';
 import R from 'ramda';
 import compose from 'recompose/compose';
 import branch from 'recompose/branch';

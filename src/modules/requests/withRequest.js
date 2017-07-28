@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+import connect from 'react-redux/es/connect/connect';
 import { createSelector } from 'reselect';
 import R from 'ramda';
 import compose from 'recompose/compose';
