@@ -28,8 +28,9 @@ This is a project template with batteries included to speed up project initiatio
 ## Getting Started
 
 - Config ENV
-- Install Node Dependencies
+- Install Dependencies
 - Start
+- Start Faster
 
 
 ### Config ENV
@@ -55,6 +56,18 @@ yarn
 
 ```
 yarn start
+```
+
+### Start Faster
+
+build dll
+```
+yarn build:dll
+```
+
+start faster
+```
+yarn start:fast
 ```
 
 
