@@ -40,6 +40,9 @@ const config = {
         postcss: () => [require('autoprefixer')],
       },
     }),
+    new webpack.DllReferencePlugin({
+      manifest: require('../build/client/dll/lib-manifest.json'),
+    }),
   ],
 
   module: {

@@ -37,8 +37,10 @@ const config = {
     new webpack.NoEmitOnErrorsPlugin(),
     new ExtractTextPlugin({
       filename: '[name].css',
-      // allChunks: true,
       disable: process.env.NODE_ENV !== 'production',
+    }),
+    new webpack.DllReferencePlugin({
+      manifest: require('../build/client/dll/lib-manifest.json'),
     }),
   ],
 

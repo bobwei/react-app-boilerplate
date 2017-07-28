@@ -15,10 +15,18 @@ export default () => {
     const compiler = webpack(config);
     app.use(require('webpack-dev-middleware')(compiler, config.devServer));
     app.use(require('webpack-hot-middleware')(compiler));
+    app.use(
+      '/assets/dll',
+      express.static(`${__dirname}/../../build/client/dll`),
+    );
   } else {
     /*
       mount assets for production
     */
+    app.use(
+      '/assets/dll',
+      express.static(`${__dirname}/../../build/client/dll`),
+    );
     app.use(
       '/assets',
       express.static(`${__dirname}/../../build/client/assets`),

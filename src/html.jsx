@@ -1,7 +1,15 @@
 /* eslint-disable react/no-danger, react/forbid-prop-types */
 import React from 'react';
 
-const HTML = ({ language, title, serverRenderingBody, jsSrc, cssSrc, env }) =>
+const HTML = ({
+  language,
+  title,
+  serverRenderingBody,
+  jsSrc,
+  libSrc,
+  cssSrc,
+  env,
+}) =>
   <html lang={language}>
     <head>
       <meta charSet="utf-8" />
@@ -25,6 +33,7 @@ const HTML = ({ language, title, serverRenderingBody, jsSrc, cssSrc, env }) =>
             __html: `window.__ENV__ = JSON.parse('${JSON.stringify(env)}');`,
           }}
         />}
+      <script src={libSrc} />
       <script src={jsSrc} />
     </body>
   </html>;
@@ -34,7 +43,9 @@ HTML.defaultProps = {
   title: 'Project',
   serverRenderingBody: '',
   jsSrc: '/assets/app.js',
+  libSrc: '/assets/dll/dll.lib.js',
   cssSrc: '/assets/main.css',
+  env: {},
 };
 
 HTML.propTypes = {
@@ -42,6 +53,7 @@ HTML.propTypes = {
   title: React.PropTypes.string,
   serverRenderingBody: React.PropTypes.string,
   jsSrc: React.PropTypes.string,
+  libSrc: React.PropTypes.string,
   cssSrc: React.PropTypes.string,
   env: React.PropTypes.object,
 };

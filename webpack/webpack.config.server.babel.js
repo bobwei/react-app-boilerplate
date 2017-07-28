@@ -47,7 +47,9 @@ const config = {
     new ExtractTextPlugin({
       filename: '_[name].css',
       allChunks: true,
-      // disable: process.env.NODE_ENV !== 'production',
+    }),
+    new webpack.DllReferencePlugin({
+      manifest: require('../build/client/dll/lib-manifest.json'),
     }),
   ],
 
@@ -64,7 +66,7 @@ const config = {
     ],
   },
 
-  cache: false,
+  cache: true,
 };
 
 export default config;
