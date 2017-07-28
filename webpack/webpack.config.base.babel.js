@@ -27,7 +27,7 @@ const config = {
       },
       {
         test: /\.(scss|css)$/,
-        exclude: /(App.scss|node_modules)/,
+        exclude: /(App.scss)/,
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
