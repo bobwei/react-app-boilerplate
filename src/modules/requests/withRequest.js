@@ -2,6 +2,7 @@ import connect from 'react-redux/es/connect/connect';
 import { createSelector } from 'reselect';
 import R from 'ramda';
 import compose from 'recompose/compose';
+import { getCredentials } from 'redux-modular-auth';
 
 /*
   1. Select env from redux store
@@ -18,6 +19,7 @@ const withRequest = (
     connect(
       createSelector(
         R.path(['env']),
+        getCredentials,
         R.applySpec({
           [requestPropName]: createRequest,
         }),
