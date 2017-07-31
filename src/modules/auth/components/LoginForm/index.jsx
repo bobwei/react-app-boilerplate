@@ -10,6 +10,8 @@ import reduxForm from 'redux-form/lib/reduxForm';
 import Field from 'redux-form/lib/Field';
 import formPropTypes from 'redux-form/lib/propTypes';
 import compose from 'recompose/compose';
+import createValidation from 'js-app-modules/lib/forms/validations/createValidation';
+import createRequiredValidations from 'js-app-modules/lib/forms/validations/createRequiredValidations';
 
 import FieldGroup from 'modules/forms/components/FieldGroup';
 import withRequest from 'modules/parse-server/requests/withRequest';
@@ -68,5 +70,8 @@ export default compose(
   reduxForm({
     form: 'login',
     onChange: (values, dispatch, { clearSubmitErrors }) => clearSubmitErrors(),
+    validate: createValidation([
+      createRequiredValidations([['username'], ['password']]),
+    ]),
   }),
 )(LoginForm);
