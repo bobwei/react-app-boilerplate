@@ -8,6 +8,7 @@ This is a project template with batteries included to speed up project initiatio
 - [Testing](#testing)
 - [Auth State](https://github.com/bobwei/redux-modular-auth)
 - [State Management](https://github.com/bobwei/redux-modular-models)
+- [Js App Modules](https://github.com/bobwei/js-app-modules)
 
 
 ## Features
