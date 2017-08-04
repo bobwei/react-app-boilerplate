@@ -14,23 +14,25 @@ import mapStateToProps from './mapStateToProps';
 import mapDispatchToProps from './mapDispatchToProps';
 
 const NavigationBar = ({ isAuthenticated, logout }) =>
-  <Navbar>
+  <Navbar collapseOnSelect>
     <Navbar.Header>
       <Navbar.Brand>
         <Link to="/">React App Boilerplate</Link>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
-    <Nav pullRight>
-      <LinkContainer to="/dashboard">
-        <NavItem>Dashboard</NavItem>
-      </LinkContainer>
-      {!isAuthenticated &&
-        <LinkContainer to="/login">
-          <NavItem>Login</NavItem>
-        </LinkContainer>}
-      {isAuthenticated && <NavItem onClick={logout}>Logout</NavItem>}
-    </Nav>
+    <Navbar.Collapse>
+      <Nav pullRight>
+        <LinkContainer to="/dashboard">
+          <NavItem>Dashboard</NavItem>
+        </LinkContainer>
+        {!isAuthenticated &&
+          <LinkContainer to="/login">
+            <NavItem>Login</NavItem>
+          </LinkContainer>}
+        {isAuthenticated && <NavItem onClick={logout}>Logout</NavItem>}
+      </Nav>
+    </Navbar.Collapse>
   </Navbar>;
 
 NavigationBar.propTypes = {
