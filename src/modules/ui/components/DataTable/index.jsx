@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Table } from 'react-bootstrap';
 import R from 'ramda';
 
@@ -44,20 +45,17 @@ DataTable.defaultProps = {
 };
 
 DataTable.propTypes = {
-  settings: React.PropTypes.shape({
-    keyField: React.PropTypes.string,
+  settings: PropTypes.shape({
+    keyField: PropTypes.string,
   }),
-  columns: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      prop: React.PropTypes.string.isRequired,
-      label: React.PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.element,
-      ]),
-      cell: React.PropTypes.func,
+  columns: PropTypes.arrayOf(
+    PropTypes.shape({
+      prop: PropTypes.string.isRequired,
+      label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+      cell: PropTypes.func,
     }),
   ),
-  data: React.PropTypes.arrayOf(React.PropTypes.any),
+  data: PropTypes.arrayOf(PropTypes.any),
 };
 
 export default DataTable;
