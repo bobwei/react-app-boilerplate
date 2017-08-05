@@ -9,6 +9,11 @@ This is a project template with batteries included to speed up project initiatio
 - [Auth State](https://github.com/bobwei/redux-modular-auth)
 - [State Management](https://github.com/bobwei/redux-modular-models)
 - [Js App Modules](https://github.com/bobwei/js-app-modules)
+- Boilerplates
+  - [Component Boilerplate](./src/modules/boilerplate/components/Component/index.jsx)
+    - Used as page component
+  - [Stateless Component Boilerplate](./src/modules/boilerplate/components/Stateless/index.jsx)
+    - Used as stateless component
 
 
 ## Features
