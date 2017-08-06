@@ -1,0 +1,29 @@
+.empty {
+  border: 2px dashed #c3c3c3;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.message {
+  color: #666;
+  text-align: center;
+}
+
+.add {
+  margin-top: 15px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.trash {
+  font-size: 20px;
+  padding: 15px 5px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
