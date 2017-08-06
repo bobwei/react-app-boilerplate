@@ -13,7 +13,16 @@ export default (initialState, callback = () => {}) => {
     enhancers.push(autoRehydrate());
   }
 
-  const store = createStore(rootReducer, initialState, compose(...enhancers));
+  const composeEnhancers =
+    typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
+      : compose;
+
+  const store = createStore(
+    rootReducer,
+    initialState,
+    composeEnhancers(...enhancers),
+  );
 
   if (canUseDOM) {
     persistStore(store, { whitelist: ['auth'] }, callback);
