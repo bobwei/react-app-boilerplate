@@ -1,6 +1,7 @@
 import { logout } from 'redux-modular-auth';
-import bindActionCreators from 'redux/lib/bindActionCreators';
 
-const mapDispatchToProps = dispatch => bindActionCreators({ logout }, dispatch);
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logout()),
+});
 
 export default mapDispatchToProps;
