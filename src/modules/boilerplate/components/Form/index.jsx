@@ -1,8 +1,5 @@
 import React from 'react';
 import 'prop-types';
-import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
 import Form from 'react-bootstrap/lib/Form';
 import Button from 'react-bootstrap/lib/Button';
 import withRouter from 'react-router-dom/withRouter';
@@ -26,36 +23,30 @@ import mapStateToProps from './mapStateToProps';
 import mapDispatchToProps from './mapDispatchToProps';
 
 const Component = ({ handleSubmit, submitting }) =>
-  <Grid>
-    <Row>
-      <Col md={4} mdOffset={4}>
-        <Form onSubmit={handleSubmit}>
-          <Field
-            name="username"
-            component={FieldGroup}
-            label="Username"
-            formControlProps={{
-              type: 'text',
-              placeholder: 'Username',
-              autoFocus: true,
-            }}
-          />
-          <Field
-            name="password"
-            component={FieldGroup}
-            label="Password"
-            formControlProps={{
-              type: 'password',
-              placeholder: 'Password',
-            }}
-          />
-          <Button type="submit" disabled={submitting} block>
-            {submitting ? 'Loading...' : 'Submit'}
-          </Button>
-        </Form>
-      </Col>
-    </Row>
-  </Grid>;
+  <Form onSubmit={handleSubmit}>
+    <Field
+      name="username"
+      component={FieldGroup}
+      label="Username"
+      formControlProps={{
+        type: 'text',
+        placeholder: 'Username',
+        autoFocus: true,
+      }}
+    />
+    <Field
+      name="password"
+      component={FieldGroup}
+      label="Password"
+      formControlProps={{
+        type: 'password',
+        placeholder: 'Password',
+      }}
+    />
+    <Button type="submit" disabled={submitting} block>
+      {submitting ? 'Loading...' : 'Submit'}
+    </Button>
+  </Form>;
 
 Component.propTypes = {
   ...formPropTypes,
