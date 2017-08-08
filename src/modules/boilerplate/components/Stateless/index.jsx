@@ -4,10 +4,10 @@ import compose from 'recompose/compose';
 
 import './index.scss';
 
-const Stateless = () => <div>Stateless</div>;
+const Component = () => <div>Component</div>;
 
-Stateless.propTypes = {};
+Component.propTypes = {};
 
-Stateless.defaultProps = {};
+Component.defaultProps = {};
 
-export default compose()(Stateless);
+export default compose()(Component);
