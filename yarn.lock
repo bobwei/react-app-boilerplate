@@ -5005,6 +5005,17 @@ react-redux@^5.0.5:
     loose-envify "^1.1.0"
     prop-types "^15.5.10"
 
+react-redux@^5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"
+  dependencies:
+    hoist-non-react-statics "^2.2.1"
+    invariant "^2.0.0"
+    lodash "^4.2.0"
+    lodash-es "^4.2.0"
+    loose-envify "^1.1.0"
+    prop-types "^15.5.10"
+
 react-router-bootstrap@^0.24.2:
   version "0.24.2"
   resolved "https://registry.yarnpkg.com/react-router-bootstrap/-/react-router-bootstrap-0.24.2.tgz#b99f5fcca812989d703eacbf400bed0529d040ab"
@@ -5182,6 +5193,21 @@ redux-form@^7.0.3:
     lodash "^4.17.3"
     lodash-es "^4.17.3"
     prop-types "^15.5.9"
+
+redux-modular-alerts@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/redux-modular-alerts/-/redux-modular-alerts-1.1.0.tgz#74c1b5932f2ad5ac0077381a7f7bf92be607b620"
+  dependencies:
+    prop-types "^15.5.10"
+    ramda "^0.24.1"
+    react "^15.6.1"
+    react-bootstrap "^0.31.2"
+    react-dom "^15.6.1"
+    react-redux "^5.0.6"
+    recompose "^0.24.0"
+    redux "^3.7.0"
+    redux-actions "^2.0.3"
+    reselect "^3.0.1"
 
 redux-modular-auth@^1.5.0:
   version "1.5.0"

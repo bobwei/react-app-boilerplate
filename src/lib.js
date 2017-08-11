@@ -18,6 +18,7 @@ import 'prop-types';
 import 'query-string';
 import 'redux-modular-auth';
 import 'redux-modular-models';
+import 'redux-modular-alerts';
 import 'redux-persist';
 import 'redux-thunk';
 import 'reselect';
