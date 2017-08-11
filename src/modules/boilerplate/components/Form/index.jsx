@@ -2,6 +2,7 @@ import React from 'react';
 import 'prop-types';
 import Form from 'react-bootstrap/lib/Form';
 import Button from 'react-bootstrap/lib/Button';
+import FormGroup from 'react-bootstrap/lib/FormGroup';
 import withRouter from 'react-router-dom/withRouter';
 import connect from 'react-redux/lib/connect/connect';
 import reduxForm from 'redux-form/lib/reduxForm';
@@ -43,9 +44,11 @@ const Component = ({ handleSubmit, submitting }) =>
         placeholder: 'Password',
       }}
     />
-    <Button type="submit" disabled={submitting} block>
-      {submitting ? 'Loading...' : 'Submit'}
-    </Button>
+    <FormGroup>
+      <Button type="submit" disabled={submitting} block>
+        {submitting ? 'Loading...' : 'Submit'}
+      </Button>
+    </FormGroup>
   </Form>;
 
 Component.propTypes = {
