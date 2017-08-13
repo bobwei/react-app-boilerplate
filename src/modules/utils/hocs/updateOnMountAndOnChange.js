@@ -1,10 +1,7 @@
-import R from 'ramda';
 import compose from 'recompose/compose';
 import lifecycle from 'recompose/lifecycle';
-import shallowEqual from 'recompose/shallowEqual';
 
-const createShouldUpdateOrKeys = (keys = ['location']) =>
-  R.useWith(R.compose(R.not, shallowEqual), [R.pick(keys), R.pick(keys)]);
+import createShouldUpdateOrKeys from '../functions/createShouldUpdateOrKeys';
 
 /*
   - Call the update function on
@@ -13,7 +10,6 @@ const createShouldUpdateOrKeys = (keys = ['location']) =>
       - We determine shouldComponentUpdate by shallow comparing selected keys of
       this.props and nextProps.
 */
-
 const updateOnMountAndOnChange = (
   update = ({ update: fn }) => fn(),
   shouldUpdateOrKeys = createShouldUpdateOrKeys(),
