@@ -18,7 +18,7 @@ import withRequest from 'modules/parse-server/requests/withRequest';
 import withLoadingState from 'modules/utils/hocs/withLoadingState';
 import withLoadingEffect from 'modules/utils/hocs/withLoadingEffect';
 import applyLoading from 'modules/utils/functions/applyLoading';
-import updateOnMount from 'modules/utils/hocs/updateOnMount';
+import updateOnMountAndOnChange from 'modules/utils/hocs/updateOnMountAndOnChange';
 
 import mapStateToProps from './mapStateToProps';
 import mapDispatchToProps from './mapDispatchToProps';
@@ -70,5 +70,5 @@ export default compose(
       createRequiredValidations([['username'], ['password']]),
     ]),
   }),
-  updateOnMount(),
+  updateOnMountAndOnChange(),
 )(Component);
