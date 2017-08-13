@@ -5194,9 +5194,9 @@ redux-form@^7.0.3:
     lodash-es "^4.17.3"
     prop-types "^15.5.9"
 
-redux-modular-alerts@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/redux-modular-alerts/-/redux-modular-alerts-1.2.0.tgz#27d9a0c8e85f938b3f4f7846f7903d868867669f"
+redux-modular-alerts@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/redux-modular-alerts/-/redux-modular-alerts-1.2.2.tgz#7e6e10aec42a1f6469f78ee564334c6d7d474ce1"
   dependencies:
     prop-types "^15.5.10"
     ramda "^0.24.1"
