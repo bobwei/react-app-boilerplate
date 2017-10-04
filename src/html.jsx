@@ -9,13 +9,11 @@ const HTML = ({
   libSrc,
   cssSrc,
   env,
-}) =>
+}) => (
   <html lang={language}>
     <head>
       <meta charSet="utf-8" />
-      <title>
-        {title}
-      </title>
+      <title>{title}</title>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <meta
         name="viewport"
@@ -27,16 +25,18 @@ const HTML = ({
       <div id="app">
         <div dangerouslySetInnerHTML={{ __html: serverRenderingBody }} />
       </div>
-      {env &&
+      {env && (
         <script
           dangerouslySetInnerHTML={{
             __html: `window.__ENV__ = JSON.parse('${JSON.stringify(env)}');`,
           }}
-        />}
+        />
+      )}
       <script src={libSrc} />
       <script src={jsSrc} />
     </body>
-  </html>;
+  </html>
+);
 
 HTML.defaultProps = {
   language: 'en',

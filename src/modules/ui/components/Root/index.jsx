@@ -9,12 +9,13 @@ import branch from 'recompose/branch';
 import Routes from 'modules/routes';
 import withStore from 'modules/stores/withStore';
 
-const Root = ({ store, Router }) =>
+const Root = ({ store, Router }) => (
   <Provider store={store}>
     <Router>
       <Routes />
     </Router>
-  </Provider>;
+  </Provider>
+);
 
 Root.propTypes = {
   store: PropTypes.object,

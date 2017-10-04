@@ -18,13 +18,14 @@ const FieldArraySection = ({
   addButtonTitle,
   emptyStateMessageTitle,
   ...fieldArrayProps
-}) =>
+}) => (
   <div>
-    {!fieldArrayProps.fields.length &&
+    {!fieldArrayProps.fields.length && (
       <div className={`${styles.message} ${styles.empty}`}>
         {emptyStateMessageTitle}
-      </div>}
-    {fieldArrayProps.fields.map((field, index) =>
+      </div>
+    )}
+    {fieldArrayProps.fields.map((field, index) => (
       <Row className={styles.row} key={field}>
         <Col xs={11}>
           <FieldComponent
@@ -43,14 +44,15 @@ const FieldArraySection = ({
             onClick={remove}
           />
         </Col>
-      </Row>,
-    )}
+      </Row>
+    ))}
     <FormGroup>
       <Button type="button" block className={styles.add} onClick={push}>
         {addButtonTitle}
       </Button>
     </FormGroup>
-  </div>;
+  </div>
+);
 
 FieldArraySection.propTypes = {
   fieldComponent: React.PropTypes.func.isRequired,

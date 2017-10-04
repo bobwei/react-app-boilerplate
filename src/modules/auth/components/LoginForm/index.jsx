@@ -20,18 +20,17 @@ import mapStateToProps from './mapStateToProps';
 import mapDispatchToProps from './mapDispatchToProps';
 import redirectIfAuthenticated from '../../hocs/redirectIfAuthenticated';
 
-const LoginForm = ({ handleSubmit, submitting, pristine, error }) =>
+const LoginForm = ({ handleSubmit, submitting, pristine, error }) => (
   <Grid>
     <Row>
       <Col md={4} mdOffset={4}>
         <Form onSubmit={handleSubmit}>
           {!pristine &&
-            error &&
-            <Alert bsStyle="danger">
-              <p>
-                {error}
-              </p>
-            </Alert>}
+            error && (
+              <Alert bsStyle="danger">
+                <p>{error}</p>
+              </Alert>
+            )}
           <Field
             name="username"
             component={FieldGroup}
@@ -57,7 +56,8 @@ const LoginForm = ({ handleSubmit, submitting, pristine, error }) =>
         </Form>
       </Col>
     </Row>
-  </Grid>;
+  </Grid>
+);
 
 LoginForm.propTypes = {
   ...formPropTypes,

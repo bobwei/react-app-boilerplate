@@ -6,7 +6,7 @@ import Route from 'react-router-dom/Route';
 
 import NavigationBar from 'modules/ui/components/NavigationBar';
 
-const Routes = () =>
+const Routes = () => (
   <Grid fluid>
     <Row>
       <NavigationBar />
@@ -31,6 +31,7 @@ const Routes = () =>
         />
       </Switch>
     </Row>
-  </Grid>;
+  </Grid>
+);
 
 export default Routes;

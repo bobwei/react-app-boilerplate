@@ -13,7 +13,7 @@ import compose from 'recompose/compose';
 import mapStateToProps from './mapStateToProps';
 import mapDispatchToProps from './mapDispatchToProps';
 
-const NavigationBar = ({ isAuthenticated, logout }) =>
+const NavigationBar = ({ isAuthenticated, logout }) => (
   <Navbar collapseOnSelect>
     <Navbar.Header>
       <Navbar.Brand>
@@ -26,14 +26,16 @@ const NavigationBar = ({ isAuthenticated, logout }) =>
         <LinkContainer to="/dashboard">
           <NavItem>Dashboard</NavItem>
         </LinkContainer>
-        {!isAuthenticated &&
+        {!isAuthenticated && (
           <LinkContainer to="/login">
             <NavItem>Login</NavItem>
-          </LinkContainer>}
+          </LinkContainer>
+        )}
         {isAuthenticated && <NavItem onClick={logout}>Logout</NavItem>}
       </Nav>
     </Navbar.Collapse>
-  </Navbar>;
+  </Navbar>
+);
 
 NavigationBar.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired,

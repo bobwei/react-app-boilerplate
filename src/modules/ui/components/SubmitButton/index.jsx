@@ -3,12 +3,13 @@ import R from 'ramda';
 
 import Button from '../Button';
 
-const SubmitButton = ({ submitting, loadingLabel, submitLabel, ...rest }) =>
+const SubmitButton = ({ submitting, loadingLabel, submitLabel, ...rest }) => (
   <Button bsStyle="main" type="submit" disabled={submitting} {...rest}>
     {R.ifElse(R.equals(true), R.always(loadingLabel), R.always(submitLabel))(
       submitting,
     )}
-  </Button>;
+  </Button>
+);
 
 SubmitButton.defaultProps = {
   loadingLabel: 'Loading...',

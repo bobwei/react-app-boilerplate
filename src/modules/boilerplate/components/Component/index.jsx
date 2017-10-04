@@ -17,12 +17,13 @@ import updateOnMountAndOnChange from 'modules/utils/hocs/updateOnMountAndOnChang
 import mapStateToProps from './mapStateToProps';
 import mapDispatchToProps from './mapDispatchToProps';
 
-const Component = () =>
+const Component = () => (
   <Grid>
     <Row>
       <Col md={12}>Component</Col>
     </Row>
-  </Grid>;
+  </Grid>
+);
 
 Component.propTypes = {};
 

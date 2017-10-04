@@ -1,9 +1,6 @@
 import React from 'react';
 
-const Cell = ({ row, prop }) =>
-  <span>
-    {row[prop]}
-  </span>;
+const Cell = ({ row, prop }) => <span>{row[prop]}</span>;
 
 Cell.propTypes = {
   row: React.PropTypes.shape(React.PropTypes.any.isRequired),

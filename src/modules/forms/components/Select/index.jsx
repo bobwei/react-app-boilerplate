@@ -7,8 +7,9 @@ import withProps from 'recompose/withProps';
 
 import './index.scss';
 
-const Component = ({ input, meta, ...props }) =>
-  <Select {...input} {...props} />;
+const Component = ({ input, meta, ...props }) => (
+  <Select {...input} {...props} />
+);
 
 Component.propTypes = {};
 

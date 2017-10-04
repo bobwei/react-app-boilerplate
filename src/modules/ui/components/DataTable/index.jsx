@@ -5,21 +5,17 @@ import R from 'ramda';
 
 import Cell from 'modules/ui/components/Cell';
 
-const DataTable = ({ settings, columns, data, ...restTableProps }) =>
+const DataTable = ({ settings, columns, data, ...restTableProps }) => (
   <Table responsive>
     <thead>
       <tr>
-        {columns.map(({ prop, label }) =>
-          <th key={prop}>
-            {label || prop}
-          </th>,
-        )}
+        {columns.map(({ prop, label }) => <th key={prop}>{label || prop}</th>)}
       </tr>
     </thead>
     <tbody>
-      {data.map((row, index, rows) =>
+      {data.map((row, index, rows) => (
         <tr key={R.path([settings.keyField])(row)}>
-          {columns.map(({ prop, cell = Cell, ...restColumnProps }) =>
+          {columns.map(({ prop, cell = Cell, ...restColumnProps }) => (
             <td key={prop}>
               {cell({
                 row,
@@ -29,12 +25,13 @@ const DataTable = ({ settings, columns, data, ...restTableProps }) =>
                 ...restTableProps,
                 ...restColumnProps,
               })}
-            </td>,
-          )}
-        </tr>,
-      )}
+            </td>
+          ))}
+        </tr>
+      ))}
     </tbody>
-  </Table>;
+  </Table>
+);
 
 DataTable.defaultProps = {
   settings: {

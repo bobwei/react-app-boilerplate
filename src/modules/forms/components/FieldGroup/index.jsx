@@ -12,21 +12,16 @@ const FieldGroup = ({
   meta: { touched, error },
   label,
   formControlProps,
-}) =>
+}) => (
   <FormGroup
     controlId={input.name}
     validationState={(!!touched && !!error && 'error') || null}
   >
-    <ControlLabel>
-      {label}
-    </ControlLabel>
+    <ControlLabel>{label}</ControlLabel>
     <FormControl {...input} {...formControlProps} />
-    {touched &&
-      error &&
-      <HelpBlock>
-        {error}
-      </HelpBlock>}
-  </FormGroup>;
+    {touched && error && <HelpBlock>{error}</HelpBlock>}
+  </FormGroup>
+);
 
 FieldGroup.propTypes = {
   ...fieldPropTypes,

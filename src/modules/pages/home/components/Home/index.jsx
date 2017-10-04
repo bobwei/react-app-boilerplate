@@ -3,7 +3,7 @@ import Jumbotron from 'react-bootstrap/lib/Jumbotron';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 
-const Home = () =>
+const Home = () => (
   <Grid>
     <Row>
       <Jumbotron>
@@ -11,6 +11,7 @@ const Home = () =>
         <p>This is a react app boilerplate with batteries included.</p>
       </Jumbotron>
     </Row>
-  </Grid>;
+  </Grid>
+);
 
 export default Home;

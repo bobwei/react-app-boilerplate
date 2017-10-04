@@ -8,14 +8,15 @@ import compose from 'recompose/compose';
 
 import AuthenticationRedirect from 'modules/auth/components/AuthenticationRedirect';
 
-const Dashboard = () =>
+const Dashboard = () => (
   <Grid>
     <Row>
       <Jumbotron>
         <h2>Dashboard</h2>
       </Jumbotron>
     </Row>
-  </Grid>;
+  </Grid>
+);
 
 export default compose(
   withRouter,

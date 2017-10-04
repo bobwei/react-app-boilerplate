@@ -23,7 +23,7 @@ import updateOnMountAndOnChange from 'modules/utils/hocs/updateOnMountAndOnChang
 import mapStateToProps from './mapStateToProps';
 import mapDispatchToProps from './mapDispatchToProps';
 
-const Component = ({ handleSubmit, submitting }) =>
+const Component = ({ handleSubmit, submitting }) => (
   <Form onSubmit={handleSubmit}>
     <Field
       name="username"
@@ -49,7 +49,8 @@ const Component = ({ handleSubmit, submitting }) =>
         {submitting ? 'Loading...' : 'Submit'}
       </Button>
     </FormGroup>
-  </Form>;
+  </Form>
+);
 
 Component.propTypes = {
   ...formPropTypes,
