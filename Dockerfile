@@ -1,13 +1,13 @@
-FROM node:8.2.1
+FROM node:8.6.0-alpine
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-ADD package.json .
-ADD yarn.lock .
+COPY package.json .
+COPY yarn.lock .
 RUN yarn
 
-ADD . .
+COPY . .
 RUN yarn build
 
 CMD [ "yarn", "server" ]
