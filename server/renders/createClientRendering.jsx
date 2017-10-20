@@ -11,8 +11,9 @@ const createClientRendering = () => {
   const env = getPublicEnv(process.env);
 
   app.get('*', (req, res) => {
+    const initialState = { env };
     const html = renderToStaticMarkup(
-      <HTML serverRenderingBody="" env={env} />,
+      <HTML serverRenderingBody="" initialState={initialState} />,
     );
     res.send(`<!doctype html>${html}`);
   });

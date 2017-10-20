@@ -15,7 +15,7 @@ const createServerRendering = () => {
   const env = getPublicEnv(process.env);
 
   app.get('*', (req, res) => {
-    const initialState = {};
+    const initialState = { env };
     const store = configureStore(initialState);
     const context = {};
     const Router = withProps({ location: req.url, context })(StaticRouter);
@@ -29,7 +29,6 @@ const createServerRendering = () => {
     const html = renderToStaticMarkup(
       <HTML
         serverRenderingBody={serverRenderingBody}
-        env={env}
         initialState={initialState}
       />,
     );

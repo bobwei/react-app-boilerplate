@@ -8,7 +8,6 @@ const HTML = ({
   jsSrc,
   libSrc,
   cssSrc,
-  env,
   initialState,
 }) => (
   <html lang={language}>
@@ -26,13 +25,6 @@ const HTML = ({
       <div id="app">
         <div dangerouslySetInnerHTML={{ __html: serverRenderingBody }} />
       </div>
-      {env && (
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.__ENV__ = JSON.parse('${JSON.stringify(env)}');`,
-          }}
-        />
-      )}
       {initialState && (
         <script
           dangerouslySetInnerHTML={{
@@ -55,7 +47,6 @@ HTML.defaultProps = {
   jsSrc: '/assets/app.js',
   libSrc: '/assets/dll/dll.lib.js',
   cssSrc: '/assets/main.css',
-  env: {},
   initialState: {},
 };
 
@@ -66,7 +57,6 @@ HTML.propTypes = {
   jsSrc: React.PropTypes.string,
   libSrc: React.PropTypes.string,
   cssSrc: React.PropTypes.string,
-  env: React.PropTypes.object,
   initialState: React.PropTypes.object,
 };
 
