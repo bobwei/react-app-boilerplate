@@ -1,6 +1,6 @@
 import express from 'express';
 import React from 'react';
-import { renderToStaticMarkup } from 'react-dom/server';
+import { renderToString } from 'react-dom/server';
 import StaticRouter from 'react-router-dom/StaticRouter';
 import withProps from 'recompose/withProps';
 
@@ -19,14 +19,14 @@ const createServerRendering = () => {
     const store = configureStore(initialState);
     const context = {};
     const Router = withProps({ location: req.url, context })(StaticRouter);
-    const serverRenderingBody = renderToStaticMarkup(
+    const serverRenderingBody = renderToString(
       <Root store={store} Router={Router} />,
     );
     if (context.url) {
       res.redirect(301, context.url);
       return;
     }
-    const html = renderToStaticMarkup(
+    const html = renderToString(
       <HTML
         serverRenderingBody={serverRenderingBody}
         initialState={initialState}
