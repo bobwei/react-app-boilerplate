@@ -1,6 +1,6 @@
 import express from 'express';
 import React from 'react';
-import { renderToString } from 'react-dom/server';
+import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import StaticRouter from 'react-router-dom/StaticRouter';
 import withProps from 'recompose/withProps';
 
@@ -26,7 +26,7 @@ const createServerRendering = () => {
       res.redirect(301, context.url);
       return;
     }
-    const html = renderToString(
+    const html = renderToStaticMarkup(
       <HTML
         serverRenderingBody={serverRenderingBody}
         initialState={initialState}
