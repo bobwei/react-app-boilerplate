@@ -9,6 +9,7 @@ const HTML = ({
   libSrc,
   cssSrc,
   env,
+  initialState,
 }) => (
   <html lang={language}>
     <head>
@@ -32,6 +33,15 @@ const HTML = ({
           }}
         />
       )}
+      {initialState && (
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.__INITIALSTATE__ = JSON.parse('${JSON.stringify(
+              initialState,
+            )}');`,
+          }}
+        />
+      )}
       <script src={libSrc} />
       <script src={jsSrc} />
     </body>
@@ -46,6 +56,7 @@ HTML.defaultProps = {
   libSrc: '/assets/dll/dll.lib.js',
   cssSrc: '/assets/main.css',
   env: {},
+  initialState: {},
 };
 
 HTML.propTypes = {
@@ -56,6 +67,7 @@ HTML.propTypes = {
   libSrc: React.PropTypes.string,
   cssSrc: React.PropTypes.string,
   env: React.PropTypes.object,
+  initialState: React.PropTypes.object,
 };
 
 export default HTML;

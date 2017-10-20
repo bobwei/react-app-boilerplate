@@ -7,6 +7,7 @@ import flattenProp from 'recompose/flattenProp';
 import setPropTypes from 'recompose/setPropTypes';
 import branch from 'recompose/branch';
 import renderNothing from 'recompose/renderNothing';
+import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
 
 /*
   Use configureStore prop to create store and inject as store prop when it's ready.
@@ -22,7 +23,9 @@ const withStore = () =>
     lifecycle({
       componentDidMount() {
         const { setState, configureStore } = this.props;
-        const store = configureStore({}, () => setState({ store }));
+        const initialState =
+          canUseDOM && window.__INITIALSTATE__ ? window.__INITIALSTATE__ : {};
+        const store = configureStore(initialState, () => setState({ store }));
       },
     }),
     branch(R.compose(R.isNil, R.prop('store')), renderNothing),
