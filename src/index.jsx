@@ -12,10 +12,21 @@ if (canUseDOM) {
   document.addEventListener('touchstart', () => {}, true);
 }
 
-ReactDOM.render(
-  <Root configureStore={configureStore} Router={Router} />,
-  document.getElementById('app'),
-);
+/* Getting initialState from server rendering */
+const initialState =
+  canUseDOM && window.__INITIALSTATE__ ? window.__INITIALSTATE__ : {};
+
+/*
+  Render <Root /> when store is ready. Actions triggered during initialization:
+  - init with initialState
+  - rehydrate ( persist-store )
+*/
+const store = configureStore(initialState, () => {
+  ReactDOM.render(
+    <Root store={store} Router={Router} />,
+    document.getElementById('app'),
+  );
+});
 
 if (module.hot) {
   module.hot.accept();
